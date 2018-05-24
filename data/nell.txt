@@ -6,8 +6,9 @@ base(athleteplaysforteam(athlete,sportsteam)).
 base(athleteplaysinleague(athlete,sportsleague)).
 base(teamplaysagainstteam(sportsteam,sportsteam)).
 base(teamplayssport(sportsteam,sport)).
+base(teamplaysinleague(sportsteam,sportsleague)).
 
-begin(model(f1)).
+begin(model(f1).
 teamplaysinleague(belmontbruins, ncaa).
 teamplaysinleague(pacifictigers, ncaa).
 teamplaysinleague(lehighmountainhawks, ncaa).
@@ -309,691 +310,691 @@ teamplaysinleague(americanueagles, ncaa).
 teamplaysinleague(carolinapanthers, nfl).
 teamplaysinleague(eastcarolinaladypirates, mlb).
 athleteplayssport(gathright, baseball).
-neg(athleteplayssport(gathright,soccer)).
+0.0::athleteplayssport(gathright,soccer).
 athleteplayssport(fernandonieve, baseball).
-neg(athleteplayssport(fernandonieve,collegebaseball)).
+0.0::athleteplayssport(fernandonieve,collegebaseball).
 athleteplayssport(neriorodriguez, baseball).
-neg(athleteplayssport(neriorodriguez,professionalbasketball)).
+0.0::athleteplayssport(neriorodriguez,professionalbasketball).
 athleteplayssport(octaviodotel, baseball).
-neg(athleteplayssport(octaviodotel,golf)).
+0.0::athleteplayssport(octaviodotel,golf).
 athleteplayssport(lawrencetaylor, football).
-neg(athleteplayssport(lawrencetaylor,baseball)).
+0.0::athleteplayssport(lawrencetaylor,baseball).
 athleteplayssport(marvinharrison, football).
-neg(athleteplayssport(marvinharrison,wrestling)).
+0.0::athleteplayssport(marvinharrison,wrestling).
 athleteplayssport(jesussanchez, baseball).
-neg(athleteplayssport(jesussanchez,boxing)).
+0.0::athleteplayssport(jesussanchez,boxing).
 athleteplayssport(johndanks, baseball).
-neg(athleteplayssport(johndanks,boxing)).
+0.0::athleteplayssport(johndanks,boxing).
 athleteplayssport(jackegbert, baseball).
-neg(athleteplayssport(jackegbert,boxing)).
+0.0::athleteplayssport(jackegbert,boxing).
 athleteplayssport(ryanspeier, baseball).
-neg(athleteplayssport(ryanspeier,carracing)).
+0.0::athleteplayssport(ryanspeier,carracing).
 athleteplayssport(mattalbers, baseball).
-neg(athleteplayssport(mattalbers,carracing)).
+0.0::athleteplayssport(mattalbers,carracing).
 athleteplayssport(biggio, baseball).
-neg(athleteplayssport(biggio,wrestling)).
+0.0::athleteplayssport(biggio,wrestling).
 athleteplayssport(bigshow, wrestling).
-neg(athleteplayssport(bigshow,golfing)).
+0.0::athleteplayssport(bigshow,golfing).
 athleteplayssport(wademiller, baseball).
-neg(athleteplayssport(wademiller,collegebaseball)).
+0.0::athleteplayssport(wademiller,collegebaseball).
 athleteplayssport(shaironmartis, baseball).
-neg(athleteplayssport(shaironmartis,professionalbasketball)).
+0.0::athleteplayssport(shaironmartis,professionalbasketball).
 athleteplayssport(scottlewis, baseball).
-neg(athleteplayssport(scottlewis,swimming)).
+0.0::athleteplayssport(scottlewis,swimming).
 athleteplayssport(therock, wrestling).
-neg(athleteplayssport(therock,boxing)).
+0.0::athleteplayssport(therock,boxing).
 athleteplayssport(jahapp, baseball).
-neg(athleteplayssport(jahapp,swimming)).
+0.0::athleteplayssport(jahapp,swimming).
 athleteplayssport(paugasol, basketball).
-neg(athleteplayssport(paugasol,softball)).
+0.0::athleteplayssport(paugasol,softball).
 athleteplayssport(mattdesalvo, baseball).
-neg(athleteplayssport(mattdesalvo,sailing)).
+0.0::athleteplayssport(mattdesalvo,sailing).
 athleteplayssport(grahamcooke, golf).
-neg(athleteplayssport(grahamcooke,lacrosse)).
+0.0::athleteplayssport(grahamcooke,lacrosse).
 athleteplayssport(yovanigallardo, baseball).
-neg(athleteplayssport(yovanigallardo,lacrosse)).
+0.0::athleteplayssport(yovanigallardo,lacrosse).
 athleteplayssport(devernhansack, baseball).
-neg(athleteplayssport(devernhansack,hockey)).
+0.0::athleteplayssport(devernhansack,hockey).
 athleteplayssport(tobistoner, baseball).
-neg(athleteplayssport(tobistoner,sailing)).
+0.0::athleteplayssport(tobistoner,sailing).
 athleteplayssport(jrsmith, baseball).
-neg(athleteplayssport(jrsmith,lacrosse)).
+0.0::athleteplayssport(jrsmith,lacrosse).
 athleteplayssport(mikeaviles, baseball).
-neg(athleteplayssport(mikeaviles,cycling)).
+0.0::athleteplayssport(mikeaviles,cycling).
 athleteplayssport(craigstammen, baseball).
-neg(athleteplayssport(craigstammen,professionalfootball)).
+0.0::athleteplayssport(craigstammen,professionalfootball).
 athleteplayssport(daryleward, baseball).
-neg(athleteplayssport(daryleward,wrestling)).
+0.0::athleteplayssport(daryleward,wrestling).
 athleteplayssport(carlosrosa, baseball).
-neg(athleteplayssport(carlosrosa,sailing)).
+0.0::athleteplayssport(carlosrosa,sailing).
 athleteplayssport(randymoss, football).
-neg(athleteplayssport(randymoss,soccer)).
+0.0::athleteplayssport(randymoss,soccer).
 athleteplayssport(kenshinkawakami, baseball).
-neg(athleteplayssport(kenshinkawakami,tennis)).
+0.0::athleteplayssport(kenshinkawakami,tennis).
 athleteplayssport(chriswithrow, baseball).
-neg(athleteplayssport(chriswithrow,wrestling)).
+0.0::athleteplayssport(chriswithrow,wrestling).
 athleteplayssport(kylephillips, golf).
-neg(athleteplayssport(kylephillips,professionalbasketball)).
+0.0::athleteplayssport(kylephillips,professionalbasketball).
 athleteplayssport(brianwestbrook, football).
-neg(athleteplayssport(brianwestbrook,lacrosse)).
+0.0::athleteplayssport(brianwestbrook,lacrosse).
 athleteplayssport(johnrheinecker, baseball).
-neg(athleteplayssport(johnrheinecker,golfing)).
+0.0::athleteplayssport(johnrheinecker,golfing).
 athleteplayssport(aaronfultz, baseball).
-neg(athleteplayssport(aaronfultz,soccer)).
+0.0::athleteplayssport(aaronfultz,soccer).
 athleteplayssport(dougmathis, baseball).
-neg(athleteplayssport(dougmathis,trackandfield)).
+0.0::athleteplayssport(dougmathis,trackandfield).
 athleteplayssport(alexicasilla, baseball).
-neg(athleteplayssport(alexicasilla,sailing)).
+0.0::athleteplayssport(alexicasilla,sailing).
 athleteplayssport(jefffulchino, baseball).
-neg(athleteplayssport(jefffulchino,boxing)).
+0.0::athleteplayssport(jefffulchino,boxing).
 athleteplayssport(joshbeckett, baseball).
-neg(athleteplayssport(joshbeckett,soccer)).
+0.0::athleteplayssport(joshbeckett,soccer).
 athleteplayssport(alistermackenzie, golf).
-neg(athleteplayssport(alistermackenzie,swimming)).
+0.0::athleteplayssport(alistermackenzie,swimming).
 athleteplayssport(josesilva, baseball).
-neg(athleteplayssport(josesilva,basketball)).
+0.0::athleteplayssport(josesilva,basketball).
 athleteplayssport(brandonpuffer, baseball).
-neg(athleteplayssport(brandonpuffer,basketball)).
+0.0::athleteplayssport(brandonpuffer,basketball).
 athleteplayssport(joseacevedo, baseball).
-neg(athleteplayssport(joseacevedo,professionalbasketball)).
+0.0::athleteplayssport(joseacevedo,professionalbasketball).
 athleteplayssport(danieldavidson, baseball).
-neg(athleteplayssport(danieldavidson,softball)).
+0.0::athleteplayssport(danieldavidson,softball).
 athleteplayssport(johnduddy, boxing).
-neg(athleteplayssport(johnduddy,golf)).
+0.0::athleteplayssport(johnduddy,golf).
 athleteplayssport(danysbaez, baseball).
-neg(athleteplayssport(danysbaez,collegebaseball)).
+0.0::athleteplayssport(danysbaez,collegebaseball).
 athleteplayssport(merkinvaldez, baseball).
-neg(athleteplayssport(merkinvaldez,trackandfield)).
+0.0::athleteplayssport(merkinvaldez,trackandfield).
 athleteplayssport(miguelmontero, baseball).
-neg(athleteplayssport(miguelmontero,professionalfootball)).
+0.0::athleteplayssport(miguelmontero,professionalfootball).
 athleteplayssport(bobbylashley, wrestling).
-neg(athleteplayssport(bobbylashley,basketball)).
+0.0::athleteplayssport(bobbylashley,basketball).
 athleteplayssport(timcorcoran, baseball).
-neg(athleteplayssport(timcorcoran,sailing)).
+0.0::athleteplayssport(timcorcoran,sailing).
 athleteplayssport(justinmorneau, baseball).
-neg(athleteplayssport(justinmorneau,wrestling)).
+0.0::athleteplayssport(justinmorneau,wrestling).
 athleteplayssport(mannypacquiao, boxing).
-neg(athleteplayssport(mannypacquiao,trackandfield)).
+0.0::athleteplayssport(mannypacquiao,trackandfield).
 athleteplayssport(omaraguilar, baseball).
-neg(athleteplayssport(omaraguilar,boxing)).
+0.0::athleteplayssport(omaraguilar,boxing).
 athleteplayssport(clydejohnston, golf).
-neg(athleteplayssport(clydejohnston,golfing)).
+0.0::athleteplayssport(clydejohnston,golfing).
 athleteplayssport(chrisduhon, basketball).
-neg(athleteplayssport(chrisduhon,professionalfootball)).
+0.0::athleteplayssport(chrisduhon,professionalfootball).
 athleteplayssport(hirokikuroda, baseball).
-neg(athleteplayssport(hirokikuroda,swimming)).
+0.0::athleteplayssport(hirokikuroda,swimming).
 athleteplayssport(josevalverde, baseball).
-neg(athleteplayssport(josevalverde,tennis)).
+0.0::athleteplayssport(josevalverde,tennis).
 athleteplayssport(yaoming, basketball).
-neg(athleteplayssport(yaoming,carracing)).
+0.0::athleteplayssport(yaoming,carracing).
 athleteplayssport(tonyscheffler, football).
-neg(athleteplayssport(tonyscheffler,carracing)).
+0.0::athleteplayssport(tonyscheffler,carracing).
 athleteplayssport(tylerflowers, baseball).
-neg(athleteplayssport(tylerflowers,sailing)).
+0.0::athleteplayssport(tylerflowers,sailing).
 athleteplayssport(drewstoren, baseball).
-neg(athleteplayssport(drewstoren,basketball)).
+0.0::athleteplayssport(drewstoren,basketball).
 athleteplayssport(anthonyswarzak, baseball).
-neg(athleteplayssport(anthonyswarzak,tennis)).
+0.0::athleteplayssport(anthonyswarzak,tennis).
 athleteplayssport(thomasdiamond, baseball).
-neg(athleteplayssport(thomasdiamond,professionalfootball)).
+0.0::athleteplayssport(thomasdiamond,professionalfootball).
 athleteplayssport(bobbyparnell, baseball).
-neg(athleteplayssport(bobbyparnell,sailing)).
+0.0::athleteplayssport(bobbyparnell,sailing).
 athleteplayssport(vinceyoung, football).
-neg(athleteplayssport(vinceyoung,professionalbasketball)).
+0.0::athleteplayssport(vinceyoung,professionalbasketball).
 athleteplayssport(joshrabe, baseball).
-neg(athleteplayssport(joshrabe,golfing)).
+0.0::athleteplayssport(joshrabe,golfing).
 athleteplayssport(dannybautista, baseball).
-neg(athleteplayssport(dannybautista,hockey)).
+0.0::athleteplayssport(dannybautista,hockey).
 athleteplayssport(davidlee, baseball).
-neg(athleteplayssport(davidlee,wrestling)).
+0.0::athleteplayssport(davidlee,wrestling).
 athleteplayssport(anthonyclaggett, baseball).
-neg(athleteplayssport(anthonyclaggett,golfing)).
+0.0::athleteplayssport(anthonyclaggett,golfing).
 athleteplayssport(raferjohnson, trackandfield).
-neg(athleteplayssport(raferjohnson,sailing)).
+0.0::athleteplayssport(raferjohnson,sailing).
 athleteplayssport(jasonrichardson, basketball).
-neg(athleteplayssport(jasonrichardson,swimming)).
+0.0::athleteplayssport(jasonrichardson,swimming).
 athleteplayssport(lancearmstrong, cycling).
-neg(athleteplayssport(lancearmstrong,professionalbasketball)).
+0.0::athleteplayssport(lancearmstrong,professionalbasketball).
 athleteplayssport(kelvimescobar, baseball).
-neg(athleteplayssport(kelvimescobar,carracing)).
+0.0::athleteplayssport(kelvimescobar,carracing).
 athleteplayssport(gregaquino, baseball).
-neg(athleteplayssport(gregaquino,wrestling)).
+0.0::athleteplayssport(gregaquino,wrestling).
 athleteplayssport(jesusdelgado, baseball).
-neg(athleteplayssport(jesusdelgado,cycling)).
+0.0::athleteplayssport(jesusdelgado,cycling).
 athleteplayssport(joshnewman, baseball).
-neg(athleteplayssport(joshnewman,golfing)).
+0.0::athleteplayssport(joshnewman,golfing).
 athleteplayssport(cococrisp, baseball).
-neg(athleteplayssport(cococrisp,golf)).
+0.0::athleteplayssport(cococrisp,golf).
 athleteplayssport(sandykoufax, baseball).
-neg(athleteplayssport(sandykoufax,soccer)).
+0.0::athleteplayssport(sandykoufax,soccer).
 athleteplayssport(nooklogan, baseball).
-neg(athleteplayssport(nooklogan,hockey)).
+0.0::athleteplayssport(nooklogan,hockey).
 athleteplayssport(deionsanders, baseball).
-neg(athleteplayssport(deionsanders,trackandfield)).
+0.0::athleteplayssport(deionsanders,trackandfield).
 athleteplayssport(matthewscherer, baseball).
-neg(athleteplayssport(matthewscherer,lacrosse)).
+0.0::athleteplayssport(matthewscherer,lacrosse).
 athleteplayssport(brianfuentes, baseball).
-neg(athleteplayssport(brianfuentes,soccer)).
+0.0::athleteplayssport(brianfuentes,soccer).
 athleteplayssport(joecalzaghe, boxing).
-neg(athleteplayssport(joecalzaghe,golfing)).
+0.0::athleteplayssport(joecalzaghe,golfing).
 athleteplayssport(victormartinez, baseball).
-neg(athleteplayssport(victormartinez,football)).
+0.0::athleteplayssport(victormartinez,football).
 athleteplayssport(eddieguardado, baseball).
-neg(athleteplayssport(eddieguardado,sailing)).
+0.0::athleteplayssport(eddieguardado,sailing).
 athleteplayssport(harmonkillebrew, baseball).
-neg(athleteplayssport(harmonkillebrew,basketball)).
+0.0::athleteplayssport(harmonkillebrew,basketball).
 athleteplayssport(marcusvick, football).
-neg(athleteplayssport(marcusvick,cycling)).
+0.0::athleteplayssport(marcusvick,cycling).
 athleteplayssport(georgefoster, baseball).
-neg(athleteplayssport(georgefoster,trackandfield)).
+0.0::athleteplayssport(georgefoster,trackandfield).
 athleteplayssport(mikemyers, baseball).
-neg(athleteplayssport(mikemyers,basketball)).
+0.0::athleteplayssport(mikemyers,basketball).
 athleteplayssport(bretprinz, baseball).
-neg(athleteplayssport(bretprinz,wrestling)).
+0.0::athleteplayssport(bretprinz,wrestling).
 athleteplayssport(francisbeltran, baseball).
-neg(athleteplayssport(francisbeltran,carracing)).
+0.0::athleteplayssport(francisbeltran,carracing).
 athleteplayssport(jamiewalker, baseball).
-neg(athleteplayssport(jamiewalker,swimming)).
+0.0::athleteplayssport(jamiewalker,swimming).
 athleteplayssport(donaldveal, baseball).
-neg(athleteplayssport(donaldveal,hockey)).
+0.0::athleteplayssport(donaldveal,hockey).
 athleteplayssport(marshallfaulk, football).
-neg(athleteplayssport(marshallfaulk,golfing)).
+0.0::athleteplayssport(marshallfaulk,golfing).
 athleteplayssport(billnewcomb, golf).
-neg(athleteplayssport(billnewcomb,lacrosse)).
+0.0::athleteplayssport(billnewcomb,lacrosse).
 athleteplayssport(placidopolanco, baseball).
-neg(athleteplayssport(placidopolanco,cycling)).
+0.0::athleteplayssport(placidopolanco,cycling).
 athleteplayssport(boofbonser, baseball).
-neg(athleteplayssport(boofbonser,trackandfield)).
+0.0::athleteplayssport(boofbonser,trackandfield).
 athleteplayssport(connorgraham, baseball).
-neg(athleteplayssport(connorgraham,football)).
+0.0::athleteplayssport(connorgraham,football).
 athleteplayssport(juanacevedo, baseball).
-neg(athleteplayssport(juanacevedo,softball)).
+0.0::athleteplayssport(juanacevedo,softball).
 athleteplayssport(marquisgrissom, baseball).
-neg(athleteplayssport(marquisgrissom,hockey)).
+0.0::athleteplayssport(marquisgrissom,hockey).
 athleteplayssport(raycroft, baseball).
-neg(athleteplayssport(raycroft,tennis)).
+0.0::athleteplayssport(raycroft,tennis).
 athleteplayssport(stevenshell, baseball).
-neg(athleteplayssport(stevenshell,lacrosse)).
+0.0::athleteplayssport(stevenshell,lacrosse).
 athleteplayssport(johngrabow, baseball).
-neg(athleteplayssport(johngrabow,basketball)).
+0.0::athleteplayssport(johngrabow,basketball).
 athleteplayssport(albertbelle, baseball).
-neg(athleteplayssport(albertbelle,lacrosse)).
+0.0::athleteplayssport(albertbelle,lacrosse).
 athleteplayssport(claycondrey, baseball).
-neg(athleteplayssport(claycondrey,carracing)).
+0.0::athleteplayssport(claycondrey,carracing).
 athleteplayssport(ronmahay, baseball).
-neg(athleteplayssport(ronmahay,tennis)).
+0.0::athleteplayssport(ronmahay,tennis).
 athleteplayssport(wikigonzalez, baseball).
-neg(athleteplayssport(wikigonzalez,professionalbasketball)).
+0.0::athleteplayssport(wikigonzalez,professionalbasketball).
 athleteplayssport(toddwilliams, baseball).
-neg(athleteplayssport(toddwilliams,basketball)).
+0.0::athleteplayssport(toddwilliams,basketball).
 athleteplayssport(elimanning, football).
-neg(athleteplayssport(elimanning,tennis)).
+0.0::athleteplayssport(elimanning,tennis).
 athleteplayssport(scottschoeneweis, baseball).
-neg(athleteplayssport(scottschoeneweis,swimming)).
+0.0::athleteplayssport(scottschoeneweis,swimming).
 athleteplayssport(chrisburke, hockey).
-neg(athleteplayssport(chrisburke,football)).
+0.0::athleteplayssport(chrisburke,football).
 athleteplayssport(royhalladay, baseball).
-neg(athleteplayssport(royhalladay,cycling)).
+0.0::athleteplayssport(royhalladay,cycling).
 athleteplayssport(rickywilliams, football).
-neg(athleteplayssport(rickywilliams,softball)).
+0.0::athleteplayssport(rickywilliams,softball).
 athleteplayssport(ryangetzlaf, hockey).
-neg(athleteplayssport(ryangetzlaf,collegebaseball)).
+0.0::athleteplayssport(ryangetzlaf,collegebaseball).
 athleteplayssport(kerrycollins, football).
-neg(athleteplayssport(kerrycollins,softball)).
+0.0::athleteplayssport(kerrycollins,softball).
 athleteplayssport(kentakahashi, baseball).
-neg(athleteplayssport(kentakahashi,wrestling)).
+0.0::athleteplayssport(kentakahashi,wrestling).
 athleteplayssport(homerbailey, baseball).
-neg(athleteplayssport(homerbailey,boxing)).
+0.0::athleteplayssport(homerbailey,boxing).
 athleteplayssport(jasongrilli, baseball).
-neg(athleteplayssport(jasongrilli,sailing)).
+0.0::athleteplayssport(jasongrilli,sailing).
 athleteplayssport(kevinhart, baseball).
-neg(athleteplayssport(kevinhart,softball)).
+0.0::athleteplayssport(kevinhart,softball).
 athleteplayssport(petermatkovitch, golf).
-neg(athleteplayssport(petermatkovitch,basketball)).
+0.0::athleteplayssport(petermatkovitch,basketball).
 athleteplayssport(shawnchacon, baseball).
-neg(athleteplayssport(shawnchacon,boxing)).
+0.0::athleteplayssport(shawnchacon,boxing).
 athleteplayssport(denniseckersley, baseball).
-neg(athleteplayssport(denniseckersley,trackandfield)).
+0.0::athleteplayssport(denniseckersley,trackandfield).
 athleteplayssport(daviddejesus, baseball).
-neg(athleteplayssport(daviddejesus,sailing)).
+0.0::athleteplayssport(daviddejesus,sailing).
 athleteplayssport(scotshields, baseball).
-neg(athleteplayssport(scotshields,basketball)).
+0.0::athleteplayssport(scotshields,basketball).
 athleteplayssport(markbrunell, football).
-neg(athleteplayssport(markbrunell,professionalbasketball)).
+0.0::athleteplayssport(markbrunell,professionalbasketball).
 athleteplayssport(jamiemoyer, baseball).
-neg(athleteplayssport(jamiemoyer,collegebaseball)).
+0.0::athleteplayssport(jamiemoyer,collegebaseball).
 athleteplayssport(josemercedes, baseball).
-neg(athleteplayssport(josemercedes,golf)).
+0.0::athleteplayssport(josemercedes,golf).
 athleteplayssport(alfredosimon, baseball).
-neg(athleteplayssport(alfredosimon,wrestling)).
+0.0::athleteplayssport(alfredosimon,wrestling).
 athleteplayssport(jjputz, baseball).
-neg(athleteplayssport(jjputz,soccer)).
+0.0::athleteplayssport(jjputz,soccer).
 athleteplayssport(brandonmccarthy, baseball).
-neg(athleteplayssport(brandonmccarthy,swimming)).
+0.0::athleteplayssport(brandonmccarthy,swimming).
 athleteplayssport(felixrodriguez, baseball).
-neg(athleteplayssport(felixrodriguez,collegebaseball)).
+0.0::athleteplayssport(felixrodriguez,collegebaseball).
 athleteplayssport(billybutler, baseball).
-neg(athleteplayssport(billybutler,hockey)).
+0.0::athleteplayssport(billybutler,hockey).
 athleteplayssport(brayanvillarreal, baseball).
-neg(athleteplayssport(brayanvillarreal,golf)).
+0.0::athleteplayssport(brayanvillarreal,golf).
 athleteplayssport(bartstarr, football).
-neg(athleteplayssport(bartstarr,tennis)).
+0.0::athleteplayssport(bartstarr,tennis).
 athleteplayssport(stevefinley, baseball).
-neg(athleteplayssport(stevefinley,cycling)).
+0.0::athleteplayssport(stevefinley,cycling).
 athleteplayssport(bretboone, baseball).
-neg(athleteplayssport(bretboone,trackandfield)).
+0.0::athleteplayssport(bretboone,trackandfield).
 athleteplayssport(chrismichalak, baseball).
-neg(athleteplayssport(chrismichalak,basketball)).
+0.0::athleteplayssport(chrismichalak,basketball).
 athleteplayssport(odalisperez, baseball).
-neg(athleteplayssport(odalisperez,tennis)).
+0.0::athleteplayssport(odalisperez,tennis).
 athleteplayssport(vicentepadilla, baseball).
-neg(athleteplayssport(vicentepadilla,professionalfootball)).
+0.0::athleteplayssport(vicentepadilla,professionalfootball).
 athleteplayssport(brianshouse, baseball).
-neg(athleteplayssport(brianshouse,sailing)).
+0.0::athleteplayssport(brianshouse,sailing).
 athleteplayssport(vernonforrest, boxing).
-neg(athleteplayssport(vernonforrest,tennis)).
+0.0::athleteplayssport(vernonforrest,tennis).
 athleteplayssport(brandonbacke, baseball).
-neg(athleteplayssport(brandonbacke,hockey)).
+0.0::athleteplayssport(brandonbacke,hockey).
 athleteplayssport(jacobturner, baseball).
-neg(athleteplayssport(jacobturner,trackandfield)).
+0.0::athleteplayssport(jacobturner,trackandfield).
 athleteplayssport(russortiz, baseball).
-neg(athleteplayssport(russortiz,professionalfootball)).
+0.0::athleteplayssport(russortiz,professionalfootball).
 athleteplayssport(chrisjohnson, football).
-neg(athleteplayssport(chrisjohnson,carracing)).
+0.0::athleteplayssport(chrisjohnson,carracing).
 athleteplayssport(jeffsamardzija, baseball).
-neg(athleteplayssport(jeffsamardzija,sailing)).
+0.0::athleteplayssport(jeffsamardzija,sailing).
 athleteplayssport(adameaton, baseball).
-neg(athleteplayssport(adameaton,trackandfield)).
+0.0::athleteplayssport(adameaton,trackandfield).
 athleteplayssport(donovanmcnabb, football).
-neg(athleteplayssport(donovanmcnabb,baseball)).
+0.0::athleteplayssport(donovanmcnabb,baseball).
 athleteplayssport(michaelvick, football).
-neg(athleteplayssport(michaelvick,carracing)).
+0.0::athleteplayssport(michaelvick,carracing).
 athleteplayssport(nickadenhart, baseball).
-neg(athleteplayssport(nickadenhart,wrestling)).
+0.0::athleteplayssport(nickadenhart,wrestling).
 athleteplayssport(colinmontgomerie, golf).
-neg(athleteplayssport(colinmontgomerie,collegebaseball)).
+0.0::athleteplayssport(colinmontgomerie,collegebaseball).
 athleteplayssport(luishernandez, baseball).
-neg(athleteplayssport(luishernandez,professionalbasketball)).
+0.0::athleteplayssport(luishernandez,professionalbasketball).
 athleteplayssport(joshbanks, baseball).
-neg(athleteplayssport(joshbanks,tennis)).
+0.0::athleteplayssport(joshbanks,tennis).
 athleteplayssport(joncoutlangus, baseball).
-neg(athleteplayssport(joncoutlangus,football)).
+0.0::athleteplayssport(joncoutlangus,football).
 athleteplayssport(mattwhite, baseball).
-neg(athleteplayssport(mattwhite,hockey)).
+0.0::athleteplayssport(mattwhite,hockey).
 athleteplayssport(timwood, baseball).
-neg(athleteplayssport(timwood,basketball)).
+0.0::athleteplayssport(timwood,basketball).
 athleteplayssport(andycavazos, baseball).
-neg(athleteplayssport(andycavazos,hockey)).
+0.0::athleteplayssport(andycavazos,hockey).
 athleteplayssport(alaysoler, baseball).
-neg(athleteplayssport(alaysoler,boxing)).
+0.0::athleteplayssport(alaysoler,boxing).
 athleteplayssport(pedrostrop, baseball).
-neg(athleteplayssport(pedrostrop,sailing)).
+0.0::athleteplayssport(pedrostrop,sailing).
 athleteplayssport(joshfogg, baseball).
-neg(athleteplayssport(joshfogg,soccer)).
+0.0::athleteplayssport(joshfogg,soccer).
 athleteplayssport(mattjoyce, baseball).
-neg(athleteplayssport(mattjoyce,professionalfootball)).
+0.0::athleteplayssport(mattjoyce,professionalfootball).
 athleteplayssport(mitchstetter, baseball).
-neg(athleteplayssport(mitchstetter,cycling)).
+0.0::athleteplayssport(mitchstetter,cycling).
 athleteplayssport(warnermadrigal, baseball).
-neg(athleteplayssport(warnermadrigal,cycling)).
+0.0::athleteplayssport(warnermadrigal,cycling).
 athleteplayssport(josesantiago, baseball).
-neg(athleteplayssport(josesantiago,football)).
+0.0::athleteplayssport(josesantiago,football).
 athleteplayssport(dangiese, baseball).
-neg(athleteplayssport(dangiese,soccer)).
+0.0::athleteplayssport(dangiese,soccer).
 athleteplayssport(dannygranger, basketball).
-neg(athleteplayssport(dannygranger,soccer)).
+0.0::athleteplayssport(dannygranger,soccer).
 athleteplayssport(johnhalama, baseball).
-neg(athleteplayssport(johnhalama,collegebaseball)).
+0.0::athleteplayssport(johnhalama,collegebaseball).
 athleteplayssport(joshroenicke, baseball).
-neg(athleteplayssport(joshroenicke,sailing)).
+0.0::athleteplayssport(joshroenicke,sailing).
 athleteplayssport(darrenmcfadden, football).
-neg(athleteplayssport(darrenmcfadden,cycling)).
+0.0::athleteplayssport(darrenmcfadden,cycling).
 athleteplayssport(berniewilliams, baseball).
-neg(athleteplayssport(berniewilliams,wrestling)).
+0.0::athleteplayssport(berniewilliams,wrestling).
 athleteplayssport(holliday, baseball).
-neg(athleteplayssport(holliday,cycling)).
+0.0::athleteplayssport(holliday,cycling).
 athleteplayssport(rickyromero, baseball).
-neg(athleteplayssport(rickyromero,collegebaseball)).
+0.0::athleteplayssport(rickyromero,collegebaseball).
 athleteplayssport(billytraber, baseball).
-neg(athleteplayssport(billytraber,hockey)).
+0.0::athleteplayssport(billytraber,hockey).
 athleteplayssport(marklowe, baseball).
-neg(athleteplayssport(marklowe,professionalbasketball)).
+0.0::athleteplayssport(marklowe,professionalbasketball).
 athleteplayssport(eugeniovelez, football).
-neg(athleteplayssport(eugeniovelez,golf)).
+0.0::athleteplayssport(eugeniovelez,golf).
 athleteplayssport(andremiller, baseball).
-neg(athleteplayssport(andremiller,football)).
+0.0::athleteplayssport(andremiller,football).
 athleteplayssport(robertvonhagge, golf).
-neg(athleteplayssport(robertvonhagge,cycling)).
+0.0::athleteplayssport(robertvonhagge,cycling).
 athleteplayssport(michaeldunn, baseball).
-neg(athleteplayssport(michaeldunn,golfing)).
+0.0::athleteplayssport(michaeldunn,golfing).
 athleteplayssport(jonathanstewart, football).
-neg(athleteplayssport(jonathanstewart,professionalfootball)).
+0.0::athleteplayssport(jonathanstewart,professionalfootball).
 athleteplayssport(shinsoochoo, baseball).
-neg(athleteplayssport(shinsoochoo,hockey)).
+0.0::athleteplayssport(shinsoochoo,hockey).
 athleteplayssport(bernardhopkins, boxing).
-neg(athleteplayssport(bernardhopkins,professionalfootball)).
+0.0::athleteplayssport(bernardhopkins,professionalfootball).
 athleteplayssport(shaq, basketball).
-neg(athleteplayssport(shaq,professionalfootball)).
+0.0::athleteplayssport(shaq,professionalfootball).
 athleteplayssport(ezequielastacio, baseball).
-neg(athleteplayssport(ezequielastacio,swimming)).
+0.0::athleteplayssport(ezequielastacio,swimming).
 athleteplayssport(tomweiskopf, golf).
-neg(athleteplayssport(tomweiskopf,soccer)).
+0.0::athleteplayssport(tomweiskopf,soccer).
 athleteplayssport(geoffjenkins, baseball).
-neg(athleteplayssport(geoffjenkins,trackandfield)).
+0.0::athleteplayssport(geoffjenkins,trackandfield).
 athleteplayssport(juliantavarez, baseball).
-neg(athleteplayssport(juliantavarez,football)).
+0.0::athleteplayssport(juliantavarez,football).
 athleteplayssport(drewbledsoe, baseball).
-neg(athleteplayssport(drewbledsoe,professionalbasketball)).
+0.0::athleteplayssport(drewbledsoe,professionalbasketball).
 athleteplayssport(terrybradshaw, professionalfootball).
-neg(athleteplayssport(terrybradshaw,golf)).
+0.0::athleteplayssport(terrybradshaw,golf).
 athleteplayssport(johnvanbenschoten, baseball).
-neg(athleteplayssport(johnvanbenschoten,professionalfootball)).
+0.0::athleteplayssport(johnvanbenschoten,professionalfootball).
 athleteplayssport(trentedwards, football).
-neg(athleteplayssport(trentedwards,tennis)).
+0.0::athleteplayssport(trentedwards,tennis).
 athleteplayssport(brandonmedders, baseball).
-neg(athleteplayssport(brandonmedders,lacrosse)).
+0.0::athleteplayssport(brandonmedders,lacrosse).
 athleteplayssport(chrisnarveson, baseball).
-neg(athleteplayssport(chrisnarveson,hockey)).
+0.0::athleteplayssport(chrisnarveson,hockey).
 athleteplayssport(claytonrichard, baseball).
-neg(athleteplayssport(claytonrichard,soccer)).
+0.0::athleteplayssport(claytonrichard,soccer).
 athleteplayssport(tommastny, baseball).
-neg(athleteplayssport(tommastny,collegebaseball)).
+0.0::athleteplayssport(tommastny,collegebaseball).
 athleteplayssport(rubenmateo, hockey).
-neg(athleteplayssport(rubenmateo,swimming)).
+0.0::athleteplayssport(rubenmateo,swimming).
 athleteplayssport(gorzelanny, baseball).
-neg(athleteplayssport(gorzelanny,wrestling)).
+0.0::athleteplayssport(gorzelanny,wrestling).
 athleteplayssport(deshaunfoster, football).
-neg(athleteplayssport(deshaunfoster,soccer)).
+0.0::athleteplayssport(deshaunfoster,soccer).
 athleteplayssport(francoharris, football).
-neg(athleteplayssport(francoharris,hockey)).
+0.0::athleteplayssport(francoharris,hockey).
 athleteplayssport(jeredweaver, baseball).
-neg(athleteplayssport(jeredweaver,golf)).
+0.0::athleteplayssport(jeredweaver,golf).
 athleteplayssport(jasonkapono, basketball).
-neg(athleteplayssport(jasonkapono,collegebaseball)).
+0.0::athleteplayssport(jasonkapono,collegebaseball).
 athleteplayssport(roberttrentjonesjr, golf).
-neg(athleteplayssport(roberttrentjonesjr,wrestling)).
+0.0::athleteplayssport(roberttrentjonesjr,wrestling).
 athleteplayssport(ronvillone, baseball).
-neg(athleteplayssport(ronvillone,swimming)).
+0.0::athleteplayssport(ronvillone,swimming).
 athleteplayssport(macaymcbride, baseball).
-neg(athleteplayssport(macaymcbride,lacrosse)).
+0.0::athleteplayssport(macaymcbride,lacrosse).
 athleteplayssport(crede, baseball).
-neg(athleteplayssport(crede,football)).
+0.0::athleteplayssport(crede,football).
 athleteplayssport(winkywright, boxing).
-neg(athleteplayssport(winkywright,collegebaseball)).
+0.0::athleteplayssport(winkywright,collegebaseball).
 athleteplayssport(yogiberra, baseball).
-neg(athleteplayssport(yogiberra,golfing)).
+0.0::athleteplayssport(yogiberra,golfing).
 athleteplayssport(markloretta, baseball).
-neg(athleteplayssport(markloretta,hockey)).
+0.0::athleteplayssport(markloretta,hockey).
 athleteplayssport(humbertosanchez, baseball).
-neg(athleteplayssport(humbertosanchez,wrestling)).
+0.0::athleteplayssport(humbertosanchez,wrestling).
 athleteplayssport(michaelbowden, baseball).
-neg(athleteplayssport(michaelbowden,tennis)).
+0.0::athleteplayssport(michaelbowden,tennis).
 athleteplayssport(jerrygil, baseball).
-neg(athleteplayssport(jerrygil,golf)).
+0.0::athleteplayssport(jerrygil,golf).
 athleteplayssport(ausmus, baseball).
-neg(athleteplayssport(ausmus,golfing)).
+0.0::athleteplayssport(ausmus,golfing).
 athleteplayssport(adambostick, baseball).
-neg(athleteplayssport(adambostick,golf)).
+0.0::athleteplayssport(adambostick,golf).
 athleteplayssport(billmazeroski, baseball).
-neg(athleteplayssport(billmazeroski,golfing)).
+0.0::athleteplayssport(billmazeroski,golfing).
 athleteplayssport(miguelcairo, baseball).
-neg(athleteplayssport(miguelcairo,cycling)).
+0.0::athleteplayssport(miguelcairo,cycling).
 athleteplayssport(mikepiazza, baseball).
-neg(athleteplayssport(mikepiazza,golfing)).
+0.0::athleteplayssport(mikepiazza,golfing).
 athleteplayssport(chriswoodward, baseball).
-neg(athleteplayssport(chriswoodward,lacrosse)).
+0.0::athleteplayssport(chriswoodward,lacrosse).
 athleteplayssport(juanmorillo, baseball).
-neg(athleteplayssport(juanmorillo,hockey)).
+0.0::athleteplayssport(juanmorillo,hockey).
 athleteplayssport(johnkoronka, baseball).
-neg(athleteplayssport(johnkoronka,professionalfootball)).
+0.0::athleteplayssport(johnkoronka,professionalfootball).
 athleteplayssport(jasonperry, baseball).
-neg(athleteplayssport(jasonperry,swimming)).
+0.0::athleteplayssport(jasonperry,swimming).
 athleteplayssport(tombendelow, golf).
-neg(athleteplayssport(tombendelow,soccer)).
+0.0::athleteplayssport(tombendelow,soccer).
 athleteplayssport(devonlowery, baseball).
-neg(athleteplayssport(devonlowery,boxing)).
+0.0::athleteplayssport(devonlowery,boxing).
 athleteplayssport(steveaustin, wrestling).
-neg(athleteplayssport(steveaustin,baseball)).
+0.0::athleteplayssport(steveaustin,baseball).
 athleteplayssport(brianduensing, baseball).
-neg(athleteplayssport(brianduensing,professionalbasketball)).
+0.0::athleteplayssport(brianduensing,professionalbasketball).
 athleteplayssport(reggiesmith, baseball).
-neg(athleteplayssport(reggiesmith,tennis)).
+0.0::athleteplayssport(reggiesmith,tennis).
 athleteplayssport(dustinrichardson, baseball).
-neg(athleteplayssport(dustinrichardson,wrestling)).
+0.0::athleteplayssport(dustinrichardson,wrestling).
 athleteplayssport(romancolon, baseball).
-neg(athleteplayssport(romancolon,cycling)).
+0.0::athleteplayssport(romancolon,cycling).
 athleteplayssport(stevesmyers, golf).
-neg(athleteplayssport(stevesmyers,baseball)).
+0.0::athleteplayssport(stevesmyers,baseball).
 athleteplayssport(michaelrobinson, football).
-neg(athleteplayssport(michaelrobinson,sailing)).
+0.0::athleteplayssport(michaelrobinson,sailing).
 athleteplayssport(tedmcanlis, golf).
-neg(athleteplayssport(tedmcanlis,boxing)).
+0.0::athleteplayssport(tedmcanlis,boxing).
 athleteplayssport(jermainedye, baseball).
-neg(athleteplayssport(jermainedye,boxing)).
+0.0::athleteplayssport(jermainedye,boxing).
 athleteplayssport(urlacher, football).
-neg(athleteplayssport(urlacher,collegebaseball)).
+0.0::athleteplayssport(urlacher,collegebaseball).
 athleteplayssport(jordanstaal, hockey).
-neg(athleteplayssport(jordanstaal,collegebaseball)).
+0.0::athleteplayssport(jordanstaal,collegebaseball).
 athleteplayssport(isidromarquez, baseball).
-neg(athleteplayssport(isidromarquez,tennis)).
+0.0::athleteplayssport(isidromarquez,tennis).
 athleteplayssport(mcgwire, baseball).
-neg(athleteplayssport(mcgwire,soccer)).
+0.0::athleteplayssport(mcgwire,soccer).
 athleteplayssport(bobbykorecky, baseball).
-neg(athleteplayssport(bobbykorecky,sailing)).
+0.0::athleteplayssport(bobbykorecky,sailing).
 athleteplayssport(jasonjennings, baseball).
-neg(athleteplayssport(jasonjennings,wrestling)).
+0.0::athleteplayssport(jasonjennings,wrestling).
 athleteplayssport(justinmiller, baseball).
-neg(athleteplayssport(justinmiller,football)).
+0.0::athleteplayssport(justinmiller,football).
 athleteplayssport(chrisreitsma, baseball).
-neg(athleteplayssport(chrisreitsma,softball)).
+0.0::athleteplayssport(chrisreitsma,softball).
 athleteplayssport(markdifelice, baseball).
-neg(athleteplayssport(markdifelice,trackandfield)).
+0.0::athleteplayssport(markdifelice,trackandfield).
 athleteplayssport(jermaintaylor, boxing).
-neg(athleteplayssport(jermaintaylor,sailing)).
+0.0::athleteplayssport(jermaintaylor,sailing).
 athleteplayssport(bengraham, football).
-neg(athleteplayssport(bengraham,hockey)).
+0.0::athleteplayssport(bengraham,hockey).
 athleteplayssport(miketimlin, baseball).
-neg(athleteplayssport(miketimlin,soccer)).
+0.0::athleteplayssport(miketimlin,soccer).
 athleteplayssport(jonleicester, baseball).
-neg(athleteplayssport(jonleicester,basketball)).
+0.0::athleteplayssport(jonleicester,basketball).
 athleteplayssport(jefftam, baseball).
-neg(athleteplayssport(jefftam,professionalbasketball)).
+0.0::athleteplayssport(jefftam,professionalbasketball).
 athleteplayssport(blakehawksworth, baseball).
-neg(athleteplayssport(blakehawksworth,trackandfield)).
+0.0::athleteplayssport(blakehawksworth,trackandfield).
 athleteplayssport(nickfaldo, golf).
-neg(athleteplayssport(nickfaldo,football)).
+0.0::athleteplayssport(nickfaldo,football).
 athleteplayssport(stevewoodard, baseball).
-neg(athleteplayssport(stevewoodard,golf)).
+0.0::athleteplayssport(stevewoodard,golf).
 athleteplayssport(jeffkarstens, baseball).
-neg(athleteplayssport(jeffkarstens,professionalbasketball)).
+0.0::athleteplayssport(jeffkarstens,professionalbasketball).
 athleteplayssport(sheltonbenjamin, wrestling).
-neg(athleteplayssport(sheltonbenjamin,sailing)).
+0.0::athleteplayssport(sheltonbenjamin,sailing).
 athleteplayssport(hunterjones, baseball).
-neg(athleteplayssport(hunterjones,golf)).
+0.0::athleteplayssport(hunterjones,golf).
 athleteplayssport(noahlowry, baseball).
-neg(athleteplayssport(noahlowry,football)).
+0.0::athleteplayssport(noahlowry,football).
 athleteplayssport(denardspan, baseball).
-neg(athleteplayssport(denardspan,boxing)).
+0.0::athleteplayssport(denardspan,boxing).
 athleteplayssport(mattryan, football).
-neg(athleteplayssport(mattryan,professionalfootball)).
+0.0::athleteplayssport(mattryan,professionalfootball).
 athleteplayssport(kenyonmartin, basketball).
-neg(athleteplayssport(kenyonmartin,hockey)).
+0.0::athleteplayssport(kenyonmartin,hockey).
 athleteplayssport(howieclark, baseball).
-neg(athleteplayssport(howieclark,tennis)).
+0.0::athleteplayssport(howieclark,tennis).
 athleteplayssport(mikeparisi, baseball).
-neg(athleteplayssport(mikeparisi,swimming)).
+0.0::athleteplayssport(mikeparisi,swimming).
 athleteplayssport(kylelohse, baseball).
-neg(athleteplayssport(kylelohse,swimming)).
+0.0::athleteplayssport(kylelohse,swimming).
 athleteplayssport(kameronloe, baseball).
-neg(athleteplayssport(kameronloe,hockey)).
+0.0::athleteplayssport(kameronloe,hockey).
 athleteplayssport(ccsabathia, baseball).
-neg(athleteplayssport(ccsabathia,swimming)).
+0.0::athleteplayssport(ccsabathia,swimming).
 athleteplayssport(bobwickman, baseball).
-neg(athleteplayssport(bobwickman,lacrosse)).
+0.0::athleteplayssport(bobwickman,lacrosse).
 athleteplayssport(sting, wrestling).
-neg(athleteplayssport(sting,cycling)).
+0.0::athleteplayssport(sting,cycling).
 athleteplayssport(nathanhaynes, baseball).
-neg(athleteplayssport(nathanhaynes,swimming)).
+0.0::athleteplayssport(nathanhaynes,swimming).
 athleteplayssport(jasongarrett, football).
-neg(athleteplayssport(jasongarrett,cycling)).
+0.0::athleteplayssport(jasongarrett,cycling).
 athleteplayssport(andrewbynum, baseball).
-neg(athleteplayssport(andrewbynum,football)).
+0.0::athleteplayssport(andrewbynum,football).
 athleteplayssport(richharden, baseball).
-neg(athleteplayssport(richharden,carracing)).
+0.0::athleteplayssport(richharden,carracing).
 athleteplayssport(russspringer, baseball).
-neg(athleteplayssport(russspringer,hockey)).
+0.0::athleteplayssport(russspringer,hockey).
 athleteplayssport(toddcoffey, baseball).
-neg(athleteplayssport(toddcoffey,trackandfield)).
+0.0::athleteplayssport(toddcoffey,trackandfield).
 athleteplayssport(gregburke, baseball).
-neg(athleteplayssport(gregburke,golfing)).
+0.0::athleteplayssport(gregburke,golfing).
 athleteplayssport(johnlackey, baseball).
-neg(athleteplayssport(johnlackey,sailing)).
+0.0::athleteplayssport(johnlackey,sailing).
 athleteplayssport(justinthomas, baseball).
-neg(athleteplayssport(justinthomas,professionalbasketball)).
+0.0::athleteplayssport(justinthomas,professionalbasketball).
 athleteplayssport(seanrodriguez, baseball).
-neg(athleteplayssport(seanrodriguez,sailing)).
+0.0::athleteplayssport(seanrodriguez,sailing).
 athleteplayssport(rickvandenhurk, baseball).
-neg(athleteplayssport(rickvandenhurk,collegebaseball)).
+0.0::athleteplayssport(rickvandenhurk,collegebaseball).
 athleteplayssport(redgrange, football).
-neg(athleteplayssport(redgrange,wrestling)).
+0.0::athleteplayssport(redgrange,wrestling).
 athleteplayssport(rickankiel, football).
-neg(athleteplayssport(rickankiel,cycling)).
+0.0::athleteplayssport(rickankiel,cycling).
 athleteplayssport(jesseenglish, baseball).
-neg(athleteplayssport(jesseenglish,cycling)).
+0.0::athleteplayssport(jesseenglish,cycling).
 athleteplayssport(kevinyoukilis, baseball).
-neg(athleteplayssport(kevinyoukilis,golf)).
+0.0::athleteplayssport(kevinyoukilis,golf).
 athleteplayssport(georgecobb, golf).
-neg(athleteplayssport(georgecobb,lacrosse)).
+0.0::athleteplayssport(georgecobb,lacrosse).
 athleteplayssport(jeremyshockey, football).
-neg(athleteplayssport(jeremyshockey,golf)).
+0.0::athleteplayssport(jeremyshockey,golf).
 athleteplayssport(adrianbeltre, baseball).
-neg(athleteplayssport(adrianbeltre,tennis)).
+0.0::athleteplayssport(adrianbeltre,tennis).
 athleteplayssport(tomglavine, baseball).
-neg(athleteplayssport(tomglavine,cycling)).
+0.0::athleteplayssport(tomglavine,cycling).
 athleteplayssport(davidherndon, baseball).
-neg(athleteplayssport(davidherndon,cycling)).
+0.0::athleteplayssport(davidherndon,cycling).
 athleteplayssport(lennydinardo, baseball).
-neg(athleteplayssport(lennydinardo,hockey)).
+0.0::athleteplayssport(lennydinardo,hockey).
 athleteplayssport(joewebb, baseball).
-neg(athleteplayssport(joewebb,professionalfootball)).
+0.0::athleteplayssport(joewebb,professionalfootball).
 athleteplayssport(patrafter, tennis).
-neg(athleteplayssport(patrafter,baseball)).
+0.0::athleteplayssport(patrafter,baseball).
 athleteplayssport(reggiewhite, football).
-neg(athleteplayssport(reggiewhite,soccer)).
+0.0::athleteplayssport(reggiewhite,soccer).
 athleteplayssport(jacobcruz, baseball).
-neg(athleteplayssport(jacobcruz,soccer)).
+0.0::athleteplayssport(jacobcruz,soccer).
 athleteplayssport(kevinmillar, baseball).
-neg(athleteplayssport(kevinmillar,professionalbasketball)).
+0.0::athleteplayssport(kevinmillar,professionalbasketball).
 athleteplayssport(doumit, baseball).
-neg(athleteplayssport(doumit,cycling)).
+0.0::athleteplayssport(doumit,cycling).
 athleteplayssport(anthonymorrow, basketball).
-neg(athleteplayssport(anthonymorrow,golf)).
+0.0::athleteplayssport(anthonymorrow,golf).
 athleteplayssport(tikibarber, football).
-neg(athleteplayssport(tikibarber,softball)).
+0.0::athleteplayssport(tikibarber,softball).
 athleteplayssport(oscardelahoya, boxing).
-neg(athleteplayssport(oscardelahoya,lacrosse)).
+0.0::athleteplayssport(oscardelahoya,lacrosse).
 athleteplayssport(floydmayweatherjr, boxing).
-neg(athleteplayssport(floydmayweatherjr,golfing)).
+0.0::athleteplayssport(floydmayweatherjr,golfing).
 athleteplayssport(justinjones, baseball).
-neg(athleteplayssport(justinjones,lacrosse)).
+0.0::athleteplayssport(justinjones,lacrosse).
 athleteplayssport(petedye, golf).
-neg(athleteplayssport(petedye,baseball)).
+0.0::athleteplayssport(petedye,baseball).
 athleteplayssport(esmerlingvasquez, baseball).
-neg(athleteplayssport(esmerlingvasquez,sailing)).
+0.0::athleteplayssport(esmerlingvasquez,sailing).
 athleteplayssport(jeffniemann, baseball).
-neg(athleteplayssport(jeffniemann,trackandfield)).
+0.0::athleteplayssport(jeffniemann,trackandfield).
 athleteplayssport(jaycutler, football).
-neg(athleteplayssport(jaycutler,lacrosse)).
+0.0::athleteplayssport(jaycutler,lacrosse).
 athleteplayssport(bobbycarpenter, football).
-neg(athleteplayssport(bobbycarpenter,cycling)).
+0.0::athleteplayssport(bobbycarpenter,cycling).
 athleteplayssport(burkebadenhop, baseball).
-neg(athleteplayssport(burkebadenhop,cycling)).
+0.0::athleteplayssport(burkebadenhop,cycling).
 athleteplayssport(maratsafin, tennis).
-neg(athleteplayssport(maratsafin,collegebaseball)).
+0.0::athleteplayssport(maratsafin,collegebaseball).
 athleteplayssport(justinverlander, baseball).
-neg(athleteplayssport(justinverlander,lacrosse)).
+0.0::athleteplayssport(justinverlander,lacrosse).
 athleteplayssport(jimmygobble, baseball).
-neg(athleteplayssport(jimmygobble,swimming)).
+0.0::athleteplayssport(jimmygobble,swimming).
 athleteplayssport(dwaynejarrett, football).
-neg(athleteplayssport(dwaynejarrett,professionalbasketball)).
+0.0::athleteplayssport(dwaynejarrett,professionalbasketball).
 athleteplayssport(scottlinebrink, baseball).
-neg(athleteplayssport(scottlinebrink,golfing)).
+0.0::athleteplayssport(scottlinebrink,golfing).
 athleteplayssport(jacknicklausandpetedye, golf).
-neg(athleteplayssport(jacknicklausandpetedye,softball)).
+0.0::athleteplayssport(jacknicklausandpetedye,softball).
 athleteplayssport(brendanshanahan, hockey).
-neg(athleteplayssport(brendanshanahan,professionalfootball)).
+0.0::athleteplayssport(brendanshanahan,professionalfootball).
 athleteplayssport(jasonkershner, baseball).
-neg(athleteplayssport(jasonkershner,tennis)).
+0.0::athleteplayssport(jasonkershner,tennis).
 athleteplayssport(rickystone, baseball).
-neg(athleteplayssport(rickystone,professionalbasketball)).
+0.0::athleteplayssport(rickystone,professionalbasketball).
 athleteplayssport(delhomme, football).
-neg(athleteplayssport(delhomme,swimming)).
+0.0::athleteplayssport(delhomme,swimming).
 athleteplayssport(dougflutie, football).
-neg(athleteplayssport(dougflutie,professionalfootball)).
+0.0::athleteplayssport(dougflutie,professionalfootball).
 athleteplayssport(brandonduckworth, baseball).
-neg(athleteplayssport(brandonduckworth,hockey)).
+0.0::athleteplayssport(brandonduckworth,hockey).
 athleteplayssport(shannonstewart, baseball).
-neg(athleteplayssport(shannonstewart,softball)).
+0.0::athleteplayssport(shannonstewart,softball).
 athleteplayssport(yormanbazardo, baseball).
-neg(athleteplayssport(yormanbazardo,sailing)).
+0.0::athleteplayssport(yormanbazardo,sailing).
 athleteplayssport(masakobayashi, baseball).
-neg(athleteplayssport(masakobayashi,wrestling)).
+0.0::athleteplayssport(masakobayashi,wrestling).
 athleteplayssport(chrisresop, baseball).
-neg(athleteplayssport(chrisresop,basketball)).
+0.0::athleteplayssport(chrisresop,basketball).
 athleteplayssport(kelvinjimenez, baseball).
-neg(athleteplayssport(kelvinjimenez,boxing)).
+0.0::athleteplayssport(kelvinjimenez,boxing).
 athleteplayssport(brianrogers, baseball).
-neg(athleteplayssport(brianrogers,hockey)).
+0.0::athleteplayssport(brianrogers,hockey).
 athleteplayssport(jefffiorentino, baseball).
-neg(athleteplayssport(jefffiorentino,wrestling)).
+0.0::athleteplayssport(jefffiorentino,wrestling).
 athleteplayssport(catcherloumarson, baseball).
-neg(athleteplayssport(catcherloumarson,collegebaseball)).
+0.0::athleteplayssport(catcherloumarson,collegebaseball).
 athleteplayssport(curtisgranderson, baseball).
-neg(athleteplayssport(curtisgranderson,golf)).
+0.0::athleteplayssport(curtisgranderson,golf).
 athleteplayssport(johnbale, baseball).
-neg(athleteplayssport(johnbale,tennis)).
+0.0::athleteplayssport(johnbale,tennis).
 athleteplayssport(chrisray, baseball).
-neg(athleteplayssport(chrisray,wrestling)).
+0.0::athleteplayssport(chrisray,wrestling).
 athleteplayssport(mattforte, hockey).
-neg(athleteplayssport(mattforte,football)).
+0.0::athleteplayssport(mattforte,football).
 athleteplayssport(eudebrito, baseball).
-neg(athleteplayssport(eudebrito,football)).
+0.0::athleteplayssport(eudebrito,football).
 athleteplayssport(joelperalta, baseball).
-neg(athleteplayssport(joelperalta,soccer)).
+0.0::athleteplayssport(joelperalta,soccer).
 athleteplayssport(mikeschmidt, baseball).
-neg(athleteplayssport(mikeschmidt,golfing)).
+0.0::athleteplayssport(mikeschmidt,golfing).
 athleteplayssport(brianwolfe, baseball).
-neg(athleteplayssport(brianwolfe,cycling)).
+0.0::athleteplayssport(brianwolfe,cycling).
 athleteplayssport(mannyaybar, baseball).
-neg(athleteplayssport(mannyaybar,swimming)).
+0.0::athleteplayssport(mannyaybar,swimming).
 athleteplayssport(larryfitzgerald, football).
-neg(athleteplayssport(larryfitzgerald,soccer)).
+0.0::athleteplayssport(larryfitzgerald,soccer).
 athleteplayssport(neftalifeliz, baseball).
-neg(athleteplayssport(neftalifeliz,collegebaseball)).
+0.0::athleteplayssport(neftalifeliz,collegebaseball).
 athleteplayssport(mikewilliams, football).
-neg(athleteplayssport(mikewilliams,professionalbasketball)).
+0.0::athleteplayssport(mikewilliams,professionalbasketball).
 athleteplayssport(brettanderson, baseball).
-neg(athleteplayssport(brettanderson,trackandfield)).
+0.0::athleteplayssport(brettanderson,trackandfield).
 athleteplayssport(favre, football).
-neg(athleteplayssport(favre,tennis)).
+0.0::athleteplayssport(favre,tennis).
 athleteplayssport(jarrodwashburn, baseball).
-neg(athleteplayssport(jarrodwashburn,wrestling)).
+0.0::athleteplayssport(jarrodwashburn,wrestling).
 athleteplayssport(bobcarpenter, baseball).
-neg(athleteplayssport(bobcarpenter,swimming)).
+0.0::athleteplayssport(bobcarpenter,swimming).
 athleteplayssport(ensberg, baseball).
-neg(athleteplayssport(ensberg,tennis)).
+0.0::athleteplayssport(ensberg,tennis).
 athleteplayssport(bobmccrory, baseball).
-neg(athleteplayssport(bobmccrory,professionalbasketball)).
+0.0::athleteplayssport(bobmccrory,professionalbasketball).
 athleteplayssport(chrissmith, baseball).
-neg(athleteplayssport(chrissmith,boxing)).
+0.0::athleteplayssport(chrissmith,boxing).
 athleteplayssport(bobgibson, baseball).
-neg(athleteplayssport(bobgibson,professionalbasketball)).
+0.0::athleteplayssport(bobgibson,professionalbasketball).
 athleteplayssport(brianlawrence, baseball).
-neg(athleteplayssport(brianlawrence,swimming)).
+0.0::athleteplayssport(brianlawrence,swimming).
 athleteplayssport(eduardoperez, baseball).
-neg(athleteplayssport(eduardoperez,cycling)).
+0.0::athleteplayssport(eduardoperez,cycling).
 athleteplayssport(bradbergesen, baseball).
-neg(athleteplayssport(bradbergesen,carracing)).
+0.0::athleteplayssport(bradbergesen,carracing).
 teamalsoknownas(pittsburghpenguins, carolinahurricaneshockey).
 teamalsoknownas(murraystate, stateuniversity).
 teamalsoknownas(stateuniversity, arkansasstateuniversity).
@@ -2286,7 +2287,7 @@ teamplayssport(dukeuniversity, basketball).
 teamplayssport(rams, football).
 teamplayssport(templeuniversity, basketball).
 teamplayssport(louiscardinals, baseball).
-end(model(f1)).
+end(model(f1).
 
 teamplaysinleague(floridaamrattlers, ncaa).
 teamplaysinleague(chicagostcougars, ncaa).
@@ -2589,691 +2590,691 @@ teamplaysinleague(cumberlandbulldogs, ncaa).
 teamplaysinleague(depauwtigers, ncaa).
 teamplaysinleague(atlanticsunconference, ncaa).
 athleteplayssport(vonhagge, golf).
-neg(athleteplayssport(vonhagge,carracing)).
+0.0::athleteplayssport(vonhagge,carracing).
 athleteplayssport(adamwainwright, baseball).
-neg(athleteplayssport(adamwainwright,trackandfield)).
+0.0::athleteplayssport(adamwainwright,trackandfield).
 athleteplayssport(jeremyjeffress, baseball).
-neg(athleteplayssport(jeremyjeffress,football)).
+0.0::athleteplayssport(jeremyjeffress,football).
 athleteplayssport(mikezagurski, baseball).
-neg(athleteplayssport(mikezagurski,cycling)).
+0.0::athleteplayssport(mikezagurski,cycling).
 athleteplayssport(billmueller, baseball).
-neg(athleteplayssport(billmueller,boxing)).
+0.0::athleteplayssport(billmueller,boxing).
 athleteplayssport(bartolomefortunato, baseball).
-neg(athleteplayssport(bartolomefortunato,cycling)).
+0.0::athleteplayssport(bartolomefortunato,cycling).
 athleteplayssport(jessefoppert, baseball).
-neg(athleteplayssport(jessefoppert,professionalfootball)).
+0.0::athleteplayssport(jessefoppert,professionalfootball).
 athleteplayssport(antoniomargarito, boxing).
-neg(athleteplayssport(antoniomargarito,tennis)).
+0.0::athleteplayssport(antoniomargarito,tennis).
 athleteplayssport(evgeninabokov, hockey).
-neg(athleteplayssport(evgeninabokov,softball)).
+0.0::athleteplayssport(evgeninabokov,softball).
 athleteplayssport(timspooneybarger, baseball).
-neg(athleteplayssport(timspooneybarger,basketball)).
+0.0::athleteplayssport(timspooneybarger,basketball).
 athleteplayssport(davideckstein, football).
-neg(athleteplayssport(davideckstein,baseball)).
+0.0::athleteplayssport(davideckstein,baseball).
 athleteplayssport(metsthirdbasemandavidwright, baseball).
-neg(athleteplayssport(metsthirdbasemandavidwright,wrestling)).
+0.0::athleteplayssport(metsthirdbasemandavidwright,wrestling).
 athleteplayssport(kevinmench, baseball).
-neg(athleteplayssport(kevinmench,swimming)).
+0.0::athleteplayssport(kevinmench,swimming).
 athleteplayssport(brendanharris, baseball).
-neg(athleteplayssport(brendanharris,sailing)).
+0.0::athleteplayssport(brendanharris,sailing).
 athleteplayssport(stephenjackson, basketball).
-neg(athleteplayssport(stephenjackson,trackandfield)).
+0.0::athleteplayssport(stephenjackson,trackandfield).
 athleteplayssport(buddycarlyle, baseball).
-neg(athleteplayssport(buddycarlyle,professionalfootball)).
+0.0::athleteplayssport(buddycarlyle,professionalfootball).
 athleteplayssport(johngaub, baseball).
-neg(athleteplayssport(johngaub,professionalbasketball)).
+0.0::athleteplayssport(johngaub,professionalbasketball).
 athleteplayssport(robertmanuel, baseball).
-neg(athleteplayssport(robertmanuel,professionalfootball)).
+0.0::athleteplayssport(robertmanuel,professionalfootball).
 athleteplayssport(tonyabreu, baseball).
-neg(athleteplayssport(tonyabreu,collegebaseball)).
+0.0::athleteplayssport(tonyabreu,collegebaseball).
 athleteplayssport(haydenpenn, baseball).
-neg(athleteplayssport(haydenpenn,wrestling)).
+0.0::athleteplayssport(haydenpenn,wrestling).
 athleteplayssport(clintonportis, football).
-neg(athleteplayssport(clintonportis,wrestling)).
+0.0::athleteplayssport(clintonportis,wrestling).
 athleteplayssport(paulhornung, football).
-neg(athleteplayssport(paulhornung,golf)).
+0.0::athleteplayssport(paulhornung,golf).
 athleteplayssport(alexramirez, baseball).
-neg(athleteplayssport(alexramirez,lacrosse)).
+0.0::athleteplayssport(alexramirez,lacrosse).
 athleteplayssport(drewanderson, baseball).
-neg(athleteplayssport(drewanderson,boxing)).
+0.0::athleteplayssport(drewanderson,boxing).
 athleteplayssport(robinsontejeda, baseball).
-neg(athleteplayssport(robinsontejeda,lacrosse)).
+0.0::athleteplayssport(robinsontejeda,lacrosse).
 athleteplayssport(hongchihkuo, baseball).
-neg(athleteplayssport(hongchihkuo,softball)).
+0.0::athleteplayssport(hongchihkuo,softball).
 athleteplayssport(felipepaulino, baseball).
-neg(athleteplayssport(felipepaulino,professionalfootball)).
+0.0::athleteplayssport(felipepaulino,professionalfootball).
 athleteplayssport(vicdarensbourg, baseball).
-neg(athleteplayssport(vicdarensbourg,cycling)).
+0.0::athleteplayssport(vicdarensbourg,cycling).
 athleteplayssport(catcherjohnnyestrada, baseball).
-neg(athleteplayssport(catcherjohnnyestrada,professionalbasketball)).
+0.0::athleteplayssport(catcherjohnnyestrada,professionalbasketball).
 athleteplayssport(joeystyles, wrestling).
-neg(athleteplayssport(joeystyles,trackandfield)).
+0.0::athleteplayssport(joeystyles,trackandfield).
 athleteplayssport(charliehaeger, baseball).
-neg(athleteplayssport(charliehaeger,tennis)).
+0.0::athleteplayssport(charliehaeger,tennis).
 athleteplayssport(joekennedy, baseball).
-neg(athleteplayssport(joekennedy,hockey)).
+0.0::athleteplayssport(joekennedy,hockey).
 athleteplayssport(brianbarton, football).
-neg(athleteplayssport(brianbarton,golfing)).
+0.0::athleteplayssport(brianbarton,golfing).
 athleteplayssport(kevinmillwood, hockey).
-neg(athleteplayssport(kevinmillwood,professionalbasketball)).
+0.0::athleteplayssport(kevinmillwood,professionalbasketball).
 athleteplayssport(robbnen, football).
-neg(athleteplayssport(robbnen,hockey)).
+0.0::athleteplayssport(robbnen,hockey).
 athleteplayssport(scotteyre, baseball).
-neg(athleteplayssport(scotteyre,swimming)).
+0.0::athleteplayssport(scotteyre,swimming).
 athleteplayssport(jimjohnson, baseball).
-neg(athleteplayssport(jimjohnson,basketball)).
+0.0::athleteplayssport(jimjohnson,basketball).
 athleteplayssport(curtispainter, football).
-neg(athleteplayssport(curtispainter,basketball)).
+0.0::athleteplayssport(curtispainter,basketball).
 athleteplayssport(gerrycooney, boxing).
-neg(athleteplayssport(gerrycooney,professionalfootball)).
+0.0::athleteplayssport(gerrycooney,professionalfootball).
 athleteplayssport(aaronrakers, baseball).
-neg(athleteplayssport(aaronrakers,cycling)).
+0.0::athleteplayssport(aaronrakers,cycling).
 athleteplayssport(alexsanchez, baseball).
-neg(athleteplayssport(alexsanchez,swimming)).
+0.0::athleteplayssport(alexsanchez,swimming).
 athleteplayssport(royjonesjr, boxing).
-neg(athleteplayssport(royjonesjr,soccer)).
+0.0::athleteplayssport(royjonesjr,soccer).
 athleteplayssport(erikmorales, boxing).
-neg(athleteplayssport(erikmorales,tennis)).
+0.0::athleteplayssport(erikmorales,tennis).
 athleteplayssport(floydmayweather, boxing).
-neg(athleteplayssport(floydmayweather,tennis)).
+0.0::athleteplayssport(floydmayweather,tennis).
 athleteplayssport(lutherhackman, baseball).
-neg(athleteplayssport(lutherhackman,wrestling)).
+0.0::athleteplayssport(lutherhackman,wrestling).
 athleteplayssport(dennystark, baseball).
-neg(athleteplayssport(dennystark,hockey)).
+0.0::athleteplayssport(dennystark,hockey).
 athleteplayssport(coreypatterson, baseball).
-neg(athleteplayssport(coreypatterson,sailing)).
+0.0::athleteplayssport(coreypatterson,sailing).
 athleteplayssport(lorenzobarcelo, baseball).
-neg(athleteplayssport(lorenzobarcelo,professionalbasketball)).
+0.0::athleteplayssport(lorenzobarcelo,professionalbasketball).
 athleteplayssport(davethomas, golf).
-neg(athleteplayssport(davethomas,carracing)).
+0.0::athleteplayssport(davethomas,carracing).
 athleteplayssport(bubbasmith, football).
-neg(athleteplayssport(bubbasmith,golf)).
+0.0::athleteplayssport(bubbasmith,golf).
 athleteplayssport(joeranda, baseball).
-neg(athleteplayssport(joeranda,trackandfield)).
+0.0::athleteplayssport(joeranda,trackandfield).
 athleteplayssport(erikbedard, baseball).
-neg(athleteplayssport(erikbedard,carracing)).
+0.0::athleteplayssport(erikbedard,carracing).
 athleteplayssport(elimarrero, football).
-neg(athleteplayssport(elimarrero,boxing)).
+0.0::athleteplayssport(elimarrero,boxing).
 athleteplayssport(fernandorodney, baseball).
-neg(athleteplayssport(fernandorodney,collegebaseball)).
+0.0::athleteplayssport(fernandorodney,collegebaseball).
 athleteplayssport(michaelbarrett, baseball).
-neg(athleteplayssport(michaelbarrett,sailing)).
+0.0::athleteplayssport(michaelbarrett,sailing).
 athleteplayssport(brianfalkenborg, baseball).
-neg(athleteplayssport(brianfalkenborg,football)).
+0.0::athleteplayssport(brianfalkenborg,football).
 athleteplayssport(robinnelson, golf).
-neg(athleteplayssport(robinnelson,golfing)).
+0.0::athleteplayssport(robinnelson,golfing).
 athleteplayssport(philstockman, baseball).
-neg(athleteplayssport(philstockman,cycling)).
+0.0::athleteplayssport(philstockman,cycling).
 athleteplayssport(carlosguevara, baseball).
-neg(athleteplayssport(carlosguevara,golf)).
+0.0::athleteplayssport(carlosguevara,golf).
 athleteplayssport(sammybaugh, football).
-neg(athleteplayssport(sammybaugh,professionalbasketball)).
+0.0::athleteplayssport(sammybaugh,professionalbasketball).
 athleteplayssport(tonyparker, basketball).
-neg(athleteplayssport(tonyparker,golf)).
+0.0::athleteplayssport(tonyparker,golf).
 athleteplayssport(jasonhammel, baseball).
-neg(athleteplayssport(jasonhammel,basketball)).
+0.0::athleteplayssport(jasonhammel,basketball).
 athleteplayssport(rickeyhenderson, baseball).
-neg(athleteplayssport(rickeyhenderson,lacrosse)).
+0.0::athleteplayssport(rickeyhenderson,lacrosse).
 athleteplayssport(markteixeira, baseball).
-neg(athleteplayssport(markteixeira,softball)).
+0.0::athleteplayssport(markteixeira,softball).
 athleteplayssport(derrickharvey, football).
-neg(athleteplayssport(derrickharvey,hockey)).
+0.0::athleteplayssport(derrickharvey,hockey).
 athleteplayssport(chriscooley, football).
-neg(athleteplayssport(chriscooley,boxing)).
+0.0::athleteplayssport(chriscooley,boxing).
 athleteplayssport(dougslaten, baseball).
-neg(athleteplayssport(dougslaten,swimming)).
+0.0::athleteplayssport(dougslaten,swimming).
 athleteplayssport(takashisaito, baseball).
-neg(athleteplayssport(takashisaito,collegebaseball)).
+0.0::athleteplayssport(takashisaito,collegebaseball).
 athleteplayssport(billynash, basketball).
-neg(athleteplayssport(billynash,professionalbasketball)).
+0.0::athleteplayssport(billynash,professionalbasketball).
 athleteplayssport(roberttrentjonesii, golf).
-neg(athleteplayssport(roberttrentjonesii,wrestling)).
+0.0::athleteplayssport(roberttrentjonesii,wrestling).
 athleteplayssport(hulkhogan, wrestling).
-neg(athleteplayssport(hulkhogan,golfing)).
+0.0::athleteplayssport(hulkhogan,golfing).
 athleteplayssport(rashardmendenhall, football).
-neg(athleteplayssport(rashardmendenhall,collegebaseball)).
+0.0::athleteplayssport(rashardmendenhall,collegebaseball).
 athleteplayssport(andrewsisco, baseball).
-neg(athleteplayssport(andrewsisco,golf)).
+0.0::athleteplayssport(andrewsisco,golf).
 athleteplayssport(omarquintanilla, baseball).
-neg(athleteplayssport(omarquintanilla,swimming)).
+0.0::athleteplayssport(omarquintanilla,swimming).
 athleteplayssport(markhendrickson, baseball).
-neg(athleteplayssport(markhendrickson,carracing)).
+0.0::athleteplayssport(markhendrickson,carracing).
 athleteplayssport(mattmoore, football).
-neg(athleteplayssport(mattmoore,golfing)).
+0.0::athleteplayssport(mattmoore,golfing).
 athleteplayssport(juanrincon, baseball).
-neg(athleteplayssport(juanrincon,trackandfield)).
+0.0::athleteplayssport(juanrincon,trackandfield).
 athleteplayssport(brandonjackson, football).
-neg(athleteplayssport(brandonjackson,basketball)).
+0.0::athleteplayssport(brandonjackson,basketball).
 athleteplayssport(williemcginest, football).
-neg(athleteplayssport(williemcginest,wrestling)).
+0.0::athleteplayssport(williemcginest,wrestling).
 athleteplayssport(kenhill, baseball).
-neg(athleteplayssport(kenhill,tennis)).
+0.0::athleteplayssport(kenhill,tennis).
 athleteplayssport(sosa, baseball).
-neg(athleteplayssport(sosa,collegebaseball)).
+0.0::athleteplayssport(sosa,collegebaseball).
 athleteplayssport(johnmaine, baseball).
-neg(athleteplayssport(johnmaine,professionalfootball)).
+0.0::athleteplayssport(johnmaine,professionalfootball).
 athleteplayssport(gabyhernandez, baseball).
-neg(athleteplayssport(gabyhernandez,trackandfield)).
+0.0::athleteplayssport(gabyhernandez,trackandfield).
 athleteplayssport(rexgrossman, football).
-neg(athleteplayssport(rexgrossman,softball)).
+0.0::athleteplayssport(rexgrossman,softball).
 athleteplayssport(kobebryant, basketball).
-neg(athleteplayssport(kobebryant,football)).
+0.0::athleteplayssport(kobebryant,football).
 athleteplayssport(kevingarnett, basketball).
-neg(athleteplayssport(kevingarnett,golfing)).
+0.0::athleteplayssport(kevingarnett,golfing).
 athleteplayssport(andrewlorraine, baseball).
-neg(athleteplayssport(andrewlorraine,professionalfootball)).
+0.0::athleteplayssport(andrewlorraine,professionalfootball).
 athleteplayssport(briantallet, baseball).
-neg(athleteplayssport(briantallet,trackandfield)).
+0.0::athleteplayssport(briantallet,trackandfield).
 athleteplayssport(billmurphy, baseball).
-neg(athleteplayssport(billmurphy,tennis)).
+0.0::athleteplayssport(billmurphy,tennis).
 athleteplayssport(bobcupp, golf).
-neg(athleteplayssport(bobcupp,hockey)).
+0.0::athleteplayssport(bobcupp,hockey).
 athleteplayssport(carmenpignatiello, baseball).
-neg(athleteplayssport(carmenpignatiello,soccer)).
+0.0::athleteplayssport(carmenpignatiello,soccer).
 athleteplayssport(jobachamberlain, baseball).
-neg(athleteplayssport(jobachamberlain,hockey)).
+0.0::athleteplayssport(jobachamberlain,hockey).
 athleteplayssport(amarestoudemire, basketball).
-neg(athleteplayssport(amarestoudemire,carracing)).
+0.0::athleteplayssport(amarestoudemire,carracing).
 athleteplayssport(colterbean, baseball).
-neg(athleteplayssport(colterbean,tennis)).
+0.0::athleteplayssport(colterbean,tennis).
 athleteplayssport(albertocastillo, baseball).
-neg(athleteplayssport(albertocastillo,golf)).
+0.0::athleteplayssport(albertocastillo,golf).
 athleteplayssport(chadcordero, baseball).
-neg(athleteplayssport(chadcordero,sailing)).
+0.0::athleteplayssport(chadcordero,sailing).
 athleteplayssport(kevinjepsen, baseball).
-neg(athleteplayssport(kevinjepsen,sailing)).
+0.0::athleteplayssport(kevinjepsen,sailing).
 athleteplayssport(brandonboggs, hockey).
-neg(athleteplayssport(brandonboggs,football)).
+0.0::athleteplayssport(brandonboggs,football).
 athleteplayssport(joshbutler, baseball).
-neg(athleteplayssport(joshbutler,sailing)).
+0.0::athleteplayssport(joshbutler,sailing).
 athleteplayssport(warrensapp, football).
-neg(athleteplayssport(warrensapp,professionalbasketball)).
+0.0::athleteplayssport(warrensapp,professionalbasketball).
 athleteplayssport(hidekiokajima, baseball).
-neg(athleteplayssport(hidekiokajima,football)).
+0.0::athleteplayssport(hidekiokajima,football).
 athleteplayssport(kikocalero, baseball).
-neg(athleteplayssport(kikocalero,basketball)).
+0.0::athleteplayssport(kikocalero,basketball).
 athleteplayssport(chaunceybillups, basketball).
-neg(athleteplayssport(chaunceybillups,swimming)).
+0.0::athleteplayssport(chaunceybillups,swimming).
 athleteplayssport(brianslocum, baseball).
-neg(athleteplayssport(brianslocum,trackandfield)).
+0.0::athleteplayssport(brianslocum,trackandfield).
 athleteplayssport(hectormercado, baseball).
-neg(athleteplayssport(hectormercado,golfing)).
+0.0::athleteplayssport(hectormercado,golfing).
 athleteplayssport(mattguerrier, baseball).
-neg(athleteplayssport(mattguerrier,collegebaseball)).
+0.0::athleteplayssport(mattguerrier,collegebaseball).
 athleteplayssport(darrensproles, football).
-neg(athleteplayssport(darrensproles,hockey)).
+0.0::athleteplayssport(darrensproles,hockey).
 athleteplayssport(drewgooden, basketball).
-neg(athleteplayssport(drewgooden,trackandfield)).
+0.0::athleteplayssport(drewgooden,trackandfield).
 athleteplayssport(clayrapada, baseball).
-neg(athleteplayssport(clayrapada,soccer)).
+0.0::athleteplayssport(clayrapada,soccer).
 athleteplayssport(alexperiard, baseball).
-neg(athleteplayssport(alexperiard,lacrosse)).
+0.0::athleteplayssport(alexperiard,lacrosse).
 athleteplayssport(kelvinpichardo, baseball).
-neg(athleteplayssport(kelvinpichardo,football)).
+0.0::athleteplayssport(kelvinpichardo,football).
 athleteplayssport(stephenrandolph, baseball).
-neg(athleteplayssport(stephenrandolph,tennis)).
+0.0::athleteplayssport(stephenrandolph,tennis).
 athleteplayssport(davisromero, baseball).
-neg(athleteplayssport(davisromero,basketball)).
+0.0::athleteplayssport(davisromero,basketball).
 athleteplayssport(davidortiz, baseball).
-neg(athleteplayssport(davidortiz,golf)).
+0.0::athleteplayssport(davidortiz,golf).
 athleteplayssport(severianoballesteros, golf).
-neg(athleteplayssport(severianoballesteros,golfing)).
+0.0::athleteplayssport(severianoballesteros,golfing).
 athleteplayssport(andruwjones, baseball).
-neg(athleteplayssport(andruwjones,collegebaseball)).
+0.0::athleteplayssport(andruwjones,collegebaseball).
 athleteplayssport(brettfavre, football).
-neg(athleteplayssport(brettfavre,softball)).
+0.0::athleteplayssport(brettfavre,softball).
 athleteplayssport(johnsmoltz, baseball).
-neg(athleteplayssport(johnsmoltz,trackandfield)).
+0.0::athleteplayssport(johnsmoltz,trackandfield).
 athleteplayssport(docgooden, baseball).
-neg(athleteplayssport(docgooden,tennis)).
+0.0::athleteplayssport(docgooden,tennis).
 athleteplayssport(robbell, baseball).
-neg(athleteplayssport(robbell,golfing)).
+0.0::athleteplayssport(robbell,golfing).
 athleteplayssport(joselima, baseball).
-neg(athleteplayssport(joselima,soccer)).
+0.0::athleteplayssport(joselima,soccer).
 athleteplayssport(raulmondesi, baseball).
-neg(athleteplayssport(raulmondesi,boxing)).
+0.0::athleteplayssport(raulmondesi,boxing).
 athleteplayssport(evanderholyfield, boxing).
-neg(athleteplayssport(evanderholyfield,cycling)).
+0.0::athleteplayssport(evanderholyfield,cycling).
 athleteplayssport(jeffridgway, baseball).
-neg(athleteplayssport(jeffridgway,hockey)).
+0.0::athleteplayssport(jeffridgway,hockey).
 athleteplayssport(michaelbeasley, football).
-neg(athleteplayssport(michaelbeasley,boxing)).
+0.0::athleteplayssport(michaelbeasley,boxing).
 athleteplayssport(wesleywright, baseball).
-neg(athleteplayssport(wesleywright,boxing)).
+0.0::athleteplayssport(wesleywright,boxing).
 athleteplayssport(salomontorres, baseball).
-neg(athleteplayssport(salomontorres,professionalbasketball)).
+0.0::athleteplayssport(salomontorres,professionalbasketball).
 athleteplayssport(mattwise, baseball).
-neg(athleteplayssport(mattwise,football)).
+0.0::athleteplayssport(mattwise,football).
 athleteplayssport(dickphelps, golf).
-neg(athleteplayssport(dickphelps,professionalbasketball)).
+0.0::athleteplayssport(dickphelps,professionalbasketball).
 athleteplayssport(michaeloconnor, baseball).
-neg(athleteplayssport(michaeloconnor,trackandfield)).
+0.0::athleteplayssport(michaeloconnor,trackandfield).
 athleteplayssport(bencrenshaw, golf).
-neg(athleteplayssport(bencrenshaw,professionalfootball)).
+0.0::athleteplayssport(bencrenshaw,professionalfootball).
 athleteplayssport(heathbell, baseball).
-neg(athleteplayssport(heathbell,golfing)).
+0.0::athleteplayssport(heathbell,golfing).
 athleteplayssport(justinspeier, baseball).
-neg(athleteplayssport(justinspeier,professionalfootball)).
+0.0::athleteplayssport(justinspeier,professionalfootball).
 athleteplayssport(kyleboller, football).
-neg(athleteplayssport(kyleboller,sailing)).
+0.0::athleteplayssport(kyleboller,sailing).
 athleteplayssport(laurencemaroney, football).
-neg(athleteplayssport(laurencemaroney,boxing)).
+0.0::athleteplayssport(laurencemaroney,boxing).
 athleteplayssport(brandoninge, baseball).
-neg(athleteplayssport(brandoninge,tennis)).
+0.0::athleteplayssport(brandoninge,tennis).
 athleteplayssport(gregorblanco, baseball).
-neg(athleteplayssport(gregorblanco,sailing)).
+0.0::athleteplayssport(gregorblanco,sailing).
 athleteplayssport(jasonanderson, baseball).
-neg(athleteplayssport(jasonanderson,cycling)).
+0.0::athleteplayssport(jasonanderson,cycling).
 athleteplayssport(kylefarnsworth, baseball).
-neg(athleteplayssport(kylefarnsworth,lacrosse)).
+0.0::athleteplayssport(kylefarnsworth,lacrosse).
 athleteplayssport(joshhancock, baseball).
-neg(athleteplayssport(joshhancock,softball)).
+0.0::athleteplayssport(joshhancock,softball).
 athleteplayssport(mikeromano, baseball).
-neg(athleteplayssport(mikeromano,golf)).
+0.0::athleteplayssport(mikeromano,golf).
 athleteplayssport(tomdoak, golf).
-neg(athleteplayssport(tomdoak,tennis)).
+0.0::athleteplayssport(tomdoak,tennis).
 athleteplayssport(vancewilson, baseball).
-neg(athleteplayssport(vancewilson,swimming)).
+0.0::athleteplayssport(vancewilson,swimming).
 athleteplayssport(reggiesanders, football).
-neg(athleteplayssport(reggiesanders,golfing)).
+0.0::athleteplayssport(reggiesanders,golfing).
 athleteplayssport(jacksonquezada, baseball).
-neg(athleteplayssport(jacksonquezada,swimming)).
+0.0::athleteplayssport(jacksonquezada,swimming).
 athleteplayssport(duanersanchez, baseball).
-neg(athleteplayssport(duanersanchez,trackandfield)).
+0.0::athleteplayssport(duanersanchez,trackandfield).
 athleteplayssport(scottiepippen, basketball).
-neg(athleteplayssport(scottiepippen,baseball)).
+0.0::athleteplayssport(scottiepippen,baseball).
 athleteplayssport(carlosperez, baseball).
-neg(athleteplayssport(carlosperez,professionalfootball)).
+0.0::athleteplayssport(carlosperez,professionalfootball).
 athleteplayssport(billykoch, baseball).
-neg(athleteplayssport(billykoch,trackandfield)).
+0.0::athleteplayssport(billykoch,trackandfield).
 athleteplayssport(rickynolasco, baseball).
-neg(athleteplayssport(rickynolasco,trackandfield)).
+0.0::athleteplayssport(rickynolasco,trackandfield).
 athleteplayssport(yorvittorrealba, baseball).
-neg(athleteplayssport(yorvittorrealba,boxing)).
+0.0::athleteplayssport(yorvittorrealba,boxing).
 athleteplayssport(jesusguzman, baseball).
-neg(athleteplayssport(jesusguzman,golf)).
+0.0::athleteplayssport(jesusguzman,golf).
 athleteplayssport(marwinvega, baseball).
-neg(athleteplayssport(marwinvega,swimming)).
+0.0::athleteplayssport(marwinvega,swimming).
 athleteplayssport(seangreen, baseball).
-neg(athleteplayssport(seangreen,hockey)).
+0.0::athleteplayssport(seangreen,hockey).
 athleteplayssport(miguelolivo, baseball).
-neg(athleteplayssport(miguelolivo,football)).
+0.0::athleteplayssport(miguelolivo,football).
 athleteplayssport(alfredofigaro, baseball).
-neg(athleteplayssport(alfredofigaro,wrestling)).
+0.0::athleteplayssport(alfredofigaro,wrestling).
 athleteplayssport(whiteyford, baseball).
-neg(athleteplayssport(whiteyford,soccer)).
+0.0::athleteplayssport(whiteyford,soccer).
 athleteplayssport(codyross, baseball).
-neg(athleteplayssport(codyross,boxing)).
+0.0::athleteplayssport(codyross,boxing).
 athleteplayssport(maxscherzer, baseball).
-neg(athleteplayssport(maxscherzer,wrestling)).
+0.0::athleteplayssport(maxscherzer,wrestling).
 athleteplayssport(kevinbrown, baseball).
-neg(athleteplayssport(kevinbrown,softball)).
+0.0::athleteplayssport(kevinbrown,softball).
 athleteplayssport(reggiebush, football).
-neg(athleteplayssport(reggiebush,cycling)).
+0.0::athleteplayssport(reggiebush,cycling).
 athleteplayssport(tanyonsturtze, baseball).
-neg(athleteplayssport(tanyonsturtze,softball)).
+0.0::athleteplayssport(tanyonsturtze,softball).
 athleteplayssport(danwheeler, baseball).
-neg(athleteplayssport(danwheeler,basketball)).
+0.0::athleteplayssport(danwheeler,basketball).
 athleteplayssport(tomfazio, golf).
-neg(athleteplayssport(tomfazio,baseball)).
+0.0::athleteplayssport(tomfazio,baseball).
 athleteplayssport(jackcassel, baseball).
-neg(athleteplayssport(jackcassel,cycling)).
+0.0::athleteplayssport(jackcassel,cycling).
 athleteplayssport(mattkinney, baseball).
-neg(athleteplayssport(mattkinney,cycling)).
+0.0::athleteplayssport(mattkinney,cycling).
 athleteplayssport(edwardmujica, baseball).
-neg(athleteplayssport(edwardmujica,swimming)).
+0.0::athleteplayssport(edwardmujica,swimming).
 athleteplayssport(kurtangle, wrestling).
-neg(athleteplayssport(kurtangle,sailing)).
+0.0::athleteplayssport(kurtangle,sailing).
 athleteplayssport(jasondavis, baseball).
-neg(athleteplayssport(jasondavis,professionalfootball)).
+0.0::athleteplayssport(jasondavis,professionalfootball).
 athleteplayssport(billwhite, baseball).
-neg(athleteplayssport(billwhite,cycling)).
+0.0::athleteplayssport(billwhite,cycling).
 athleteplayssport(ericpatterson, baseball).
-neg(athleteplayssport(ericpatterson,swimming)).
+0.0::athleteplayssport(ericpatterson,swimming).
 athleteplayssport(mickfoley, wrestling).
-neg(athleteplayssport(mickfoley,baseball)).
+0.0::athleteplayssport(mickfoley,baseball).
 athleteplayssport(jamesloney, baseball).
-neg(athleteplayssport(jamesloney,trackandfield)).
+0.0::athleteplayssport(jamesloney,trackandfield).
 athleteplayssport(davehenderson, baseball).
-neg(athleteplayssport(davehenderson,hockey)).
+0.0::athleteplayssport(davehenderson,hockey).
 athleteplayssport(michaelcuddyer, baseball).
-neg(athleteplayssport(michaelcuddyer,professionalbasketball)).
+0.0::athleteplayssport(michaelcuddyer,professionalbasketball).
 athleteplayssport(jasonjohnson, baseball).
-neg(athleteplayssport(jasonjohnson,trackandfield)).
+0.0::athleteplayssport(jasonjohnson,trackandfield).
 athleteplayssport(joelhanrahan, baseball).
-neg(athleteplayssport(joelhanrahan,soccer)).
+0.0::athleteplayssport(joelhanrahan,soccer).
 athleteplayssport(raferalston, basketball).
-neg(athleteplayssport(raferalston,tennis)).
+0.0::athleteplayssport(raferalston,tennis).
 athleteplayssport(marquisdaniels, basketball).
-neg(athleteplayssport(marquisdaniels,professionalfootball)).
+0.0::athleteplayssport(marquisdaniels,professionalfootball).
 athleteplayssport(gregsmith, baseball).
-neg(athleteplayssport(gregsmith,basketball)).
+0.0::athleteplayssport(gregsmith,basketball).
 athleteplayssport(daviddellucci, baseball).
-neg(athleteplayssport(daviddellucci,football)).
+0.0::athleteplayssport(daviddellucci,football).
 athleteplayssport(roberttrentjonesjnr, golf).
-neg(athleteplayssport(roberttrentjonesjnr,football)).
+0.0::athleteplayssport(roberttrentjonesjnr,football).
 athleteplayssport(juanmanuelmarquez, boxing).
-neg(athleteplayssport(juanmanuelmarquez,soccer)).
+0.0::athleteplayssport(juanmanuelmarquez,soccer).
 athleteplayssport(brandonleague, baseball).
-neg(athleteplayssport(brandonleague,golfing)).
+0.0::athleteplayssport(brandonleague,golfing).
 athleteplayssport(hectorrondon, baseball).
-neg(athleteplayssport(hectorrondon,football)).
+0.0::athleteplayssport(hectorrondon,football).
 athleteplayssport(derrickturnbow, baseball).
-neg(athleteplayssport(derrickturnbow,lacrosse)).
+0.0::athleteplayssport(derrickturnbow,lacrosse).
 athleteplayssport(valeriodelossantos, baseball).
-neg(athleteplayssport(valeriodelossantos,basketball)).
+0.0::athleteplayssport(valeriodelossantos,basketball).
 athleteplayssport(dannyrichar, baseball).
-neg(athleteplayssport(dannyrichar,wrestling)).
+0.0::athleteplayssport(dannyrichar,wrestling).
 athleteplayssport(kaseykiker, baseball).
-neg(athleteplayssport(kaseykiker,basketball)).
+0.0::athleteplayssport(kaseykiker,basketball).
 athleteplayssport(ianstewart, baseball).
-neg(athleteplayssport(ianstewart,basketball)).
+0.0::athleteplayssport(ianstewart,basketball).
 athleteplayssport(jeffhardy, wrestling).
-neg(athleteplayssport(jeffhardy,professionalbasketball)).
+0.0::athleteplayssport(jeffhardy,professionalbasketball).
 athleteplayssport(bernardrobinson, basketball).
-neg(athleteplayssport(bernardrobinson,swimming)).
+0.0::athleteplayssport(bernardrobinson,swimming).
 athleteplayssport(bradyclark, baseball).
-neg(athleteplayssport(bradyclark,cycling)).
+0.0::athleteplayssport(bradyclark,cycling).
 athleteplayssport(jaredallen, football).
-neg(athleteplayssport(jaredallen,softball)).
+0.0::athleteplayssport(jaredallen,softball).
 athleteplayssport(georgeforeman, boxing).
-neg(athleteplayssport(georgeforeman,cycling)).
+0.0::athleteplayssport(georgeforeman,cycling).
 athleteplayssport(markmelancon, baseball).
-neg(athleteplayssport(markmelancon,carracing)).
+0.0::athleteplayssport(markmelancon,carracing).
 athleteplayssport(justinduchscherer, baseball).
-neg(athleteplayssport(justinduchscherer,golfing)).
+0.0::athleteplayssport(justinduchscherer,golfing).
 athleteplayssport(brentdlugach, baseball).
-neg(athleteplayssport(brentdlugach,sailing)).
+0.0::athleteplayssport(brentdlugach,sailing).
 athleteplayssport(brodiecroyle, football).
-neg(athleteplayssport(brodiecroyle,golf)).
+0.0::athleteplayssport(brodiecroyle,golf).
 athleteplayssport(shigetoshihasegawa, baseball).
-neg(athleteplayssport(shigetoshihasegawa,cycling)).
+0.0::athleteplayssport(shigetoshihasegawa,cycling).
 athleteplayssport(rodrigolopez, baseball).
-neg(athleteplayssport(rodrigolopez,softball)).
+0.0::athleteplayssport(rodrigolopez,softball).
 athleteplayssport(jacknicklausandarnoldpalmer, golf).
-neg(athleteplayssport(jacknicklausandarnoldpalmer,boxing)).
+0.0::athleteplayssport(jacknicklausandarnoldpalmer,boxing).
 athleteplayssport(buehrle, baseball).
-neg(athleteplayssport(buehrle,golf)).
+0.0::athleteplayssport(buehrle,golf).
 athleteplayssport(billypetrick, baseball).
-neg(athleteplayssport(billypetrick,golf)).
+0.0::athleteplayssport(billypetrick,golf).
 athleteplayssport(leegardner, baseball).
-neg(athleteplayssport(leegardner,wrestling)).
+0.0::athleteplayssport(leegardner,wrestling).
 athleteplayssport(longoria, baseball).
-neg(athleteplayssport(longoria,hockey)).
+0.0::athleteplayssport(longoria,hockey).
 athleteplayssport(johnbannister, baseball).
-neg(athleteplayssport(johnbannister,carracing)).
+0.0::athleteplayssport(johnbannister,carracing).
 athleteplayssport(jefffrancoeur, baseball).
-neg(athleteplayssport(jefffrancoeur,carracing)).
+0.0::athleteplayssport(jefffrancoeur,carracing).
 athleteplayssport(garrettatkins, baseball).
-neg(athleteplayssport(garrettatkins,football)).
+0.0::athleteplayssport(garrettatkins,football).
 athleteplayssport(osirismatos, baseball).
-neg(athleteplayssport(osirismatos,hockey)).
+0.0::athleteplayssport(osirismatos,hockey).
 athleteplayssport(mattcain, baseball).
-neg(athleteplayssport(mattcain,football)).
+0.0::athleteplayssport(mattcain,football).
 athleteplayssport(richardgasquet, tennis).
-neg(athleteplayssport(richardgasquet,wrestling)).
+0.0::athleteplayssport(richardgasquet,wrestling).
 athleteplayssport(bryanmorris, baseball).
-neg(athleteplayssport(bryanmorris,professionalfootball)).
+0.0::athleteplayssport(bryanmorris,professionalfootball).
 athleteplayssport(melvinmora, baseball).
-neg(athleteplayssport(melvinmora,sailing)).
+0.0::athleteplayssport(melvinmora,sailing).
 athleteplayssport(markredman, baseball).
-neg(athleteplayssport(markredman,lacrosse)).
+0.0::athleteplayssport(markredman,lacrosse).
 athleteplayssport(shanespencer, baseball).
-neg(athleteplayssport(shanespencer,swimming)).
+0.0::athleteplayssport(shanespencer,swimming).
 athleteplayssport(tedrobinson, golf).
-neg(athleteplayssport(tedrobinson,professionalbasketball)).
+0.0::athleteplayssport(tedrobinson,professionalbasketball).
 athleteplayssport(joseluiscastillo, boxing).
-neg(athleteplayssport(joseluiscastillo,collegebaseball)).
+0.0::athleteplayssport(joseluiscastillo,collegebaseball).
 athleteplayssport(bengordon, basketball).
-neg(athleteplayssport(bengordon,lacrosse)).
+0.0::athleteplayssport(bengordon,lacrosse).
 athleteplayssport(wilkinramirez, baseball).
-neg(athleteplayssport(wilkinramirez,boxing)).
+0.0::athleteplayssport(wilkinramirez,boxing).
 athleteplayssport(adammiller, baseball).
-neg(athleteplayssport(adammiller,sailing)).
+0.0::athleteplayssport(adammiller,sailing).
 athleteplayssport(mattharrison, baseball).
-neg(athleteplayssport(mattharrison,trackandfield)).
+0.0::athleteplayssport(mattharrison,trackandfield).
 athleteplayssport(edromero, baseball).
-neg(athleteplayssport(edromero,professionalfootball)).
+0.0::athleteplayssport(edromero,professionalfootball).
 athleteplayssport(billrussell, basketball).
-neg(athleteplayssport(billrussell,lacrosse)).
+0.0::athleteplayssport(billrussell,lacrosse).
 athleteplayssport(roycampanella, baseball).
-neg(athleteplayssport(roycampanella,football)).
+0.0::athleteplayssport(roycampanella,football).
 athleteplayssport(mattwieters, baseball).
-neg(athleteplayssport(mattwieters,cycling)).
+0.0::athleteplayssport(mattwieters,cycling).
 athleteplayssport(hermida, baseball).
-neg(athleteplayssport(hermida,professionalbasketball)).
+0.0::athleteplayssport(hermida,professionalbasketball).
 athleteplayssport(mikemaroth, football).
-neg(athleteplayssport(mikemaroth,collegebaseball)).
+0.0::athleteplayssport(mikemaroth,collegebaseball).
 athleteplayssport(philmickelson, golf).
-neg(athleteplayssport(philmickelson,golfing)).
+0.0::athleteplayssport(philmickelson,golfing).
 athleteplayssport(sultanibragimov, boxing).
-neg(athleteplayssport(sultanibragimov,trackandfield)).
+0.0::athleteplayssport(sultanibragimov,trackandfield).
 athleteplayssport(jairjurrjens, baseball).
-neg(athleteplayssport(jairjurrjens,sailing)).
+0.0::athleteplayssport(jairjurrjens,sailing).
 athleteplayssport(henryrodriguez, baseball).
-neg(athleteplayssport(henryrodriguez,swimming)).
+0.0::athleteplayssport(henryrodriguez,swimming).
 athleteplayssport(jerryrice, football).
-neg(athleteplayssport(jerryrice,basketball)).
+0.0::athleteplayssport(jerryrice,basketball).
 athleteplayssport(reggienelson, football).
-neg(athleteplayssport(reggienelson,professionalbasketball)).
+0.0::athleteplayssport(reggienelson,professionalbasketball).
 athleteplayssport(nicklausdesign, golf).
-neg(athleteplayssport(nicklausdesign,professionalbasketball)).
+0.0::athleteplayssport(nicklausdesign,professionalbasketball).
 athleteplayssport(stanleythompson, golf).
-neg(athleteplayssport(stanleythompson,trackandfield)).
+0.0::athleteplayssport(stanleythompson,trackandfield).
 athleteplayssport(justintuck, football).
-neg(athleteplayssport(justintuck,softball)).
+0.0::athleteplayssport(justintuck,softball).
 athleteplayssport(drewnaylor, baseball).
-neg(athleteplayssport(drewnaylor,football)).
+0.0::athleteplayssport(drewnaylor,football).
 athleteplayssport(willardbyrd, golf).
-neg(athleteplayssport(willardbyrd,carracing)).
+0.0::athleteplayssport(willardbyrd,carracing).
 athleteplayssport(benjohnson, baseball).
-neg(athleteplayssport(benjohnson,boxing)).
+0.0::athleteplayssport(benjohnson,boxing).
 athleteplayssport(samlecure, baseball).
-neg(athleteplayssport(samlecure,swimming)).
+0.0::athleteplayssport(samlecure,swimming).
 athleteplayssport(tjford, basketball).
-neg(athleteplayssport(tjford,cycling)).
+0.0::athleteplayssport(tjford,cycling).
 athleteplayssport(danfouts, football).
-neg(athleteplayssport(danfouts,carracing)).
+0.0::athleteplayssport(danfouts,carracing).
 athleteplayssport(alexromero, baseball).
-neg(athleteplayssport(alexromero,carracing)).
+0.0::athleteplayssport(alexromero,carracing).
 athleteplayssport(sports, baseball).
-neg(athleteplayssport(sports,tennis)).
+0.0::athleteplayssport(sports,tennis).
 athleteplayssport(virgilvasquez, baseball).
-neg(athleteplayssport(virgilvasquez,collegebaseball)).
+0.0::athleteplayssport(virgilvasquez,collegebaseball).
 athleteplayssport(jordanzimmermann, baseball).
-neg(athleteplayssport(jordanzimmermann,boxing)).
+0.0::athleteplayssport(jordanzimmermann,boxing).
 athleteplayssport(lidstrom, hockey).
-neg(athleteplayssport(lidstrom,cycling)).
+0.0::athleteplayssport(lidstrom,cycling).
 athleteplayssport(quarterbacktonyromo, football).
-neg(athleteplayssport(quarterbacktonyromo,boxing)).
+0.0::athleteplayssport(quarterbacktonyromo,boxing).
 athleteplayssport(deucelutui, football).
-neg(athleteplayssport(deucelutui,golfing)).
+0.0::athleteplayssport(deucelutui,golfing).
 athleteplayssport(jasonmotte, baseball).
-neg(athleteplayssport(jasonmotte,cycling)).
+0.0::athleteplayssport(jasonmotte,cycling).
 athleteplayssport(rudyseanez, baseball).
-neg(athleteplayssport(rudyseanez,softball)).
+0.0::athleteplayssport(rudyseanez,softball).
 athleteplayssport(josephaddai, football).
-neg(athleteplayssport(josephaddai,golf)).
+0.0::athleteplayssport(josephaddai,golf).
 athleteplayssport(bradthomas, baseball).
-neg(athleteplayssport(bradthomas,softball)).
+0.0::athleteplayssport(bradthomas,softball).
 athleteplayssport(scottcassidy, baseball).
-neg(athleteplayssport(scottcassidy,collegebaseball)).
+0.0::athleteplayssport(scottcassidy,collegebaseball).
 athleteplayssport(chrisjakubauskas, baseball).
-neg(athleteplayssport(chrisjakubauskas,boxing)).
+0.0::athleteplayssport(chrisjakubauskas,boxing).
 athleteplayssport(andyoliver, baseball).
-neg(athleteplayssport(andyoliver,football)).
+0.0::athleteplayssport(andyoliver,football).
 athleteplayssport(ralphplummer, golf).
-neg(athleteplayssport(ralphplummer,trackandfield)).
+0.0::athleteplayssport(ralphplummer,trackandfield).
 athleteplayssport(bartolocolon, baseball).
-neg(athleteplayssport(bartolocolon,soccer)).
+0.0::athleteplayssport(bartolocolon,soccer).
 athleteplayssport(brianburres, baseball).
-neg(athleteplayssport(brianburres,collegebaseball)).
+0.0::athleteplayssport(brianburres,collegebaseball).
 athleteplayssport(sailrivera, baseball).
-neg(athleteplayssport(sailrivera,cycling)).
+0.0::athleteplayssport(sailrivera,cycling).
 athleteplayssport(kylegunderson, baseball).
-neg(athleteplayssport(kylegunderson,swimming)).
+0.0::athleteplayssport(kylegunderson,swimming).
 athleteplayssport(marlonbyrd, hockey).
-neg(athleteplayssport(marlonbyrd,professionalbasketball)).
+0.0::athleteplayssport(marlonbyrd,professionalbasketball).
 athleteplayssport(martezwilson, baseball).
-neg(athleteplayssport(martezwilson,football)).
+0.0::athleteplayssport(martezwilson,football).
 athleteplayssport(shaunhill, baseball).
-neg(athleteplayssport(shaunhill,lacrosse)).
+0.0::athleteplayssport(shaunhill,lacrosse).
 athleteplayssport(tonyjacklin, golf).
-neg(athleteplayssport(tonyjacklin,hockey)).
+0.0::athleteplayssport(tonyjacklin,hockey).
 athleteplayssport(jaypayton, baseball).
-neg(athleteplayssport(jaypayton,professionalbasketball)).
+0.0::athleteplayssport(jaypayton,professionalbasketball).
 athleteplayssport(danmeyer, baseball).
-neg(athleteplayssport(danmeyer,carracing)).
+0.0::athleteplayssport(danmeyer,carracing).
 athleteplayssport(jordantata, baseball).
-neg(athleteplayssport(jordantata,football)).
+0.0::athleteplayssport(jordantata,football).
 athleteplayssport(yunieskybetancourt, baseball).
-neg(athleteplayssport(yunieskybetancourt,basketball)).
+0.0::athleteplayssport(yunieskybetancourt,basketball).
 athleteplayssport(lukemurton, baseball).
-neg(athleteplayssport(lukemurton,golf)).
+0.0::athleteplayssport(lukemurton,golf).
 athleteplayssport(anthonyreyes, baseball).
-neg(athleteplayssport(anthonyreyes,collegebaseball)).
+0.0::athleteplayssport(anthonyreyes,collegebaseball).
 athleteplayssport(nomargarciaparra, baseball).
-neg(athleteplayssport(nomargarciaparra,swimming)).
+0.0::athleteplayssport(nomargarciaparra,swimming).
 athleteplayssport(joenelson, baseball).
-neg(athleteplayssport(joenelson,soccer)).
+0.0::athleteplayssport(joenelson,soccer).
 athleteplayssport(luismartinez, baseball).
-neg(athleteplayssport(luismartinez,carracing)).
+0.0::athleteplayssport(luismartinez,carracing).
 athleteplayssport(tjhoushmandzadeh, football).
-neg(athleteplayssport(tjhoushmandzadeh,cycling)).
+0.0::athleteplayssport(tjhoushmandzadeh,cycling).
 athleteplayssport(ryanhanigan, baseball).
-neg(athleteplayssport(ryanhanigan,professionalfootball)).
+0.0::athleteplayssport(ryanhanigan,professionalfootball).
 athleteplayssport(coreydillon, football).
-neg(athleteplayssport(coreydillon,tennis)).
+0.0::athleteplayssport(coreydillon,tennis).
 athleteplayssport(pjbrown, baseball).
-neg(athleteplayssport(pjbrown,cycling)).
+0.0::athleteplayssport(pjbrown,cycling).
 athleteplayssport(wladimirklitschko, boxing).
-neg(athleteplayssport(wladimirklitschko,swimming)).
+0.0::athleteplayssport(wladimirklitschko,swimming).
 athleteplayssport(yunelescobar, baseball).
-neg(athleteplayssport(yunelescobar,carracing)).
+0.0::athleteplayssport(yunelescobar,carracing).
 athleteplayssport(jasonbrown, football).
-neg(athleteplayssport(jasonbrown,basketball)).
+0.0::athleteplayssport(jasonbrown,basketball).
 athleteplayssport(billbuckner, baseball).
-neg(athleteplayssport(billbuckner,collegebaseball)).
+0.0::athleteplayssport(billbuckner,collegebaseball).
 athleteplayssport(troysmith, football).
-neg(athleteplayssport(troysmith,carracing)).
+0.0::athleteplayssport(troysmith,carracing).
 athleteplayssport(eltonbrand, basketball).
-neg(athleteplayssport(eltonbrand,hockey)).
+0.0::athleteplayssport(eltonbrand,hockey).
 athleteplayssport(renyelpinto, baseball).
-neg(athleteplayssport(renyelpinto,softball)).
+0.0::athleteplayssport(renyelpinto,softball).
 athleteplayssport(tylerwalker, baseball).
-neg(athleteplayssport(tylerwalker,boxing)).
+0.0::athleteplayssport(tylerwalker,boxing).
 athleteplayssport(angelguzman, baseball).
-neg(athleteplayssport(angelguzman,golf)).
+0.0::athleteplayssport(angelguzman,golf).
 athleteplayssport(katsuhikomaekawa, baseball).
-neg(athleteplayssport(katsuhikomaekawa,lacrosse)).
+0.0::athleteplayssport(katsuhikomaekawa,lacrosse).
 athleteplayssport(andreagassi, tennis).
-neg(athleteplayssport(andreagassi,trackandfield)).
+0.0::athleteplayssport(andreagassi,trackandfield).
 athleteplayssport(hankblalock, baseball).
-neg(athleteplayssport(hankblalock,golfing)).
+0.0::athleteplayssport(hankblalock,golfing).
 athleteplayssport(carsonpalmer, football).
-neg(athleteplayssport(carsonpalmer,collegebaseball)).
+0.0::athleteplayssport(carsonpalmer,collegebaseball).
 athleteplayssport(jefffrancoeur, baseball).
-neg(athleteplayssport(jefffrancoeur,professionalfootball)).
+0.0::athleteplayssport(jefffrancoeur,professionalfootball).
 athleteplayssport(matthasselbeck, football).
-neg(athleteplayssport(matthasselbeck,professionalfootball)).
+0.0::athleteplayssport(matthasselbeck,professionalfootball).
 athleteplayssport(chadparonto, baseball).
-neg(athleteplayssport(chadparonto,golfing)).
+0.0::athleteplayssport(chadparonto,golfing).
 athleteplayssport(scottfeldman, baseball).
-neg(athleteplayssport(scottfeldman,carracing)).
+0.0::athleteplayssport(scottfeldman,carracing).
 athleteplayssport(curtispride, baseball).
-neg(athleteplayssport(curtispride,golf)).
+0.0::athleteplayssport(curtispride,golf).
 athleteplayssport(juanmiranda, baseball).
-neg(athleteplayssport(juanmiranda,trackandfield)).
+0.0::athleteplayssport(juanmiranda,trackandfield).
 athleteplayssport(bronsonarroyo, baseball).
-neg(athleteplayssport(bronsonarroyo,basketball)).
+0.0::athleteplayssport(bronsonarroyo,basketball).
 athleteplayssport(dougcarrick, golf).
-neg(athleteplayssport(dougcarrick,swimming)).
+0.0::athleteplayssport(dougcarrick,swimming).
 athleteplayssport(chrisleroux, baseball).
-neg(athleteplayssport(chrisleroux,carracing)).
+0.0::athleteplayssport(chrisleroux,carracing).
 athleteplayssport(michaelwuertz, baseball).
-neg(athleteplayssport(michaelwuertz,cycling)).
+0.0::athleteplayssport(michaelwuertz,cycling).
 athleteplayssport(jaredburton, baseball).
-neg(athleteplayssport(jaredburton,golfing)).
+0.0::athleteplayssport(jaredburton,golfing).
 athleteplayssport(jordandejong, baseball).
-neg(athleteplayssport(jordandejong,golfing)).
+0.0::athleteplayssport(jordandejong,golfing).
 athleteplayssport(chrishammond, baseball).
-neg(athleteplayssport(chrishammond,professionalfootball)).
+0.0::athleteplayssport(chrishammond,professionalfootball).
 athleteplayssport(danmaples, golf).
-neg(athleteplayssport(danmaples,cycling)).
+0.0::athleteplayssport(danmaples,cycling).
 athleteplayssport(collinbalester, baseball).
-neg(athleteplayssport(collinbalester,soccer)).
+0.0::athleteplayssport(collinbalester,soccer).
 athleteplayssport(sampras, tennis).
-neg(athleteplayssport(sampras,wrestling)).
+0.0::athleteplayssport(sampras,wrestling).
 athleteplayssport(petermoylan, baseball).
-neg(athleteplayssport(petermoylan,tennis)).
+0.0::athleteplayssport(petermoylan,tennis).
 athleteplayssport(dustinnippert, baseball).
-neg(athleteplayssport(dustinnippert,lacrosse)).
+0.0::athleteplayssport(dustinnippert,lacrosse).
 athleteplayssport(dye, golf).
-neg(athleteplayssport(dye,tennis)).
+0.0::athleteplayssport(dye,tennis).
 athleteplayssport(danielbarone, baseball).
-neg(athleteplayssport(danielbarone,soccer)).
+0.0::athleteplayssport(danielbarone,soccer).
 athleteplayssport(kojiuehara, baseball).
-neg(athleteplayssport(kojiuehara,hockey)).
+0.0::athleteplayssport(kojiuehara,hockey).
 athleteplayssport(tonyclark, baseball).
-neg(athleteplayssport(tonyclark,professionalfootball)).
+0.0::athleteplayssport(tonyclark,professionalfootball).
 athleteplayssport(mikeoconnor, baseball).
-neg(athleteplayssport(mikeoconnor,sailing)).
+0.0::athleteplayssport(mikeoconnor,sailing).
 athleteplayssport(jonkitna, football).
-neg(athleteplayssport(jonkitna,softball)).
+0.0::athleteplayssport(jonkitna,softball).
 athleteplayssport(benfrancisco, baseball).
-neg(athleteplayssport(benfrancisco,professionalbasketball)).
+0.0::athleteplayssport(benfrancisco,professionalbasketball).
 athleteplayssport(daleearnhardt, carracing).
-neg(athleteplayssport(daleearnhardt,professionalbasketball)).
+0.0::athleteplayssport(daleearnhardt,professionalbasketball).
 athleteplayssport(brianbruney, baseball).
-neg(athleteplayssport(brianbruney,swimming)).
+0.0::athleteplayssport(brianbruney,swimming).
 athleteplayssport(caseyfossum, baseball).
-neg(athleteplayssport(caseyfossum,cycling)).
+0.0::athleteplayssport(caseyfossum,cycling).
 athleteplayssport(levalespeigner, baseball).
-neg(athleteplayssport(levalespeigner,trackandfield)).
+0.0::athleteplayssport(levalespeigner,trackandfield).
 athleteplayssport(joshshortslef, baseball).
-neg(athleteplayssport(joshshortslef,collegebaseball)).
+0.0::athleteplayssport(joshshortslef,collegebaseball).
 athleteplayssport(chadgaudin, baseball).
-neg(athleteplayssport(chadgaudin,wrestling)).
+0.0::athleteplayssport(chadgaudin,wrestling).
 athleteplayssport(brocklesnar, wrestling).
-neg(athleteplayssport(brocklesnar,golfing)).
+0.0::athleteplayssport(brocklesnar,golfing).
 athleteplayssport(bryancorey, baseball).
-neg(athleteplayssport(bryancorey,hockey)).
+0.0::athleteplayssport(bryancorey,hockey).
 athleteplayssport(kevincash, baseball).
-neg(athleteplayssport(kevincash,boxing)).
+0.0::athleteplayssport(kevincash,boxing).
 athleteplayssport(aaron, baseball).
-neg(athleteplayssport(aaron,collegebaseball)).
+0.0::athleteplayssport(aaron,collegebaseball).
 athleteplayssport(tomseaver, baseball).
-neg(athleteplayssport(tomseaver,football)).
+0.0::athleteplayssport(tomseaver,football).
 athleteplayssport(colehamels, baseball).
-neg(athleteplayssport(colehamels,cycling)).
+0.0::athleteplayssport(colehamels,cycling).
 athleteplayssport(matttreanor, baseball).
-neg(athleteplayssport(matttreanor,trackandfield)).
+0.0::athleteplayssport(matttreanor,trackandfield).
 athleteplayssport(corkymiller, baseball).
-neg(athleteplayssport(corkymiller,sailing)).
+0.0::athleteplayssport(corkymiller,sailing).
 athleteplayssport(jonniese, baseball).
-neg(athleteplayssport(jonniese,sailing)).
+0.0::athleteplayssport(jonniese,sailing).
 athleteplayssport(calripken, baseball).
-neg(athleteplayssport(calripken,trackandfield)).
+0.0::athleteplayssport(calripken,trackandfield).
 athleteplayssport(jimhoey, baseball).
-neg(athleteplayssport(jimhoey,lacrosse)).
+0.0::athleteplayssport(jimhoey,lacrosse).
 athleteplayssport(jimengh, golf).
-neg(athleteplayssport(jimengh,tennis)).
+0.0::athleteplayssport(jimengh,tennis).
 athleteplayssport(torryholt, football).
-neg(athleteplayssport(torryholt,cycling)).
+0.0::athleteplayssport(torryholt,cycling).
 athleteplayssport(genebates, golf).
-neg(athleteplayssport(genebates,boxing)).
+0.0::athleteplayssport(genebates,boxing).
 athleteplayssport(mattgarza, baseball).
-neg(athleteplayssport(mattgarza,sailing)).
+0.0::athleteplayssport(mattgarza,sailing).
 athleteplayssport(corydoyne, baseball).
-neg(athleteplayssport(corydoyne,golf)).
+0.0::athleteplayssport(corydoyne,golf).
 athleteplayssport(aaronlaffey, baseball).
-neg(athleteplayssport(aaronlaffey,tennis)).
+0.0::athleteplayssport(aaronlaffey,tennis).
 athleteplayssport(jeffmanship, baseball).
-neg(athleteplayssport(jeffmanship,basketball)).
+0.0::athleteplayssport(jeffmanship,basketball).
 athleteplayssport(rustystaub, baseball).
-neg(athleteplayssport(rustystaub,professionalfootball)).
+0.0::athleteplayssport(rustystaub,professionalfootball).
 athleteplayssport(kevinpucetas, baseball).
-neg(athleteplayssport(kevinpucetas,lacrosse)).
+0.0::athleteplayssport(kevinpucetas,lacrosse).
 teamalsoknownas(northcarolinaatstateuniversity, stateuniversity).
 teamalsoknownas(centralmichiganuniversity, stateuniversity).
 teamalsoknownas(stateuniversity, sanfranciscostate).
@@ -4569,7 +4570,7 @@ teamplayssport(nyubobcats, basketball).
 
 
 
-begin(model(f2)).
+begin(model(f2).
 teamplaysinleague(wittenbergtigers, ncaa).
 teamplaysinleague(ucfknights, ncaa).
 teamplaysinleague(wagnercollege, ncaa).
@@ -4873,697 +4874,697 @@ teamplaysinleague(texastechuniversity, international).
 teamplaysinleague(bostonredsox, mlb).
 teamplaysinleague(saintpaulscollege, nfl).
 athleteplayssport(kylemcclellan, baseball).
-neg(athleteplayssport(kylemcclellan,football)).
+0.0::athleteplayssport(kylemcclellan,football).
 athleteplayssport(trevorbell, baseball).
-neg(athleteplayssport(trevorbell,swimming)).
+0.0::athleteplayssport(trevorbell,swimming).
 athleteplayssport(shaqoneal, basketball).
-neg(athleteplayssport(shaqoneal,wrestling)).
+0.0::athleteplayssport(shaqoneal,wrestling).
 athleteplayssport(devinharris, basketball).
-neg(athleteplayssport(devinharris,carracing)).
+0.0::athleteplayssport(devinharris,carracing).
 athleteplayssport(ricardorincon, baseball).
-neg(athleteplayssport(ricardorincon,boxing)).
+0.0::athleteplayssport(ricardorincon,boxing).
 athleteplayssport(allanhouston, basketball).
-neg(athleteplayssport(allanhouston,boxing)).
+0.0::athleteplayssport(allanhouston,boxing).
 athleteplayssport(juangutierrez, baseball).
-neg(athleteplayssport(juangutierrez,basketball)).
+0.0::athleteplayssport(juangutierrez,basketball).
 athleteplayssport(jeromebettis, football).
-neg(athleteplayssport(jeromebettis,hockey)).
+0.0::athleteplayssport(jeromebettis,hockey).
 athleteplayssport(rogerpackard, golf).
-neg(athleteplayssport(rogerpackard,softball)).
+0.0::athleteplayssport(rogerpackard,softball).
 athleteplayssport(garybennett, baseball).
-neg(athleteplayssport(garybennett,football)).
+0.0::athleteplayssport(garybennett,football).
 athleteplayssport(bowa, baseball).
-neg(athleteplayssport(bowa,soccer)).
+0.0::athleteplayssport(bowa,soccer).
 athleteplayssport(jonadkins, baseball).
-neg(athleteplayssport(jonadkins,sailing)).
+0.0::athleteplayssport(jonadkins,sailing).
 athleteplayssport(josemijares, baseball).
-neg(athleteplayssport(josemijares,soccer)).
+0.0::athleteplayssport(josemijares,soccer).
 athleteplayssport(karllitten, golf).
-neg(athleteplayssport(karllitten,professionalbasketball)).
+0.0::athleteplayssport(karllitten,professionalbasketball).
 athleteplayssport(fredlynn, baseball).
-neg(athleteplayssport(fredlynn,professionalfootball)).
+0.0::athleteplayssport(fredlynn,professionalfootball).
 athleteplayssport(jackkidwell, golf).
-neg(athleteplayssport(jackkidwell,wrestling)).
+0.0::athleteplayssport(jackkidwell,wrestling).
 athleteplayssport(stevetrachsel, baseball).
-neg(athleteplayssport(stevetrachsel,boxing)).
+0.0::athleteplayssport(stevetrachsel,boxing).
 athleteplayssport(kendye, golf).
-neg(athleteplayssport(kendye,boxing)).
+0.0::athleteplayssport(kendye,boxing).
 athleteplayssport(jacktaschner, football).
-neg(athleteplayssport(jacktaschner,wrestling)).
+0.0::athleteplayssport(jacktaschner,wrestling).
 athleteplayssport(jedlowrie, baseball).
-neg(athleteplayssport(jedlowrie,professionalbasketball)).
+0.0::athleteplayssport(jedlowrie,professionalbasketball).
 athleteplayssport(joemontana, football).
-neg(athleteplayssport(joemontana,baseball)).
+0.0::athleteplayssport(joemontana,baseball).
 athleteplayssport(jasonwilliams, basketball).
-neg(athleteplayssport(jasonwilliams,trackandfield)).
+0.0::athleteplayssport(jasonwilliams,trackandfield).
 athleteplayssport(greggzaun, baseball).
-neg(athleteplayssport(greggzaun,cycling)).
+0.0::athleteplayssport(greggzaun,cycling).
 athleteplayssport(ryansweeney, baseball).
-neg(athleteplayssport(ryansweeney,collegebaseball)).
+0.0::athleteplayssport(ryansweeney,collegebaseball).
 athleteplayssport(tonygwynn, baseball).
-neg(athleteplayssport(tonygwynn,basketball)).
+0.0::athleteplayssport(tonygwynn,basketball).
 athleteplayssport(desmondmuirhead, golf).
-neg(athleteplayssport(desmondmuirhead,swimming)).
+0.0::athleteplayssport(desmondmuirhead,swimming).
 athleteplayssport(marinosalas, baseball).
-neg(athleteplayssport(marinosalas,lacrosse)).
+0.0::athleteplayssport(marinosalas,lacrosse).
 athleteplayssport(bonds, baseball).
-neg(athleteplayssport(bonds,soccer)).
+0.0::athleteplayssport(bonds,soccer).
 athleteplayssport(miguelojeda, baseball).
-neg(athleteplayssport(miguelojeda,carracing)).
+0.0::athleteplayssport(miguelojeda,carracing).
 athleteplayssport(jefflacy, boxing).
-neg(athleteplayssport(jefflacy,carracing)).
+0.0::athleteplayssport(jefflacy,carracing).
 athleteplayssport(bradnelson, baseball).
-neg(athleteplayssport(bradnelson,golfing)).
+0.0::athleteplayssport(bradnelson,golfing).
 athleteplayssport(tarvarisjackson, football).
-neg(athleteplayssport(tarvarisjackson,baseball)).
+0.0::athleteplayssport(tarvarisjackson,baseball).
 athleteplayssport(jimmycollins, baseball).
-neg(athleteplayssport(jimmycollins,professionalbasketball)).
+0.0::athleteplayssport(jimmycollins,professionalbasketball).
 athleteplayssport(anthonylerew, baseball).
-neg(athleteplayssport(anthonylerew,professionalbasketball)).
+0.0::athleteplayssport(anthonylerew,professionalbasketball).
 athleteplayssport(juansalas, baseball).
-neg(athleteplayssport(juansalas,basketball)).
+0.0::athleteplayssport(juansalas,basketball).
 athleteplayssport(felixventura, baseball).
-neg(athleteplayssport(felixventura,collegebaseball)).
+0.0::athleteplayssport(felixventura,collegebaseball).
 athleteplayssport(frankfrancisco, baseball).
-neg(athleteplayssport(frankfrancisco,football)).
+0.0::athleteplayssport(frankfrancisco,football).
 athleteplayssport(scottbaker, baseball).
-neg(athleteplayssport(scottbaker,cycling)).
+0.0::athleteplayssport(scottbaker,cycling).
 athleteplayssport(bulger, baseball).
-neg(athleteplayssport(bulger,lacrosse)).
+0.0::athleteplayssport(bulger,lacrosse).
 athleteplayssport(bradiejames, golf).
-neg(athleteplayssport(bradiejames,baseball)).
+0.0::athleteplayssport(bradiejames,baseball).
 athleteplayssport(danielschlereth, baseball).
-neg(athleteplayssport(danielschlereth,softball)).
+0.0::athleteplayssport(danielschlereth,softball).
 athleteplayssport(esmailincaridad, baseball).
-neg(athleteplayssport(esmailincaridad,soccer)).
+0.0::athleteplayssport(esmailincaridad,soccer).
 athleteplayssport(jasonwindsor, baseball).
-neg(athleteplayssport(jasonwindsor,basketball)).
+0.0::athleteplayssport(jasonwindsor,basketball).
 athleteplayssport(edgarrenteria, baseball).
-neg(athleteplayssport(edgarrenteria,tennis)).
+0.0::athleteplayssport(edgarrenteria,tennis).
 athleteplayssport(trentgreen, football).
-neg(athleteplayssport(trentgreen,carracing)).
+0.0::athleteplayssport(trentgreen,carracing).
 athleteplayssport(ryanshealy, baseball).
-neg(athleteplayssport(ryanshealy,softball)).
+0.0::athleteplayssport(ryanshealy,softball).
 athleteplayssport(johnlannan, baseball).
-neg(athleteplayssport(johnlannan,wrestling)).
+0.0::athleteplayssport(johnlannan,wrestling).
 athleteplayssport(adambernero, baseball).
-neg(athleteplayssport(adambernero,lacrosse)).
+0.0::athleteplayssport(adambernero,lacrosse).
 athleteplayssport(davidpauley, baseball).
-neg(athleteplayssport(davidpauley,golfing)).
+0.0::athleteplayssport(davidpauley,golfing).
 athleteplayssport(kurtbirkins, baseball).
-neg(athleteplayssport(kurtbirkins,hockey)).
+0.0::athleteplayssport(kurtbirkins,hockey).
 athleteplayssport(ericdickerson, football).
-neg(athleteplayssport(ericdickerson,collegebaseball)).
+0.0::athleteplayssport(ericdickerson,collegebaseball).
 athleteplayssport(billbray, baseball).
-neg(athleteplayssport(billbray,golf)).
+0.0::athleteplayssport(billbray,golf).
 athleteplayssport(emilbrown, baseball).
-neg(athleteplayssport(emilbrown,professionalfootball)).
+0.0::athleteplayssport(emilbrown,professionalfootball).
 athleteplayssport(bjupton, baseball).
-neg(athleteplayssport(bjupton,collegebaseball)).
+0.0::athleteplayssport(bjupton,collegebaseball).
 athleteplayssport(antoniotarver, boxing).
-neg(athleteplayssport(antoniotarver,professionalbasketball)).
+0.0::athleteplayssport(antoniotarver,professionalbasketball).
 athleteplayssport(timstauffer, baseball).
-neg(athleteplayssport(timstauffer,sailing)).
+0.0::athleteplayssport(timstauffer,sailing).
 athleteplayssport(juanfrancisco, baseball).
-neg(athleteplayssport(juanfrancisco,carracing)).
+0.0::athleteplayssport(juanfrancisco,carracing).
 athleteplayssport(lyleoverbay, baseball).
-neg(athleteplayssport(lyleoverbay,cycling)).
+0.0::athleteplayssport(lyleoverbay,cycling).
 athleteplayssport(anthonyortega, baseball).
-neg(athleteplayssport(anthonyortega,swimming)).
+0.0::athleteplayssport(anthonyortega,swimming).
 athleteplayssport(mikeekstrom, baseball).
-neg(athleteplayssport(mikeekstrom,carracing)).
+0.0::athleteplayssport(mikeekstrom,carracing).
 athleteplayssport(berroa, baseball).
-neg(athleteplayssport(berroa,golf)).
+0.0::athleteplayssport(berroa,golf).
 athleteplayssport(phildumatrait, baseball).
-neg(athleteplayssport(phildumatrait,professionalfootball)).
+0.0::athleteplayssport(phildumatrait,professionalfootball).
 athleteplayssport(williamfbell, golf).
-neg(athleteplayssport(williamfbell,cycling)).
+0.0::athleteplayssport(williamfbell,cycling).
 athleteplayssport(bradjames, baseball).
-neg(athleteplayssport(bradjames,professionalfootball)).
+0.0::athleteplayssport(bradjames,professionalfootball).
 athleteplayssport(kendalvolz, baseball).
-neg(athleteplayssport(kendalvolz,hockey)).
+0.0::athleteplayssport(kendalvolz,hockey).
 athleteplayssport(harrison, baseball).
-neg(athleteplayssport(harrison,wrestling)).
+0.0::athleteplayssport(harrison,wrestling).
 athleteplayssport(tomwatson, golf).
-neg(athleteplayssport(tomwatson,collegebaseball)).
+0.0::athleteplayssport(tomwatson,collegebaseball).
 athleteplayssport(scottdohmann, baseball).
-neg(athleteplayssport(scottdohmann,golfing)).
+0.0::athleteplayssport(scottdohmann,golfing).
 athleteplayssport(brianmoran, baseball).
-neg(athleteplayssport(brianmoran,cycling)).
+0.0::athleteplayssport(brianmoran,cycling).
 athleteplayssport(joshsharpless, baseball).
-neg(athleteplayssport(joshsharpless,golf)).
+0.0::athleteplayssport(joshsharpless,golf).
 athleteplayssport(chrischambliss, baseball).
-neg(athleteplayssport(chrischambliss,collegebaseball)).
+0.0::athleteplayssport(chrischambliss,collegebaseball).
 athleteplayssport(kylernewby, baseball).
-neg(athleteplayssport(kylernewby,swimming)).
+0.0::athleteplayssport(kylernewby,swimming).
 athleteplayssport(joseceda, baseball).
-neg(athleteplayssport(joseceda,tennis)).
+0.0::athleteplayssport(joseceda,tennis).
 athleteplayssport(armandogalarraga, baseball).
-neg(athleteplayssport(armandogalarraga,sailing)).
+0.0::athleteplayssport(armandogalarraga,sailing).
 athleteplayssport(ryanfranklin, baseball).
-neg(athleteplayssport(ryanfranklin,football)).
+0.0::athleteplayssport(ryanfranklin,football).
 athleteplayssport(bertuzzi, hockey).
-neg(athleteplayssport(bertuzzi,cycling)).
+0.0::athleteplayssport(bertuzzi,cycling).
 athleteplayssport(narcisoelvira, baseball).
-neg(athleteplayssport(narcisoelvira,lacrosse)).
+0.0::athleteplayssport(narcisoelvira,lacrosse).
 athleteplayssport(tytaubenheim, baseball).
-neg(athleteplayssport(tytaubenheim,lacrosse)).
+0.0::athleteplayssport(tytaubenheim,lacrosse).
 athleteplayssport(gregoden, football).
-neg(athleteplayssport(gregoden,basketball)).
+0.0::athleteplayssport(gregoden,basketball).
 athleteplayssport(franklinmorales, baseball).
-neg(athleteplayssport(franklinmorales,professionalbasketball)).
+0.0::athleteplayssport(franklinmorales,professionalbasketball).
 athleteplayssport(davidriske, baseball).
-neg(athleteplayssport(davidriske,golfing)).
+0.0::athleteplayssport(davidriske,golfing).
 athleteplayssport(dennysreyes, baseball).
-neg(athleteplayssport(dennysreyes,trackandfield)).
+0.0::athleteplayssport(dennysreyes,trackandfield).
 athleteplayssport(corysullivan, baseball).
-neg(athleteplayssport(corysullivan,cycling)).
+0.0::athleteplayssport(corysullivan,cycling).
 athleteplayssport(tonypenajr, baseball).
-neg(athleteplayssport(tonypenajr,professionalfootball)).
+0.0::athleteplayssport(tonypenajr,professionalfootball).
 athleteplayssport(randykeisler, baseball).
-neg(athleteplayssport(randykeisler,trackandfield)).
+0.0::athleteplayssport(randykeisler,trackandfield).
 athleteplayssport(zdenochara, hockey).
-neg(athleteplayssport(zdenochara,soccer)).
+0.0::athleteplayssport(zdenochara,soccer).
 athleteplayssport(ronaldfream, golf).
-neg(athleteplayssport(ronaldfream,wrestling)).
+0.0::athleteplayssport(ronaldfream,wrestling).
 athleteplayssport(joshwilliams, baseball).
-neg(athleteplayssport(joshwilliams,soccer)).
+0.0::athleteplayssport(joshwilliams,soccer).
 athleteplayssport(lamarodom, basketball).
-neg(athleteplayssport(lamarodom,golfing)).
+0.0::athleteplayssport(lamarodom,golfing).
 athleteplayssport(franciscocruceta, baseball).
-neg(athleteplayssport(franciscocruceta,trackandfield)).
+0.0::athleteplayssport(franciscocruceta,trackandfield).
 athleteplayssport(kellystinnett, baseball).
-neg(athleteplayssport(kellystinnett,tennis)).
+0.0::athleteplayssport(kellystinnett,tennis).
 athleteplayssport(daryllclark, football).
-neg(athleteplayssport(daryllclark,softball)).
+0.0::athleteplayssport(daryllclark,softball).
 athleteplayssport(erickdampier, basketball).
-neg(athleteplayssport(erickdampier,football)).
+0.0::athleteplayssport(erickdampier,football).
 athleteplayssport(joebeimel, baseball).
-neg(athleteplayssport(joebeimel,professionalfootball)).
+0.0::athleteplayssport(joebeimel,professionalfootball).
 athleteplayssport(dennistankersley, baseball).
-neg(athleteplayssport(dennistankersley,professionalbasketball)).
+0.0::athleteplayssport(dennistankersley,professionalbasketball).
 athleteplayssport(jjputz, baseball).
-neg(athleteplayssport(jjputz,carracing)).
+0.0::athleteplayssport(jjputz,carracing).
 athleteplayssport(antawnjamison, basketball).
-neg(athleteplayssport(antawnjamison,trackandfield)).
+0.0::athleteplayssport(antawnjamison,trackandfield).
 athleteplayssport(joefrazier, boxing).
-neg(athleteplayssport(joefrazier,hockey)).
+0.0::athleteplayssport(joefrazier,hockey).
 athleteplayssport(timthomas, hockey).
-neg(athleteplayssport(timthomas,wrestling)).
+0.0::athleteplayssport(timthomas,wrestling).
 athleteplayssport(josepaniagua, baseball).
-neg(athleteplayssport(josepaniagua,soccer)).
+0.0::athleteplayssport(josepaniagua,soccer).
 athleteplayssport(dwaynewade, basketball).
-neg(athleteplayssport(dwaynewade,lacrosse)).
+0.0::athleteplayssport(dwaynewade,lacrosse).
 athleteplayssport(chrisiannetta, baseball).
-neg(athleteplayssport(chrisiannetta,tennis)).
+0.0::athleteplayssport(chrisiannetta,tennis).
 athleteplayssport(alfonzo, baseball).
-neg(athleteplayssport(alfonzo,basketball)).
+0.0::athleteplayssport(alfonzo,basketball).
 athleteplayssport(waltersilva, baseball).
-neg(athleteplayssport(waltersilva,golf)).
+0.0::athleteplayssport(waltersilva,golf).
 athleteplayssport(carlosmartinez, baseball).
-neg(athleteplayssport(carlosmartinez,tennis)).
+0.0::athleteplayssport(carlosmartinez,tennis).
 athleteplayssport(joakimsoria, baseball).
-neg(athleteplayssport(joakimsoria,hockey)).
+0.0::athleteplayssport(joakimsoria,hockey).
 athleteplayssport(brianroberts, baseball).
-neg(athleteplayssport(brianroberts,wrestling)).
+0.0::athleteplayssport(brianroberts,wrestling).
 athleteplayssport(manuelcorpas, baseball).
-neg(athleteplayssport(manuelcorpas,lacrosse)).
+0.0::athleteplayssport(manuelcorpas,lacrosse).
 athleteplayssport(connorrobertson, baseball).
-neg(athleteplayssport(connorrobertson,soccer)).
+0.0::athleteplayssport(connorrobertson,soccer).
 athleteplayssport(joshgeer, baseball).
-neg(athleteplayssport(joshgeer,wrestling)).
+0.0::athleteplayssport(joshgeer,wrestling).
 athleteplayssport(barryzito, baseball).
-neg(athleteplayssport(barryzito,boxing)).
+0.0::athleteplayssport(barryzito,boxing).
 athleteplayssport(kenray, baseball).
-neg(athleteplayssport(kenray,carracing)).
+0.0::athleteplayssport(kenray,carracing).
 athleteplayssport(mattbelisle, baseball).
-neg(athleteplayssport(mattbelisle,professionalbasketball)).
+0.0::athleteplayssport(mattbelisle,professionalbasketball).
 athleteplayssport(brianwilson, baseball).
-neg(athleteplayssport(brianwilson,swimming)).
+0.0::athleteplayssport(brianwilson,swimming).
 athleteplayssport(lamontpeterson, boxing).
-neg(athleteplayssport(lamontpeterson,softball)).
+0.0::athleteplayssport(lamontpeterson,softball).
 athleteplayssport(peterthomson, golf).
-neg(athleteplayssport(peterthomson,professionalbasketball)).
+0.0::athleteplayssport(peterthomson,professionalbasketball).
 athleteplayssport(joshphelps, baseball).
-neg(athleteplayssport(joshphelps,sailing)).
+0.0::athleteplayssport(joshphelps,sailing).
 athleteplayssport(richhill, baseball).
-neg(athleteplayssport(richhill,sailing)).
+0.0::athleteplayssport(richhill,sailing).
 athleteplayssport(jakepeavy, baseball).
-neg(athleteplayssport(jakepeavy,cycling)).
+0.0::athleteplayssport(jakepeavy,cycling).
 athleteplayssport(dougbrocail, baseball).
-neg(athleteplayssport(dougbrocail,tennis)).
+0.0::athleteplayssport(dougbrocail,tennis).
 athleteplayssport(latroyhawkins, baseball).
-neg(athleteplayssport(latroyhawkins,hockey)).
+0.0::athleteplayssport(latroyhawkins,hockey).
 athleteplayssport(jeffstevens, baseball).
-neg(athleteplayssport(jeffstevens,football)).
+0.0::athleteplayssport(jeffstevens,football).
 athleteplayssport(michaelphelps, swimming).
-neg(athleteplayssport(michaelphelps,professionalfootball)).
+0.0::athleteplayssport(michaelphelps,professionalfootball).
 athleteplayssport(honuswagner, baseball).
-neg(athleteplayssport(honuswagner,trackandfield)).
+0.0::athleteplayssport(honuswagner,trackandfield).
 athleteplayssport(kylekendrick, baseball).
-neg(athleteplayssport(kylekendrick,football)).
+0.0::athleteplayssport(kylekendrick,football).
 athleteplayssport(evalongoria, baseball).
-neg(athleteplayssport(evalongoria,basketball)).
+0.0::athleteplayssport(evalongoria,basketball).
 athleteplayssport(nelsonfigueroa, baseball).
-neg(athleteplayssport(nelsonfigueroa,wrestling)).
+0.0::athleteplayssport(nelsonfigueroa,wrestling).
 athleteplayssport(kirkgibson, baseball).
-neg(athleteplayssport(kirkgibson,golfing)).
+0.0::athleteplayssport(kirkgibson,golfing).
 athleteplayssport(erichacker, baseball).
-neg(athleteplayssport(erichacker,softball)).
+0.0::athleteplayssport(erichacker,softball).
 athleteplayssport(scottstrickland, baseball).
-neg(athleteplayssport(scottstrickland,hockey)).
+0.0::athleteplayssport(scottstrickland,hockey).
 athleteplayssport(layncenix, baseball).
-neg(athleteplayssport(layncenix,softball)).
+0.0::athleteplayssport(layncenix,softball).
 athleteplayssport(davidcortes, baseball).
-neg(athleteplayssport(davidcortes,softball)).
+0.0::athleteplayssport(davidcortes,softball).
 athleteplayssport(jaymarshall, baseball).
-neg(athleteplayssport(jaymarshall,sailing)).
+0.0::athleteplayssport(jaymarshall,sailing).
 athleteplayssport(arthurhills, golf).
-neg(athleteplayssport(arthurhills,football)).
+0.0::athleteplayssport(arthurhills,football).
 athleteplayssport(ryanperrilloux, football).
-neg(athleteplayssport(ryanperrilloux,basketball)).
+0.0::athleteplayssport(ryanperrilloux,basketball).
 athleteplayssport(vitaliklitschko, boxing).
-neg(athleteplayssport(vitaliklitschko,basketball)).
+0.0::athleteplayssport(vitaliklitschko,basketball).
 athleteplayssport(tigerwoods, golf).
-neg(athleteplayssport(tigerwoods,wrestling)).
+0.0::athleteplayssport(tigerwoods,wrestling).
 athleteplayssport(wilfredoledezma, baseball).
-neg(athleteplayssport(wilfredoledezma,hockey)).
+0.0::athleteplayssport(wilfredoledezma,hockey).
 athleteplayssport(josecapellan, baseball).
-neg(athleteplayssport(josecapellan,football)).
+0.0::athleteplayssport(josecapellan,football).
 athleteplayssport(rickieweeks, baseball).
-neg(athleteplayssport(rickieweeks,sailing)).
+0.0::athleteplayssport(rickieweeks,sailing).
 athleteplayssport(joshbarfield, baseball).
-neg(athleteplayssport(joshbarfield,basketball)).
+0.0::athleteplayssport(joshbarfield,basketball).
 athleteplayssport(kotsay, baseball).
-neg(athleteplayssport(kotsay,professionalfootball)).
+0.0::athleteplayssport(kotsay,professionalfootball).
 athleteplayssport(chrisredman, football).
-neg(athleteplayssport(chrisredman,sailing)).
+0.0::athleteplayssport(chrisredman,sailing).
 athleteplayssport(mattpalmer, baseball).
-neg(athleteplayssport(mattpalmer,carracing)).
+0.0::athleteplayssport(mattpalmer,carracing).
 athleteplayssport(markgrace, baseball).
-neg(athleteplayssport(markgrace,cycling)).
+0.0::athleteplayssport(markgrace,cycling).
 athleteplayssport(jasonstandridge, baseball).
-neg(athleteplayssport(jasonstandridge,lacrosse)).
+0.0::athleteplayssport(jasonstandridge,lacrosse).
 athleteplayssport(ryantucker, baseball).
-neg(athleteplayssport(ryantucker,wrestling)).
+0.0::athleteplayssport(ryantucker,wrestling).
 athleteplayssport(sammygervacio, baseball).
-neg(athleteplayssport(sammygervacio,hockey)).
+0.0::athleteplayssport(sammygervacio,hockey).
 athleteplayssport(jasonwaddell, baseball).
-neg(athleteplayssport(jasonwaddell,hockey)).
+0.0::athleteplayssport(jasonwaddell,hockey).
 athleteplayssport(kevinjones, football).
-neg(athleteplayssport(kevinjones,boxing)).
+0.0::athleteplayssport(kevinjones,boxing).
 athleteplayssport(nelsoncruz, baseball).
-neg(athleteplayssport(nelsoncruz,collegebaseball)).
+0.0::athleteplayssport(nelsoncruz,collegebaseball).
 athleteplayssport(tommyhunter, baseball).
-neg(athleteplayssport(tommyhunter,swimming)).
+0.0::athleteplayssport(tommyhunter,swimming).
 athleteplayssport(alexhinshaw, football).
-neg(athleteplayssport(alexhinshaw,boxing)).
+0.0::athleteplayssport(alexhinshaw,boxing).
 athleteplayssport(ericbyrnes, baseball).
-neg(athleteplayssport(ericbyrnes,collegebaseball)).
+0.0::athleteplayssport(ericbyrnes,collegebaseball).
 athleteplayssport(edwinmoses, trackandfield).
-neg(athleteplayssport(edwinmoses,golf)).
+0.0::athleteplayssport(edwinmoses,golf).
 athleteplayssport(brianbannister, baseball).
-neg(athleteplayssport(brianbannister,cycling)).
+0.0::athleteplayssport(brianbannister,cycling).
 athleteplayssport(byronnelson, golf).
-neg(athleteplayssport(byronnelson,professionalbasketball)).
+0.0::athleteplayssport(byronnelson,professionalbasketball).
 athleteplayssport(justinlehr, baseball).
-neg(athleteplayssport(justinlehr,golfing)).
+0.0::athleteplayssport(justinlehr,golfing).
 athleteplayssport(dougfister, baseball).
-neg(athleteplayssport(dougfister,professionalfootball)).
+0.0::athleteplayssport(dougfister,professionalfootball).
 athleteplayssport(joeinglett, baseball).
-neg(athleteplayssport(joeinglett,golf)).
+0.0::athleteplayssport(joeinglett,golf).
 athleteplayssport(clayzavada, baseball).
-neg(athleteplayssport(clayzavada,lacrosse)).
+0.0::athleteplayssport(clayzavada,lacrosse).
 athleteplayssport(santonioholmes, football).
-neg(athleteplayssport(santonioholmes,swimming)).
+0.0::athleteplayssport(santonioholmes,swimming).
 athleteplayssport(eddiehackett, golf).
-neg(athleteplayssport(eddiehackett,professionalbasketball)).
+0.0::athleteplayssport(eddiehackett,professionalbasketball).
 athleteplayssport(marquescolston, football).
-neg(athleteplayssport(marquescolston,trackandfield)).
+0.0::athleteplayssport(marquescolston,trackandfield).
 athleteplayssport(joshkinney, baseball).
-neg(athleteplayssport(joshkinney,collegebaseball)).
+0.0::athleteplayssport(joshkinney,collegebaseball).
 athleteplayssport(yusmeiropetit, baseball).
-neg(athleteplayssport(yusmeiropetit,tennis)).
+0.0::athleteplayssport(yusmeiropetit,tennis).
 athleteplayssport(cmpunk, wrestling).
-neg(athleteplayssport(cmpunk,swimming)).
+0.0::athleteplayssport(cmpunk,swimming).
 athleteplayssport(timduncan, basketball).
-neg(athleteplayssport(timduncan,softball)).
+0.0::athleteplayssport(timduncan,softball).
 athleteplayssport(michaelchang, tennis).
-neg(athleteplayssport(michaelchang,sailing)).
+0.0::athleteplayssport(michaelchang,sailing).
 athleteplayssport(ryantheriot, baseball).
-neg(athleteplayssport(ryantheriot,boxing)).
+0.0::athleteplayssport(ryantheriot,boxing).
 athleteplayssport(peavy, baseball).
-neg(athleteplayssport(peavy,sailing)).
+0.0::athleteplayssport(peavy,sailing).
 athleteplayssport(danielmoskos, baseball).
-neg(athleteplayssport(danielmoskos,golf)).
+0.0::athleteplayssport(danielmoskos,golf).
 athleteplayssport(justinhampson, baseball).
-neg(athleteplayssport(justinhampson,swimming)).
+0.0::athleteplayssport(justinhampson,swimming).
 athleteplayssport(pedroliriano, baseball).
-neg(athleteplayssport(pedroliriano,hockey)).
+0.0::athleteplayssport(pedroliriano,hockey).
 athleteplayssport(johnolerud, baseball).
-neg(athleteplayssport(johnolerud,soccer)).
+0.0::athleteplayssport(johnolerud,soccer).
 athleteplayssport(chrisheintz, baseball).
-neg(athleteplayssport(chrisheintz,basketball)).
+0.0::athleteplayssport(chrisheintz,basketball).
 athleteplayssport(clark, golf).
-neg(athleteplayssport(clark,wrestling)).
+0.0::athleteplayssport(clark,wrestling).
 athleteplayssport(ronnycedeno, baseball).
-neg(athleteplayssport(ronnycedeno,swimming)).
+0.0::athleteplayssport(ronnycedeno,swimming).
 athleteplayssport(thomasmcbroom, golf).
-neg(athleteplayssport(thomasmcbroom,professionalbasketball)).
+0.0::athleteplayssport(thomasmcbroom,professionalbasketball).
 athleteplayssport(bauer, baseball).
-neg(athleteplayssport(bauer,carracing)).
+0.0::athleteplayssport(bauer,carracing).
 athleteplayssport(perrydye, golf).
-neg(athleteplayssport(perrydye,tennis)).
+0.0::athleteplayssport(perrydye,tennis).
 athleteplayssport(futeni, baseball).
-neg(athleteplayssport(futeni,boxing)).
+0.0::athleteplayssport(futeni,boxing).
 athleteplayssport(scottdunn, baseball).
-neg(athleteplayssport(scottdunn,boxing)).
+0.0::athleteplayssport(scottdunn,boxing).
 athleteplayssport(kevinfaulk, football).
-neg(athleteplayssport(kevinfaulk,collegebaseball)).
+0.0::athleteplayssport(kevinfaulk,collegebaseball).
 athleteplayssport(josephortiz, baseball).
-neg(athleteplayssport(josephortiz,soccer)).
+0.0::athleteplayssport(josephortiz,soccer).
 athleteplayssport(darioveras, baseball).
-neg(athleteplayssport(darioveras,lacrosse)).
+0.0::athleteplayssport(darioveras,lacrosse).
 athleteplayssport(daisukematsuzaka, baseball).
-neg(athleteplayssport(daisukematsuzaka,professionalbasketball)).
+0.0::athleteplayssport(daisukematsuzaka,professionalbasketball).
 athleteplayssport(mikefontenot, baseball).
-neg(athleteplayssport(mikefontenot,professionalbasketball)).
+0.0::athleteplayssport(mikefontenot,professionalbasketball).
 athleteplayssport(freddiejones, baseball).
-neg(athleteplayssport(freddiejones,boxing)).
+0.0::athleteplayssport(freddiejones,boxing).
 athleteplayssport(steveyoung, football).
-neg(athleteplayssport(steveyoung,tennis)).
+0.0::athleteplayssport(steveyoung,tennis).
 athleteplayssport(paulbako, baseball).
-neg(athleteplayssport(paulbako,tennis)).
+0.0::athleteplayssport(paulbako,tennis).
 athleteplayssport(jeremyhellickson, baseball).
-neg(athleteplayssport(jeremyhellickson,boxing)).
+0.0::athleteplayssport(jeremyhellickson,boxing).
 athleteplayssport(danuggla, baseball).
-neg(athleteplayssport(danuggla,football)).
+0.0::athleteplayssport(danuggla,football).
 athleteplayssport(williecollazo, baseball).
-neg(athleteplayssport(williecollazo,softball)).
+0.0::athleteplayssport(williecollazo,softball).
 athleteplayssport(bryanbullington, baseball).
-neg(athleteplayssport(bryanbullington,golf)).
+0.0::athleteplayssport(bryanbullington,golf).
 athleteplayssport(cliffpolitte, baseball).
-neg(athleteplayssport(cliffpolitte,sailing)).
+0.0::athleteplayssport(cliffpolitte,sailing).
 athleteplayssport(richthompson, baseball).
-neg(athleteplayssport(richthompson,football)).
+0.0::athleteplayssport(richthompson,football).
 athleteplayssport(jimedmonds, football).
-neg(athleteplayssport(jimedmonds,professionalbasketball)).
+0.0::athleteplayssport(jimedmonds,professionalbasketball).
 athleteplayssport(timbyrdak, baseball).
-neg(athleteplayssport(timbyrdak,trackandfield)).
+0.0::athleteplayssport(timbyrdak,trackandfield).
 athleteplayssport(dougwaechter, baseball).
-neg(athleteplayssport(dougwaechter,professionalfootball)).
+0.0::athleteplayssport(dougwaechter,professionalfootball).
 athleteplayssport(pbdye, golf).
-neg(athleteplayssport(pbdye,carracing)).
+0.0::athleteplayssport(pbdye,carracing).
 athleteplayssport(davidcone, baseball).
-neg(athleteplayssport(davidcone,cycling)).
+0.0::athleteplayssport(davidcone,cycling).
 athleteplayssport(latos, baseball).
-neg(athleteplayssport(latos,tennis)).
+0.0::athleteplayssport(latos,tennis).
 athleteplayssport(chrisbooker, baseball).
-neg(athleteplayssport(chrisbooker,basketball)).
+0.0::athleteplayssport(chrisbooker,basketball).
 athleteplayssport(mikebibby, basketball).
-neg(athleteplayssport(mikebibby,soccer)).
+0.0::athleteplayssport(mikebibby,soccer).
 athleteplayssport(victorgarate, baseball).
-neg(athleteplayssport(victorgarate,professionalbasketball)).
+0.0::athleteplayssport(victorgarate,professionalbasketball).
 athleteplayssport(mathiaskiwanuka, football).
-neg(athleteplayssport(mathiaskiwanuka,basketball)).
+0.0::athleteplayssport(mathiaskiwanuka,basketball).
 athleteplayssport(arturolopez, baseball).
-neg(athleteplayssport(arturolopez,cycling)).
+0.0::athleteplayssport(arturolopez,cycling).
 athleteplayssport(bobbykeppel, baseball).
-neg(athleteplayssport(bobbykeppel,football)).
+0.0::athleteplayssport(bobbykeppel,football).
 athleteplayssport(bobfeller, baseball).
-neg(athleteplayssport(bobfeller,boxing)).
+0.0::athleteplayssport(bobfeller,boxing).
 athleteplayssport(clydedrexler, basketball).
-neg(athleteplayssport(clydedrexler,baseball)).
+0.0::athleteplayssport(clydedrexler,baseball).
 athleteplayssport(dewonday, baseball).
-neg(athleteplayssport(dewonday,wrestling)).
+0.0::athleteplayssport(dewonday,wrestling).
 athleteplayssport(jonesdrew, football).
-neg(athleteplayssport(jonesdrew,soccer)).
+0.0::athleteplayssport(jonesdrew,soccer).
 athleteplayssport(michaeldasher, golf).
-neg(athleteplayssport(michaeldasher,golfing)).
+0.0::athleteplayssport(michaeldasher,golfing).
 athleteplayssport(michaelclayton, baseball).
-neg(athleteplayssport(michaelclayton,football)).
+0.0::athleteplayssport(michaelclayton,football).
 athleteplayssport(kylesnyder, baseball).
-neg(athleteplayssport(kylesnyder,sailing)).
+0.0::athleteplayssport(kylesnyder,sailing).
 athleteplayssport(austinmaddox, baseball).
-neg(athleteplayssport(austinmaddox,hockey)).
+0.0::athleteplayssport(austinmaddox,hockey).
 athleteplayssport(jerrysands, baseball).
-neg(athleteplayssport(jerrysands,sailing)).
+0.0::athleteplayssport(jerrysands,sailing).
 athleteplayssport(darylthompson, baseball).
-neg(athleteplayssport(darylthompson,golfing)).
+0.0::athleteplayssport(darylthompson,golfing).
 athleteplayssport(alfonsosoriano, baseball).
-neg(athleteplayssport(alfonsosoriano,football)).
+0.0::athleteplayssport(alfonsosoriano,football).
 athleteplayssport(joenamath, football).
-neg(athleteplayssport(joenamath,basketball)).
+0.0::athleteplayssport(joenamath,basketball).
 athleteplayssport(darwincubillan, baseball).
-neg(athleteplayssport(darwincubillan,football)).
+0.0::athleteplayssport(darwincubillan,football).
 athleteplayssport(martinstlouis, baseball).
-neg(athleteplayssport(martinstlouis,softball)).
+0.0::athleteplayssport(martinstlouis,softball).
 athleteplayssport(cleonjones, baseball).
-neg(athleteplayssport(cleonjones,boxing)).
+0.0::athleteplayssport(cleonjones,boxing).
 athleteplayssport(jasonromano, baseball).
-neg(athleteplayssport(jasonromano,golf)).
+0.0::athleteplayssport(jasonromano,golf).
 athleteplayssport(dankolb, baseball).
-neg(athleteplayssport(dankolb,golf)).
+0.0::athleteplayssport(dankolb,golf).
 athleteplayssport(mattleinart, golf).
-neg(athleteplayssport(mattleinart,carracing)).
+0.0::athleteplayssport(mattleinart,carracing).
 athleteplayssport(geraldlaird, hockey).
-neg(athleteplayssport(geraldlaird,collegebaseball)).
+0.0::athleteplayssport(geraldlaird,collegebaseball).
 athleteplayssport(chadpennington, football).
-neg(athleteplayssport(chadpennington,tennis)).
+0.0::athleteplayssport(chadpennington,tennis).
 athleteplayssport(busterposey, baseball).
-neg(athleteplayssport(busterposey,professionalbasketball)).
+0.0::athleteplayssport(busterposey,professionalbasketball).
 athleteplayssport(davidboston, football).
-neg(athleteplayssport(davidboston,cycling)).
+0.0::athleteplayssport(davidboston,cycling).
 athleteplayssport(gregreynolds, baseball).
-neg(athleteplayssport(gregreynolds,golfing)).
+0.0::athleteplayssport(gregreynolds,golfing).
 athleteplayssport(jonathancoachman, wrestling).
-neg(athleteplayssport(jonathancoachman,professionalfootball)).
+0.0::athleteplayssport(jonathancoachman,professionalfootball).
 athleteplayssport(carlosmuniz, baseball).
-neg(athleteplayssport(carlosmuniz,basketball)).
+0.0::athleteplayssport(carlosmuniz,basketball).
 athleteplayssport(salfasano, baseball).
-neg(athleteplayssport(salfasano,football)).
+0.0::athleteplayssport(salfasano,football).
 athleteplayssport(chrisshelton, baseball).
-neg(athleteplayssport(chrisshelton,cycling)).
+0.0::athleteplayssport(chrisshelton,cycling).
 athleteplayssport(kevinjohnson, basketball).
-neg(athleteplayssport(kevinjohnson,tennis)).
+0.0::athleteplayssport(kevinjohnson,tennis).
 athleteplayssport(brianmatusz, baseball).
-neg(athleteplayssport(brianmatusz,softball)).
+0.0::athleteplayssport(brianmatusz,softball).
 athleteplayssport(toddhollandsworth, baseball).
-neg(athleteplayssport(toddhollandsworth,carracing)).
+0.0::athleteplayssport(toddhollandsworth,carracing).
 athleteplayssport(shawnmarion, basketball).
-neg(athleteplayssport(shawnmarion,boxing)).
+0.0::athleteplayssport(shawnmarion,boxing).
 athleteplayssport(jdmartin, baseball).
-neg(athleteplayssport(jdmartin,professionalbasketball)).
+0.0::athleteplayssport(jdmartin,professionalbasketball).
 athleteplayssport(chrisvolstad, baseball).
-neg(athleteplayssport(chrisvolstad,boxing)).
+0.0::athleteplayssport(chrisvolstad,boxing).
 athleteplayssport(kevincorreia, baseball).
-neg(athleteplayssport(kevincorreia,tennis)).
+0.0::athleteplayssport(kevincorreia,tennis).
 athleteplayssport(faustocarmona, baseball).
-neg(athleteplayssport(faustocarmona,trackandfield)).
+0.0::athleteplayssport(faustocarmona,trackandfield).
 athleteplayssport(joshfields, baseball).
-neg(athleteplayssport(joshfields,boxing)).
+0.0::athleteplayssport(joshfields,boxing).
 athleteplayssport(tomoohka, baseball).
-neg(athleteplayssport(tomoohka,professionalfootball)).
+0.0::athleteplayssport(tomoohka,professionalfootball).
 athleteplayssport(mattthornton, baseball).
-neg(athleteplayssport(mattthornton,professionalfootball)).
+0.0::athleteplayssport(mattthornton,professionalfootball).
 athleteplayssport(jasongrimsley, baseball).
-neg(athleteplayssport(jasongrimsley,professionalbasketball)).
+0.0::athleteplayssport(jasongrimsley,professionalbasketball).
 athleteplayssport(cabellrobinson, golf).
-neg(athleteplayssport(cabellrobinson,collegebaseball)).
+0.0::athleteplayssport(cabellrobinson,collegebaseball).
 athleteplayssport(joselodiaz, baseball).
-neg(athleteplayssport(joselodiaz,carracing)).
+0.0::athleteplayssport(joselodiaz,carracing).
 athleteplayssport(galesayers, football).
-neg(athleteplayssport(galesayers,soccer)).
+0.0::athleteplayssport(galesayers,soccer).
 athleteplayssport(geoffgeary, baseball).
-neg(athleteplayssport(geoffgeary,carracing)).
+0.0::athleteplayssport(geoffgeary,carracing).
 athleteplayssport(joeborowski, baseball).
-neg(athleteplayssport(joeborowski,professionalbasketball)).
+0.0::athleteplayssport(joeborowski,professionalbasketball).
 athleteplayssport(rajonrondo, basketball).
-neg(athleteplayssport(rajonrondo,wrestling)).
+0.0::athleteplayssport(rajonrondo,wrestling).
 athleteplayssport(chriswidger, baseball).
-neg(athleteplayssport(chriswidger,soccer)).
+0.0::athleteplayssport(chriswidger,soccer).
 athleteplayssport(markmulder, football).
-neg(athleteplayssport(markmulder,carracing)).
+0.0::athleteplayssport(markmulder,carracing).
 athleteplayssport(andersonhernandez, baseball).
-neg(athleteplayssport(andersonhernandez,professionalbasketball)).
+0.0::athleteplayssport(andersonhernandez,professionalbasketball).
 athleteplayssport(grahammarsh, golf).
-neg(athleteplayssport(grahammarsh,collegebaseball)).
+0.0::athleteplayssport(grahammarsh,collegebaseball).
 athleteplayssport(tripleh, wrestling).
-neg(athleteplayssport(tripleh,basketball)).
+0.0::athleteplayssport(tripleh,basketball).
 athleteplayssport(bradvoyles, baseball).
-neg(athleteplayssport(bradvoyles,tennis)).
+0.0::athleteplayssport(bradvoyles,tennis).
 athleteplayssport(markmclemore, baseball).
-neg(athleteplayssport(markmclemore,football)).
+0.0::athleteplayssport(markmclemore,football).
 athleteplayssport(angelsanchez, baseball).
-neg(athleteplayssport(angelsanchez,hockey)).
+0.0::athleteplayssport(angelsanchez,hockey).
 athleteplayssport(timhamulack, baseball).
-neg(athleteplayssport(timhamulack,hockey)).
+0.0::athleteplayssport(timhamulack,hockey).
 athleteplayssport(wladimirbalentien, baseball).
-neg(athleteplayssport(wladimirbalentien,softball)).
+0.0::athleteplayssport(wladimirbalentien,softball).
 athleteplayssport(buddyryan, baseball).
-neg(athleteplayssport(buddyryan,tennis)).
+0.0::athleteplayssport(buddyryan,tennis).
 athleteplayssport(luisvizcaino, baseball).
-neg(athleteplayssport(luisvizcaino,collegebaseball)).
+0.0::athleteplayssport(luisvizcaino,collegebaseball).
 athleteplayssport(yannicknoah, tennis).
-neg(athleteplayssport(yannicknoah,cycling)).
+0.0::athleteplayssport(yannicknoah,cycling).
 athleteplayssport(krisbenson, baseball).
-neg(athleteplayssport(krisbenson,professionalfootball)).
+0.0::athleteplayssport(krisbenson,professionalfootball).
 athleteplayssport(andreigoudala, basketball).
-neg(athleteplayssport(andreigoudala,cycling)).
+0.0::athleteplayssport(andreigoudala,cycling).
 athleteplayssport(scottstevens, hockey).
-neg(athleteplayssport(scottstevens,lacrosse)).
+0.0::athleteplayssport(scottstevens,lacrosse).
 athleteplayssport(davidmurphy, baseball).
-neg(athleteplayssport(davidmurphy,football)).
+0.0::athleteplayssport(davidmurphy,football).
 athleteplayssport(scottrichmond, baseball).
-neg(athleteplayssport(scottrichmond,hockey)).
+0.0::athleteplayssport(scottrichmond,hockey).
 athleteplayssport(travismetcalf, hockey).
-neg(athleteplayssport(travismetcalf,soccer)).
+0.0::athleteplayssport(travismetcalf,soccer).
 athleteplayssport(roberttrentjones, golf).
-neg(athleteplayssport(roberttrentjones,basketball)).
+0.0::athleteplayssport(roberttrentjones,basketball).
 athleteplayssport(markmcgwireandsammysosa, baseball).
-neg(athleteplayssport(markmcgwireandsammysosa,sailing)).
+0.0::athleteplayssport(markmcgwireandsammysosa,sailing).
 athleteplayssport(stevekline, baseball).
-neg(athleteplayssport(stevekline,lacrosse)).
+0.0::athleteplayssport(stevekline,lacrosse).
 athleteplayssport(leorosales, baseball).
-neg(athleteplayssport(leorosales,boxing)).
+0.0::athleteplayssport(leorosales,boxing).
 athleteplayssport(diegocorrales, boxing).
-neg(athleteplayssport(diegocorrales,football)).
+0.0::athleteplayssport(diegocorrales,football).
 athleteplayssport(wadeboggs, baseball).
-neg(athleteplayssport(wadeboggs,trackandfield)).
+0.0::athleteplayssport(wadeboggs,trackandfield).
 athleteplayssport(krismedlen, baseball).
-neg(athleteplayssport(krismedlen,golfing)).
+0.0::athleteplayssport(krismedlen,golfing).
 athleteplayssport(brentleach, baseball).
-neg(athleteplayssport(brentleach,sailing)).
+0.0::athleteplayssport(brentleach,sailing).
 athleteplayssport(johnyoung, golf).
-neg(athleteplayssport(johnyoung,basketball)).
+0.0::athleteplayssport(johnyoung,basketball).
 athleteplayssport(markgrudzielanek, baseball).
-neg(athleteplayssport(markgrudzielanek,hockey)).
+0.0::athleteplayssport(markgrudzielanek,hockey).
 athleteplayssport(owendaniels, football).
-neg(athleteplayssport(owendaniels,carracing)).
+0.0::athleteplayssport(owendaniels,carracing).
 athleteplayssport(kyledavies, baseball).
-neg(athleteplayssport(kyledavies,trackandfield)).
+0.0::athleteplayssport(kyledavies,trackandfield).
 athleteplayssport(brandonknight, baseball).
-neg(athleteplayssport(brandonknight,carracing)).
+0.0::athleteplayssport(brandonknight,carracing).
 athleteplayssport(drewbrees, football).
-neg(athleteplayssport(drewbrees,professionalbasketball)).
+0.0::athleteplayssport(drewbrees,professionalbasketball).
 athleteplayssport(chrisbyrd, boxing).
-neg(athleteplayssport(chrisbyrd,professionalbasketball)).
+0.0::athleteplayssport(chrisbyrd,professionalbasketball).
 athleteplayssport(ryandempster, baseball).
-neg(athleteplayssport(ryandempster,carracing)).
+0.0::athleteplayssport(ryandempster,carracing).
 athleteplayssport(joshsmith, basketball).
-neg(athleteplayssport(joshsmith,hockey)).
+0.0::athleteplayssport(joshsmith,hockey).
 athleteplayssport(rudygay, basketball).
-neg(athleteplayssport(rudygay,hockey)).
+0.0::athleteplayssport(rudygay,hockey).
 athleteplayssport(craigmorton, football).
-neg(athleteplayssport(craigmorton,golf)).
+0.0::athleteplayssport(craigmorton,golf).
 athleteplayssport(patrickkane, hockey).
-neg(athleteplayssport(patrickkane,professionalbasketball)).
+0.0::athleteplayssport(patrickkane,professionalbasketball).
 athleteplayssport(aaronrodgers, basketball).
-neg(athleteplayssport(aaronrodgers,carracing)).
+0.0::athleteplayssport(aaronrodgers,carracing).
 athleteplayssport(stevenjackson, baseball).
-neg(athleteplayssport(stevenjackson,trackandfield)).
+0.0::athleteplayssport(stevenjackson,trackandfield).
 athleteplayssport(chrisschroder, baseball).
-neg(athleteplayssport(chrisschroder,lacrosse)).
+0.0::athleteplayssport(chrisschroder,lacrosse).
 athleteplayssport(chadorvella, baseball).
-neg(athleteplayssport(chadorvella,collegebaseball)).
+0.0::athleteplayssport(chadorvella,collegebaseball).
 athleteplayssport(johnbuck, baseball).
-neg(athleteplayssport(johnbuck,tennis)).
+0.0::athleteplayssport(johnbuck,tennis).
 athleteplayssport(erichurley, baseball).
-neg(athleteplayssport(erichurley,professionalfootball)).
+0.0::athleteplayssport(erichurley,professionalfootball).
 athleteplayssport(michaeldubee, baseball).
-neg(athleteplayssport(michaeldubee,wrestling)).
+0.0::athleteplayssport(michaeldubee,wrestling).
 athleteplayssport(bradmills, baseball).
-neg(athleteplayssport(bradmills,collegebaseball)).
+0.0::athleteplayssport(bradmills,collegebaseball).
 athleteplayssport(christymathewson, football).
-neg(athleteplayssport(christymathewson,carracing)).
+0.0::athleteplayssport(christymathewson,carracing).
 athleteplayssport(randyjohnson, baseball).
-neg(athleteplayssport(randyjohnson,tennis)).
+0.0::athleteplayssport(randyjohnson,tennis).
 athleteplayssport(jakewestbrook, baseball).
-neg(athleteplayssport(jakewestbrook,football)).
+0.0::athleteplayssport(jakewestbrook,football).
 athleteplayssport(henryblanco, baseball).
-neg(athleteplayssport(henryblanco,trackandfield)).
+0.0::athleteplayssport(henryblanco,trackandfield).
 athleteplayssport(vinniechulk, baseball).
-neg(athleteplayssport(vinniechulk,trackandfield)).
+0.0::athleteplayssport(vinniechulk,trackandfield).
 athleteplayssport(craigwilson, baseball).
-neg(athleteplayssport(craigwilson,professionalbasketball)).
+0.0::athleteplayssport(craigwilson,professionalbasketball).
 athleteplayssport(carmeloanthony, basketball).
-neg(athleteplayssport(carmeloanthony,professionalbasketball)).
+0.0::athleteplayssport(carmeloanthony,professionalbasketball).
 athleteplayssport(tadahitoiguchi, baseball).
-neg(athleteplayssport(tadahitoiguchi,lacrosse)).
+0.0::athleteplayssport(tadahitoiguchi,lacrosse).
 athleteplayssport(dexterfowler, baseball).
-neg(athleteplayssport(dexterfowler,cycling)).
+0.0::athleteplayssport(dexterfowler,cycling).
 athleteplayssport(derekhagan, football).
-neg(athleteplayssport(derekhagan,soccer)).
+0.0::athleteplayssport(derekhagan,soccer).
 athleteplayssport(fukudome, baseball).
-neg(athleteplayssport(fukudome,basketball)).
+0.0::athleteplayssport(fukudome,basketball).
 athleteplayssport(joevalentine, baseball).
-neg(athleteplayssport(joevalentine,boxing)).
+0.0::athleteplayssport(joevalentine,boxing).
 athleteplayssport(joethatcher, baseball).
-neg(athleteplayssport(joethatcher,football)).
+0.0::athleteplayssport(joethatcher,football).
 athleteplayssport(albertpujols, baseball).
-neg(athleteplayssport(albertpujols,soccer)).
+0.0::athleteplayssport(albertpujols,soccer).
 athleteplayssport(ahmangreen, football).
-neg(athleteplayssport(ahmangreen,tennis)).
+0.0::athleteplayssport(ahmangreen,tennis).
 athleteplayssport(benwallace, basketball).
-neg(athleteplayssport(benwallace,tennis)).
+0.0::athleteplayssport(benwallace,tennis).
 athleteplayssport(bobbyjenks, baseball).
-neg(athleteplayssport(bobbyjenks,swimming)).
+0.0::athleteplayssport(bobbyjenks,swimming).
 athleteplayssport(alzikorus, golf).
-neg(athleteplayssport(alzikorus,basketball)).
+0.0::athleteplayssport(alzikorus,basketball).
 athleteplayssport(wadedavis, baseball).
-neg(athleteplayssport(wadedavis,football)).
+0.0::athleteplayssport(wadedavis,football).
 athleteplayssport(chrisgissell, baseball).
-neg(athleteplayssport(chrisgissell,lacrosse)).
+0.0::athleteplayssport(chrisgissell,lacrosse).
 athleteplayssport(griffeyjr, baseball).
-neg(athleteplayssport(griffeyjr,cycling)).
+0.0::athleteplayssport(griffeyjr,cycling).
 athleteplayssport(steveslaton, football).
-neg(athleteplayssport(steveslaton,softball)).
+0.0::athleteplayssport(steveslaton,softball).
 athleteplayssport(enriquegonzalez, baseball).
-neg(athleteplayssport(enriquegonzalez,swimming)).
+0.0::athleteplayssport(enriquegonzalez,swimming).
 athleteplayssport(antonioosuna, baseball).
-neg(athleteplayssport(antonioosuna,carracing)).
+0.0::athleteplayssport(antonioosuna,carracing).
 athleteplayssport(danielrayherrera, baseball).
-neg(athleteplayssport(danielrayherrera,football)).
+0.0::athleteplayssport(danielrayherrera,football).
 athleteplayssport(dwighthoward, basketball).
-neg(athleteplayssport(dwighthoward,professionalfootball)).
+0.0::athleteplayssport(dwighthoward,professionalfootball).
 athleteplayssport(josemarte, baseball).
-neg(athleteplayssport(josemarte,football)).
+0.0::athleteplayssport(josemarte,football).
 athleteplayssport(jeremypowell, baseball).
-neg(athleteplayssport(jeremypowell,sailing)).
+0.0::athleteplayssport(jeremypowell,sailing).
 athleteplayssport(bryanaugenstein, baseball).
-neg(athleteplayssport(bryanaugenstein,trackandfield)).
+0.0::athleteplayssport(bryanaugenstein,trackandfield).
 athleteplayssport(mattherges, baseball).
-neg(athleteplayssport(mattherges,tennis)).
+0.0::athleteplayssport(mattherges,tennis).
 athleteplayssport(larrybigbie, baseball).
-neg(athleteplayssport(larrybigbie,wrestling)).
+0.0::athleteplayssport(larrybigbie,wrestling).
 athleteplayssport(caseyfien, baseball).
-neg(athleteplayssport(caseyfien,swimming)).
+0.0::athleteplayssport(caseyfien,swimming).
 athleteplayssport(bradhennessey, baseball).
-neg(athleteplayssport(bradhennessey,softball)).
+0.0::athleteplayssport(bradhennessey,softball).
 athleteplayssport(brandonrush, basketball).
-neg(athleteplayssport(brandonrush,collegebaseball)).
+0.0::athleteplayssport(brandonrush,collegebaseball).
 athleteplayssport(johnadams, baseball).
-neg(athleteplayssport(johnadams,boxing)).
+0.0::athleteplayssport(johnadams,boxing).
 athleteplayssport(bradkilby, baseball).
-neg(athleteplayssport(bradkilby,tennis)).
+0.0::athleteplayssport(bradkilby,tennis).
 athleteplayssport(mannydelcarmen, baseball).
-neg(athleteplayssport(mannydelcarmen,football)).
+0.0::athleteplayssport(mannydelcarmen,football).
 athleteplayssport(derrickward, football).
-neg(athleteplayssport(derrickward,wrestling)).
+0.0::athleteplayssport(derrickward,wrestling).
 athleteplayssport(hatteberg, baseball).
-neg(athleteplayssport(hatteberg,basketball)).
+0.0::athleteplayssport(hatteberg,basketball).
 athleteplayssport(rosenfels, football).
-neg(athleteplayssport(rosenfels,cycling)).
+0.0::athleteplayssport(rosenfels,cycling).
 athleteplayssport(ryanraburn, baseball).
-neg(athleteplayssport(ryanraburn,sailing)).
+0.0::athleteplayssport(ryanraburn,sailing).
 athleteplayssport(ludwick, football).
-neg(athleteplayssport(ludwick,softball)).
+0.0::athleteplayssport(ludwick,softball).
 athleteplayssport(hectoralmonte, baseball).
-neg(athleteplayssport(hectoralmonte,collegebaseball)).
+0.0::athleteplayssport(hectoralmonte,collegebaseball).
 athleteplayssport(josegarcia, baseball).
-neg(athleteplayssport(josegarcia,professionalfootball)).
+0.0::athleteplayssport(josegarcia,professionalfootball).
 athleteplayssport(chrisduncan, hockey).
-neg(athleteplayssport(chrisduncan,golfing)).
+0.0::athleteplayssport(chrisduncan,golfing).
 teamalsoknownas(northwesternstateladydemons, stateuniversity).
 teamalsoknownas(olemiss, stateuniversity).
 teamalsoknownas(boulder, stateuniversity).
@@ -6867,4 +6868,4 @@ teamplayssport(chicagoblackhawks, hockey).
 teamplayssport(jayhawks, baseball).
 teamplayssport(philadelphiaers, basketball).
 teamplayssport(purdueuniversity, basketball).
-end(model(f2)).
+end(model(f2).

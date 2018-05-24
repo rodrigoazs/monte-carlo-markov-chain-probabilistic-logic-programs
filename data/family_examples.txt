@@ -16,5 +16,5 @@
 0.0::grandmother(alice,prudent).
 0.0::grandmother(alice,lucy).
 0.0::grandmother(rose,katleen).
-0.0::grandmother(laura,soetkin).
-0.0::grandmother(laura,rose).
+0.0::grandmother(prudent,lieve).
+0.0::grandmother(prudent,katleen).
