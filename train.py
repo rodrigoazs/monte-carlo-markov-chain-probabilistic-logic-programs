@@ -22,6 +22,9 @@ class MCPLP:
         self.state = []
         self.evaluations = {}
         self.max_literals = 5
+        
+        self.temp_values = []
+        self.cost_values = []
     
     def set_target(self, target):
         self.target = target
@@ -119,8 +122,8 @@ class MCPLP:
             if i % m == 0:
                 p = c/i
                 delta = 2 * math.sqrt(p*(1-p)/i)
-        print('Samples generated: '+str(i))
-        print('Result: '+str(p))
+        #print('Samples generated: '+str(i))
+        #print('Result: '+str(p))
         return p
     
     def get_variables_type(self, clause):
@@ -160,18 +163,36 @@ class MCPLP:
                 after_possible_literals = self.get_possible_literals(clause)
                 for cl in after_possible_literals:
                     a = clause.copy()
-                    a.append(cl)
-                    candidates.append(a)
+                    allow = True
+                    for lit in a:
+                        if self.print_clause([lit]) == self.print_clause([cl]):
+                            allow = False
+                            break
+                    if allow:
+                        a.append(cl)
+                        candidates.append(a)
             possible_literals = self.get_possible_literals(clause[:-1])
             for cl in possible_literals:
                 a = clause[:-1].copy()
-                a.append(cl)
-                candidates.append(a)
+                allow = True
+                for lit in a:
+                    if self.print_clause([lit]) == self.print_clause([cl]):
+                        allow = False
+                        break
+                if allow:
+                    a.append(cl)
+                    candidates.append(a)
             before_possible_literals = self.get_possible_literals(clause[:-2])
             for cl in before_possible_literals:
                 a = clause[:-2].copy()
-                a.append(cl)
-                candidates.append(a)
+                allow = True
+                for lit in a:
+                    if self.print_clause([lit]) == self.print_clause([cl]):
+                        allow = False
+                        break
+                if allow:
+                    a.append(cl)
+                    candidates.append(a)
             if len(clause[:-2]) == 0:
                 candidates.append([])
             return candidates     
@@ -347,7 +368,7 @@ class MCPLP:
         return clauses
     
     def calculate_temp(self, iteration):
-        return 1000*0.8**iteration
+        return 1000 * 1 / (1 + math.exp((iteration - 0) / 60))
     
     def annealing_process(self, n_iterations):
         for i in range(n_iterations):
@@ -358,8 +379,14 @@ class MCPLP:
             
             state_mse = self.calculate_state_mse(self.state)
             
+            self.cost_values.append(state_mse)
+            self.temp_values.append(temp)
+            
             if temp > 0:
-                ratio = math.exp((state_mse - candidate_mse) / temp)
+                try:
+                    ratio = math.exp((state_mse - candidate_mse) / temp)
+                except:
+                    ratio = 1
             else:
                 ratio = int(candidate_mse < state_mse)
                 
@@ -370,22 +397,3 @@ mc = MCPLP()
 mc.set_target('grandmother')
 mc.load_data('data/family_prob.txt')
 mc.load_examples('data/family_examples.txt')
-
-mc.monte_carlo_delta(clause=[[EnPredicate('parent'), EnVariable('A'), EnVariable('C')],[EnPredicate('parent'), EnVariable('C'), EnVariable('B')]], variables={EnVariable('A'): EnAtom('rene'), EnVariable('B'): EnAtom('lieve')})
-      
-#examples = load_examples('data/family_examples.txt')
-#data = load_data('data/family_prob.txt')
-
-
-
-#target = 'grandmother'
-state = []
-state = next_state(state, target, data)
-
-cl = state_to_clause(state)
-
-get_mse(examples, cl, data)
-
-d = get_mse(examples, [], data)
-a = get_mse(examples, [[EnPredicate('parent'), EnVariable('A'), EnVariable('C')]], data)
-b = get_mse(examples, [[EnPredicate('parent'), EnVariable('C'), EnVariable('A')]], data)
