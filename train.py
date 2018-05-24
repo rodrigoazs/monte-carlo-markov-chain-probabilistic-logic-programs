@@ -8,7 +8,10 @@ Created on Wed May 23 16:06:41 2018
 from satisfy import *
 from main import *
 from state import *
-from sklearn.metrics import mean_squared_error           
+from sklearn.metrics import mean_squared_error    
+import math     
+import random
+from itertools import product
 
 class MCPLP:
     def __init__(self):
@@ -18,9 +21,13 @@ class MCPLP:
         self.bases = []
         self.state = []
         self.evaluations = {}
+        self.max_literals = 5
     
     def set_target(self, target):
         self.target = target
+        
+    def set_max_literals(self, max_literals):
+        self.max_literals = max_literals
         
     def load_examples(self, file):
         data = []
@@ -76,8 +83,6 @@ class MCPLP:
             y.append(example[2])
             varA = EnAtom(example[1][0])
             varB = EnAtom(example[1][1])
-            print(varA)
-            print(varB)
             y_pred.append(self.monte_carlo_delta(delta_p = 0.01, m=100, clause=clause, variables={EnVariable('A'): varA, EnVariable('B'): varB}))
         return mean_squared_error(y, y_pred)
     
@@ -117,55 +122,160 @@ class MCPLP:
         print('Samples generated: '+str(i))
         print('Result: '+str(p))
         return p
-        
-    def next_state(self):
+    
+    def get_variables_type(self, clause):
         bases_dict = dict(self.bases)
         
+        vrs = {}
+        lastVar = 'B'
+        for i in range(len(bases_dict[self.target])):
+            if bases_dict[self.target][i] not in vrs:
+                vrs[bases_dict[self.target][i]] = set()
+            vrs[bases_dict[self.target][i]].add(chr(65 + i))
+            
+        for cl in clause:
+            pred = str(cl[0])
+            for j in range(len(cl[1:])):
+                if bases_dict[pred][j] not in vrs:
+                    vrs[bases_dict[pred][j]] = set()
+                vrs[bases_dict[pred][j]].add(str(cl[1:][j]))
+                if str(cl[1:][j]) > lastVar:
+                    lastVar = str(cl[1:][j])
+                
+        return (vrs, lastVar)
+    
+    def get_possible_candidates(self, clause):
+        candidates = []
+        
+        if len(clause) == 0:
+            possible_literals = self.get_possible_literals([])
+            for cl in possible_literals:
+                a = clause.copy()
+                a.append(cl)
+                candidates.append(a)
+            candidates.append([])
+            return candidates
+        else:
+            if len(clause) < self.max_literals:
+                after_possible_literals = self.get_possible_literals(clause)
+                for cl in after_possible_literals:
+                    a = clause.copy()
+                    a.append(cl)
+                    candidates.append(a)
+            possible_literals = self.get_possible_literals(clause[:-1])
+            for cl in possible_literals:
+                a = clause[:-1].copy()
+                a.append(cl)
+                candidates.append(a)
+            before_possible_literals = self.get_possible_literals(clause[:-2])
+            for cl in before_possible_literals:
+                a = clause[:-2].copy()
+                a.append(cl)
+                candidates.append(a)
+            if len(clause[:-2]) == 0:
+                candidates.append([])
+            return candidates     
+                    
+    def get_possible_literals(self, clause):
+        bases_dict = dict(self.bases)
+        vrs = self.get_variables_type(clause)
+        
         possibles = []
-        if len(self.state) == 0:
-            last = self.target
-        else:
-            last = state[-1]
+        for key, value in bases_dict.items():
+            if key != self.target:
+                if len(bases_dict[key]) == 1:
+                    v = vrs[0][bases_dict[key][0]]
+                    for i in v:
+                        possibles.append([EnPredicate(key), EnVariable(i)])
+                    possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1))])
+                else:
+                    v1 = vrs[0][bases_dict[key][0]]
+                    v2 = vrs[0][bases_dict[key][1]]
+                    p = list(product(v1, v2))
+                    for i in p:
+                        possibles.append([EnPredicate(key), EnVariable(i[0]), EnVariable(i[1])])
+                    for i in v1:
+                        possibles.append([EnPredicate(key), EnVariable(i), EnVariable(chr(ord(vrs[1])+1))])
+                    for i in v2:
+                        possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1)), EnVariable(i)])      
+        return possibles
+    
+    def sample_candidate(self):
+        candidates = self.get_possible_candidates(self.state)
+        candidate= random.choice(candidates)            
+        return candidate
         
-        if last[0] == '_': #is inverse function
-            right = 0
-            last = last[1:]
-        else:
-            right = 1
+#    def sample_candidate(self):
+#        bases_dict = dict(self.bases)
+#        
+#        if len(self.state) >= 5:
+#            candidate = self.state.copy()
+#            candidate = candidate[:-1]
+#            return candidate
+#        
+#        possibles = []
+#        if len(self.state) == 0:
+#            last = self.target
+#        else:
+#            last = self.state[-1]
+#        
+#        if last[0] == '_': #is inverse function
+#            right = 0
+#            last = last[1:]
+#        else:
+#            right = 1
+#        
+#        if len(self.state) == 0 or len(bases_dict[last]) == 1:
+#            right = 0
+#        
+##        clause = self.state_to_clause(self.state)
+##        str_clause = self.print_clause(clause)
+##        if str_clause not in self.evaluations:
+##            mse = self.get_mse(clause)
+##            self.evaluations[str_clause] = mse
+#        
+#        for key, value in bases_dict.items():
+#            if key != self.target:
+#                if value[0] == bases_dict[last][right]:
+#                    possibles.append(key)
+#                if len(value) > 1 and value[1] == bases_dict[last][right]:
+#                    possibles.append('_' + key)
+#
+##        for i in range(len(possibles)):
+##            temp = self.state.copy()
+##            temp.append(possibles[i])
+##            clause = self.state_to_clause(temp)
+##            str_clause = self.print_clause(clause)
+##            if str_clause not in self.evaluations:
+##                mse = self.get_mse(clause)
+##                self.evaluations[str_clause] = mse
+##            
+##        if len(state):
+##            if random.random() < 0.5:
+##                self.state = self.state[:-1]
+##            else:
+##                self.state.append(random.choice(possibles))
+##        else:
+##            self.state.append(random.choice(possibles))
+#
+#        if random.random() < 1/(len(possibles)+1):
+#            candidate = self.state.copy()
+#            candidate = candidate[:-1]
+#        else:
+#            candidate = self.state.copy()
+#            candidate.append(random.choice(possibles))
+#            
+#        return candidate
         
-        if len(state) == 0 or len(bases_dict[last]) == 1:
-            right = 0
-        
-        clause = self.state_to_clause(self.state)
+    def calculate_state_mse(self, state):
+        #clause = self.state_to_clause(state)
+        clause = state
         str_clause = self.print_clause(clause)
         if str_clause not in self.evaluations:
             mse = self.get_mse(clause)
             self.evaluations[str_clause] = mse
+        return self.evaluations[str_clause]
         
-        for key, value in bases_dict.items():
-            if key != target:
-                if value[0] == bases_dict[last][right]:
-                    possibles.append(key)
-                if len(value) > 1 and value[1] == bases_dict[last][right]:
-                    possibles.append('_' + key)
-        print(possibles)
-        for i in range(len(possibles)):
-            temp = self.state.copy()
-            temp.append(possibles[i])
-            clause = self.state_to_clause(temp)
-            str_clause = self.print_clause(clause)
-            if str_clause not in self.evaluations:
-                mse = self.get_mse(clause)
-                self.evaluations[str_clause] = mse
-            
-        if len(state):
-            if random.random() < 0.5:
-                self.state = self.state[:-1]
-            else:
-                self.state.append(random.choice(possibles))
-        else:
-            self.state.append(random.choice(possibles))
-            
     def state_to_clause(self, state):
         if len(state) == 0:
             return []
@@ -230,11 +340,36 @@ class MCPLP:
     def print_state(self, state):
         #print(self.state)
         return self.print_clause(self.state_to_clause(state))
+    
+    def clauses_visited(self):
+        clauses = self.evaluations.items()
+        clauses = sorted(clauses, key=lambda x: x[1])
+        return clauses
+    
+    def calculate_temp(self, iteration):
+        return 1000*0.8**iteration
+    
+    def annealing_process(self, n_iterations):
+        for i in range(n_iterations):
+            temp = self.calculate_temp(i)
+            
+            candidate = self.sample_candidate()
+            candidate_mse = self.calculate_state_mse(candidate)
+            
+            state_mse = self.calculate_state_mse(self.state)
+            
+            if temp > 0:
+                ratio = math.exp((state_mse - candidate_mse) / temp)
+            else:
+                ratio = int(candidate_mse < state_mse)
+                
+            if random.random() < ratio:
+                self.state = candidate
 
 mc = MCPLP()
-mc.set_target('athleteplayssport')
-mc.load_data('data/nell.txt')
-mc.load_examples('data/nell.txt')
+mc.set_target('grandmother')
+mc.load_data('data/family_prob.txt')
+mc.load_examples('data/family_examples.txt')
 
 mc.monte_carlo_delta(clause=[[EnPredicate('parent'), EnVariable('A'), EnVariable('C')],[EnPredicate('parent'), EnVariable('C'), EnVariable('B')]], variables={EnVariable('A'): EnAtom('rene'), EnVariable('B'): EnAtom('lieve')})
       
