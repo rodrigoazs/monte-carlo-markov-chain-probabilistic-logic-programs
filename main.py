@@ -7,9 +7,24 @@ Created on Tue May 22 21:12:04 2018
 """
 
 from train import *
+import logging
+import json
 
+print('Start MCPLP')
 mc = MCPLP(target='grandmother', level=logging.INFO)
 mc.load_data('data/family_prob.txt')
 mc.load_examples('data/family_examples.txt')
 
-mc.annealing_process(500)
+results = mc.annealing_process(500)
+
+import matplotlib.pyplot as plt
+
+plt.plot([i for i in range(len(results[1]))], results[1])
+
+plt.plot([i for i in range(len(results[2]))], results[2])
+
+with open('results/grandmother_2_results.txt', 'w') as outfile:  
+    json.dump(results, outfile)
+    
+with open('results/grandmother_2_clauses.txt', 'w') as outfile:  
+    json.dump(mc.clauses_visited(), outfile)

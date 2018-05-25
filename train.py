@@ -28,10 +28,8 @@ class MCPLP:
         self.max_literals = max_literals
         self.target = target
         
-        self.temp_values = []
-        self.cost_values = []
-
         self.logger = logging.getLogger('mcplp')
+        self.logger
         self.logger.setLevel(level)
         
     def load_examples(self, file):
@@ -227,126 +225,14 @@ class MCPLP:
         candidates = self.get_possible_candidates(self.state)
         candidate= random.choice(candidates)            
         return candidate
-        
-#    def sample_candidate(self):
-#        bases_dict = dict(self.bases)
-#        
-#        if len(self.state) >= 5:
-#            candidate = self.state.copy()
-#            candidate = candidate[:-1]
-#            return candidate
-#        
-#        possibles = []
-#        if len(self.state) == 0:
-#            last = self.target
-#        else:
-#            last = self.state[-1]
-#        
-#        if last[0] == '_': #is inverse function
-#            right = 0
-#            last = last[1:]
-#        else:
-#            right = 1
-#        
-#        if len(self.state) == 0 or len(bases_dict[last]) == 1:
-#            right = 0
-#        
-##        clause = self.state_to_clause(self.state)
-##        str_clause = self.print_clause(clause)
-##        if str_clause not in self.evaluations:
-##            mse = self.get_mse(clause)
-##            self.evaluations[str_clause] = mse
-#        
-#        for key, value in bases_dict.items():
-#            if key != self.target:
-#                if value[0] == bases_dict[last][right]:
-#                    possibles.append(key)
-#                if len(value) > 1 and value[1] == bases_dict[last][right]:
-#                    possibles.append('_' + key)
-#
-##        for i in range(len(possibles)):
-##            temp = self.state.copy()
-##            temp.append(possibles[i])
-##            clause = self.state_to_clause(temp)
-##            str_clause = self.print_clause(clause)
-##            if str_clause not in self.evaluations:
-##                mse = self.get_mse(clause)
-##                self.evaluations[str_clause] = mse
-##            
-##        if len(state):
-##            if random.random() < 0.5:
-##                self.state = self.state[:-1]
-##            else:
-##                self.state.append(random.choice(possibles))
-##        else:
-##            self.state.append(random.choice(possibles))
-#
-#        if random.random() < 1/(len(possibles)+1):
-#            candidate = self.state.copy()
-#            candidate = candidate[:-1]
-#        else:
-#            candidate = self.state.copy()
-#            candidate.append(random.choice(possibles))
-#            
-#        return candidate
-        
+
     def calculate_state_mse(self, state):
-        #clause = self.state_to_clause(state)
         clause = state
         str_clause = self.print_clause(clause)
         if str_clause not in self.evaluations:
             mse = self.get_mse(clause)
             self.evaluations[str_clause] = mse
         return self.evaluations[str_clause]
-        
-    def state_to_clause(self, state):
-        if len(state) == 0:
-            return []
-
-        bases_dict = dict(self.bases)
-        
-        variables = ['A']
-        a = [chr(i) for i in range(67, 67 + len(state))]
-        variables.extend(a)
-        
-        t = []
-        v = 0
-        for i in range(len(state)):
-            pred = state[i][1:] if state[i][0] == '_' else state[i]
-            vl = [variables[v + j] for j in range(len(bases_dict[pred]))]
-            v += 1 if len(bases_dict[pred]) > 1 else 0
-            t.append([state[i], vl])
-        
-        if len(t[-1][1]) == 1:
-            target_types = bases_dict[pred][0]
-            pred = t[-1][0][1:] if t[-1][0][0] == '_' else t[-1][0]
-            pred_types = bases_dict[pred][0]
-            if target_types == pred_types:
-                t[-1][1][0] = 'B' 
-        else:
-            if t[-1][0][0] == '_':
-                pred = t[-1][0][1:]
-                target_types = bases_dict[self.target][1]
-                pred_types = bases_dict[pred][0]
-                if target_types == pred_types:
-                    t[-1][1][1] = 'B' 
-            else:
-                pred = t[-1][0]
-                target_types = bases_dict[self.target][1]
-                pred_types = bases_dict[pred][1]
-                if target_types == pred_types:
-                    t[-1][1][1] = 'B' 
-        
-        for i in range(len(t)):
-            if t[i][0][0] == '_':
-                t[i][1] = t[i][1][::-1]
-                t[i][0] = t[i][0][1:]
-            pred = t[i][0]
-            varsb = [EnVariable(j) for j in t[i][1]]
-            t[i] = [EnPredicate(pred)]
-            t[i].extend(varsb)
-
-        return t
 
     def print_clause(self, clause):
         if len(clause) == 0:
@@ -360,21 +246,22 @@ class MCPLP:
             c.append(str(i[0]) + '(' + args + ')')
         return ','.join(c) 
     
-    def print_state(self, state):
-        #print(self.state)
-        return self.print_clause(self.state_to_clause(state))
-    
     def clauses_visited(self):
         clauses = self.evaluations.items()
         clauses = sorted(clauses, key=lambda x: x[1])
         return clauses
     
     def calculate_temp(self, iteration):
-        return 1000 * 1 / (1 + math.exp((iteration - 0) / 60))
+        return 1000 * 1 / (1 + math.exp((iteration - 0) / 50))
     
     def annealing_process(self, n_iterations):
         self.logger.info('Starting Simulated Annealing')
+        
+        state_values = []
+        temp_values = []
+        cost_values = []
         start = time.time()
+        
         for i in range(n_iterations):
             temp = self.calculate_temp(i)
             
@@ -383,8 +270,8 @@ class MCPLP:
             
             state_mse = self.calculate_state_mse(self.state)
             
-            self.cost_values.append(state_mse)
-            self.temp_values.append(temp)
+            cost_values.append(state_mse)
+            temp_values.append(temp)
             
             self.logger.info('Iteration: %s, Temperature: %s State MSE: %s, Candidate MSE: %s, State: %s, Candidate: %s' % (i, temp, state_mse, candidate_mse, self.print_clause(self.state), self.print_clause(candidate)))
             
@@ -398,4 +285,6 @@ class MCPLP:
                 
             if random.random() < ratio:
                 self.state = candidate
+                state_values.append(self.print_clause(self.state))
         run_time = time.time() - start
+        return (run_time, temp_values, cost_values, state_values)
