@@ -5,32 +5,34 @@ Created on Wed May 23 16:06:41 2018
 @author: 317005
 """
 
-from satisfy import *
-from main import *
-from state import *
-from sklearn.metrics import mean_squared_error    
+import time
 import math     
 import random
+import re
+
+from satisfy import *
+
+from sklearn.metrics import mean_squared_error    
+
 from itertools import product
+import logging
 
 class MCPLP:
-    def __init__(self):
-        self.target = target
+    def __init__(self, target='', max_literals=5, level=logging.WARNING):
         self.examples = []
         self.data = []
         self.bases = []
         self.state = []
         self.evaluations = {}
-        self.max_literals = 5
+
+        self.max_literals = max_literals
+        self.target = target
         
         self.temp_values = []
         self.cost_values = []
-    
-    def set_target(self, target):
-        self.target = target
-        
-    def set_max_literals(self, max_literals):
-        self.max_literals = max_literals
+
+        self.logger = logging.getLogger('mcplp')
+        self.logger.setLevel(level)
         
     def load_examples(self, file):
         data = []
@@ -371,6 +373,8 @@ class MCPLP:
         return 1000 * 1 / (1 + math.exp((iteration - 0) / 60))
     
     def annealing_process(self, n_iterations):
+        self.logger.info('Starting Simulated Annealing')
+        start = time.time()
         for i in range(n_iterations):
             temp = self.calculate_temp(i)
             
@@ -382,6 +386,8 @@ class MCPLP:
             self.cost_values.append(state_mse)
             self.temp_values.append(temp)
             
+            self.logger.info('Iteration: %s, Temperature: %s State MSE: %s, Candidate MSE: %s, State: %s, Candidate: %s' % (i, temp, state_mse, candidate_mse, self.print_clause(self.state), self.print_clause(candidate)))
+            
             if temp > 0:
                 try:
                     ratio = math.exp((state_mse - candidate_mse) / temp)
@@ -392,8 +398,4 @@ class MCPLP:
                 
             if random.random() < ratio:
                 self.state = candidate
-
-mc = MCPLP()
-mc.set_target('grandmother')
-mc.load_data('data/family_prob.txt')
-mc.load_examples('data/family_examples.txt')
+        run_time = time.time() - start
