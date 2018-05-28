@@ -208,7 +208,8 @@ class MCPLP:
                     v = vrs[0][bases_dict[key][0]]
                     for i in v:
                         possibles.append([EnPredicate(key), EnVariable(i)])
-                    possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1))])
+                    # mode only + (previous variables)
+                    #possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1))])
                 else:
                     v1 = vrs[0][bases_dict[key][0]]
                     v2 = vrs[0][bases_dict[key][1]]
