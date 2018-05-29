@@ -18,7 +18,7 @@ from itertools import product
 import logging
 
 class MCPLP:
-    def __init__(self, target='', max_literals=5, level=logging.WARNING):
+    def __init__(self, target='', max_literals=5, delta_p=0.01, m=100, level='WARNING', amplitude=1000, center=0, width=50):
         self.examples = []
         self.data = []
         self.bases = []
@@ -27,10 +27,15 @@ class MCPLP:
 
         self.max_literals = max_literals
         self.target = target
+        self.delta_p = delta_p
+        self.m = m
+        self.amplitude = amplitude
+        self.center = center
+        self.width = 50
         
+        logging.basicConfig(level=level)
         self.logger = logging.getLogger('mcplp')
-        self.logger
-        self.logger.setLevel(level)
+        #self.logger.setLevel('INFO')        
         
     def load_examples(self, file):
         data = []
@@ -86,7 +91,11 @@ class MCPLP:
             y.append(example[2])
             varA = EnAtom(example[1][0])
             varB = EnAtom(example[1][1])
-            y_pred.append(self.monte_carlo_delta(delta_p = 0.01, m=100, clause=clause, variables={EnVariable('A'): varA, EnVariable('B'): varB}))
+            #start = time.time()
+            pred = self.monte_carlo_delta(delta_p = self.delta_p, m=self.m, clause=clause, variables={EnVariable('A'): varA, EnVariable('B'): varB})
+            #run_time = time.time() - start
+            y_pred.append(pred)
+            #self.logger.info('Result for example %s is %s, Time: %s' % (str(example), str(pred), str(run_time)))
         return mean_squared_error(y, y_pred)
     
     def sample_program(self):
@@ -98,7 +107,7 @@ class MCPLP:
                 program.add_tuple(dt[0], dt[1])
         return program
                 
-    def monte_carlo(self, m=1000, clause=[], variables={}):
+    def monte_carlo(self, m=100, clause=[], variables={}):
         if len(clause) == 0:
             return 1.0
         mn = 0
@@ -107,7 +116,8 @@ class MCPLP:
             mn += program.satisfy_clause_recursive(clause, variables=variables)
         return mn / m
 
-    def monte_carlo_delta(self, delta_p = 0.01, m=1000, clause=[], variables={}):
+    def monte_carlo_delta(self, delta_p = 0.01, m=100, clause=[], variables={}):
+        #start = time.time()
         if len(clause) == 0:
             return 1.0
         c = 0
@@ -122,9 +132,9 @@ class MCPLP:
             if i % m == 0:
                 p = c/i
                 delta = 2 * math.sqrt(p*(1-p)/i)
-        self.logger.info('Samples generated: %s, Result: %s, Clause: %s' % (str(i), self.print_clause(clause), str(p)))
-        print('Samples generated: '+str(i))
-        print('Result: '+str(p))
+                #print('Samples generated: '+str(i))
+        #run_time = time.time() - start
+        #self.logger.info('Samples generated: %s, Result: %s, Clause: %s, Time: %s' % (str(i), str(p), self.print_clause(clause), str(run_time)))
         return p
     
     def get_variables_type(self, clause):
@@ -264,7 +274,7 @@ class MCPLP:
         return clauses
     
     def calculate_temp(self, iteration):
-        return 1000 * 1 / (1 + math.exp((iteration - 0) / 50))
+        return self.amplitude * 1 / (1 + math.exp((iteration - self.center) / self.width))
     
     def annealing_process(self, n_iterations):
         self.logger.info('Starting Simulated Annealing')
@@ -274,29 +284,34 @@ class MCPLP:
         cost_values = []
         start = time.time()
         
-        for i in range(n_iterations):
-            temp = self.calculate_temp(i)
-            
-            candidate = self.sample_candidate()
-            candidate_mse = self.calculate_state_mse(candidate)
-            
-            state_mse = self.calculate_state_mse(self.state)
-            
-            cost_values.append(state_mse)
-            temp_values.append(temp)
-            
-            self.logger.info('Iteration: %s, Temperature: %s State MSE: %s, Candidate MSE: %s, State: %s, Candidate: %s' % (i, temp, state_mse, candidate_mse, self.print_clause(self.state), self.print_clause(candidate)))
-            
-            if temp > 0:
-                try:
-                    ratio = math.exp((state_mse - candidate_mse) / temp)
-                except:
-                    ratio = 1
-            else:
-                ratio = int(candidate_mse < state_mse)
+        try:
+            for i in range(n_iterations):
+                temp = self.calculate_temp(i)
                 
-            if random.random() < ratio:
-                self.state = candidate
-                state_values.append(self.print_clause(self.state))
+                candidate = self.sample_candidate()
+                candidate_mse = self.calculate_state_mse(candidate)
+                
+                state_mse = self.calculate_state_mse(self.state)
+                
+                cost_values.append(state_mse)
+                temp_values.append(temp)
+                
+                self.logger.info('Iteration: %s, Temperature: %s State MSE: %s, Candidate MSE: %s, State: %s, Candidate: %s' % (i, temp, state_mse, candidate_mse, self.print_clause(self.state), self.print_clause(candidate)))
+      
+                if temp > 0:
+                    try:
+                        ratio = math.exp((state_mse - candidate_mse) / temp)
+                    except:
+                        ratio = 1
+                else:
+                    ratio = int(candidate_mse < state_mse)
+                    
+                if random.random() < ratio:
+                    self.state = candidate
+                    state_values.append(self.print_clause(self.state))
+        except KeyboardInterrupt:
+            self.logger.info('LEARNING INTERRUPTED BY USER')
+        
         run_time = time.time() - start
-        return (run_time, temp_values, cost_values, state_values)
+        self.logger.info('Total Run Time: %s' % (str(run_time)))
+        return (run_time, temp_values, cost_values, state_values, self.clauses_visited())

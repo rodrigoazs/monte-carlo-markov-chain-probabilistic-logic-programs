@@ -13,6 +13,75 @@ import random
 import re
 import time
 
+def recursive(root, target, depth=0):
+    facts = set()
+    if depth == 4:
+        for relation in root.relations:
+            if relation.name != target:
+                if relation.inverse == False:
+                    facts.add(','.join([relation.origin.name, relation.name, relation.node.name, str(relation.probability)[:6]]))
+                else:
+                    facts.add(','.join([relation.node.name, relation.name, relation.origin.name, str(relation.probability)[:6]]))
+        return facts
+    else:
+        for relation in root.relations:
+            if relation.name != target:
+                #print(str(relation))
+                if relation.inverse == False:
+                    facts.add(','.join([relation.origin.name, relation.name, relation.node.name, str(relation.probability)[:6]]))
+                else:
+                    facts.add(','.join([relation.node.name, relation.name, relation.origin.name, str(relation.probability)[:6]]))
+                to_add = recursive(relation.node, target, depth+1)
+                facts = facts.union(to_add)
+        return facts
+
+class Relation:
+    def __init__(self, origin, node, name, inverse=False, probability=1.0):
+        self.name = name
+        self.inverse = inverse
+        self.probability = probability
+        self.node = node
+        self.origin = origin
+    
+    def __str__(self):
+        if self.inverse == False:
+            return str(self.probability) + '::' + self.name + '(' + str(self.origin) + ',' + str(self.node) + ').'
+        else:
+            return str(self.probability) + '::' + self.name + '(' + str(self.node) + ',' + str(self.origin) + ').'
+        
+class Node:
+    def __init__(self, name):
+        self.name = name
+        self.relations = []
+        
+    def __str__(self):
+        return self.name
+        
+    def add_relation(self, relation, obj, inverse=False, probability=1.0):
+        self.relations.append(Relation(self, obj, relation, inverse=inverse, probability=probability))
+            
+class Graph: 
+    def __init__(self):
+        self.nodes = {}
+        self.count = {}
+        
+    def add_relation(self, sub, relation, obj, probability):
+        if sub not in self.nodes:
+            self.nodes[sub] = Node(sub)
+            self.count[sub] = 0
+        if obj not in self.nodes:
+            self.nodes[obj] = Node(obj)
+            self.count[obj] = 0
+        # only for athletes
+        if relation == 'athleteplaysinleague' or relation == 'athleteplaysforteam' or relation == 'athleteplayssport':
+            self.count[sub] += 1
+            #self.count[obj] += 1
+        sub = self.nodes[sub]
+        obj = self.nodes[obj]
+        
+        sub.add_relation(relation, obj, probability=probability)
+        obj.add_relation(relation, sub, inverse=True, probability=probability)
+
 def create_folds(data, size):
     length = int(len(data)/size) #length of each fold
     folds = []
@@ -29,6 +98,7 @@ def get_data(dataset, n_folds, target, target_parity, allow_negation=True, examp
     folds = [''] * n_folds
     
     relations = {}
+    graph = Graph()
     for data in dataset.values:
         entity_type = (data[1].split(':'))[1]
         entity = (data[1].split(':'))[2]
@@ -46,7 +116,8 @@ def get_data(dataset, n_folds, target, target_parity, allow_negation=True, examp
         #entity and value cannot start with '_', otherwise it is considered variable (?)
         entity = entity[1:] if entity[0] == '_' else entity
         value = value[1:] if value[0] == '_' else value
-                  
+        
+        graph.add_relation(entity, relation, value, probability)
         if relation in relations:
             relations[relation].append([entity, relation, value, probability, entity_type, value_type])
         else:
@@ -58,6 +129,12 @@ def get_data(dataset, n_folds, target, target_parity, allow_negation=True, examp
 #            settings += 'mode('+str(relation)+'(+,-)).\n'
 #            settings += 'mode('+str(relation)+'(-,+)).\n'
 #    settings += '\n'
+    sorted_x = sorted(graph.count.items(), key=lambda x: x[1], reverse=True)
+    accepted_entities = set()
+    for i in range(25):
+        accepted_entities.add(sorted_x[i][0])
+    #facts = recursive(graph.nodes[first], target, 0)
+
     for key, value in relations.items():
         first = value[0]
         settings += 'base('+str(first[1])+'('+str(first[4])+','+str(first[5])+')).\n'
@@ -76,7 +153,11 @@ def get_data(dataset, n_folds, target, target_parity, allow_negation=True, examp
             if d[1] != target:
                 base += str(d[3])[:6]+'::' +str(d[1]) + '(' +str(d[0])+ ','+str(d[2])+ ').\n'
 
-    tar = relations[target]
+    #tar = relations[target]
+    tar = []
+    for relation in relations[target]:
+        if relation[0] in accepted_entities:
+            tar.append(relation)
     values = [set(), set()]
     for d in tar:
         values[0].add(str(d[0]))
@@ -96,16 +177,19 @@ def get_data(dataset, n_folds, target, target_parity, allow_negation=True, examp
         # print positive and negative targets
         for j in range(len(tar[i])):
             d = tar[i][j]
-            folds[i] += str(d[3])[:6]+'::' +str(d[1]) + '(' +str(d[0])+ ','+str(d[2])+ ').\n'
+            #print(str(d[0]) + ' count ' + str(base.count(str(d[0]))))
+            if base.count(str(d[0])) > 2:
+                folds[i] += str(d[3])[:6]+'::' +str(d[1]) + '(' +str(d[0])+ ','+str(d[2])+ ').\n'
             #rand_objects = all_objects.difference(tuples[str(d[0])])
             #folds[i] += '0.0::'+str(d[1]) + '(' +str(d[0])+ ','+str(random.choice(list(rand_objects)))+ ').\n'
             if example_mode == 'balance_incode':
-                folds[i] += '0.0::'+str(d[1]) + '(' +str(neg_examples[i][j][0])+ ','+ neg_examples[i][j][1] + ').\n'
+                if base.count(str(neg_examples[i][j][0])) > 2:
+                    folds[i] += '0.0::'+str(d[1]) + '(' +str(neg_examples[i][j][0])+ ','+ neg_examples[i][j][1] + ').\n'
             
-    return {'settings': settings, 'base': base, 'folds': folds}
+    return {'settings': settings, 'base': base, 'folds': folds, 'graph': graph}
 
 dataset = pd.read_csv('NELL.sports.08m.850.small.csv')
-n_folds = 3
+n_folds = 1
 # ============================================
 
 targets = [
