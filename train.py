@@ -122,8 +122,9 @@ class MCPLP:
             if i % m == 0:
                 p = c/i
                 delta = 2 * math.sqrt(p*(1-p)/i)
-        #print('Samples generated: '+str(i))
-        #print('Result: '+str(p))
+        self.logger.info('Samples generated: %s, Result: %s, Clause: %s' % (str(i), self.print_clause(clause), str(p)))
+        print('Samples generated: '+str(i))
+        print('Result: '+str(p))
         return p
     
     def get_variables_type(self, clause):
@@ -205,21 +206,31 @@ class MCPLP:
         for key, value in bases_dict.items():
             if key != self.target:
                 if len(bases_dict[key]) == 1:
-                    v = vrs[0][bases_dict[key][0]]
-                    for i in v:
-                        possibles.append([EnPredicate(key), EnVariable(i)])
-                    # mode only + (previous variables)
-                    #possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1))])
+                    if bases_dict[key][0] in vrs[0]:
+                        v = vrs[0][bases_dict[key][0]]
+                        for i in v:
+                            possibles.append([EnPredicate(key), EnVariable(i)])
+                        # mode only + (previous variables)
+                        #possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1))])
                 else:
-                    v1 = vrs[0][bases_dict[key][0]]
-                    v2 = vrs[0][bases_dict[key][1]]
-                    p = list(product(v1, v2))
-                    for i in p:
-                        possibles.append([EnPredicate(key), EnVariable(i[0]), EnVariable(i[1])])
-                    for i in v1:
-                        possibles.append([EnPredicate(key), EnVariable(i), EnVariable(chr(ord(vrs[1])+1))])
-                    for i in v2:
-                        possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1)), EnVariable(i)])      
+                    if bases_dict[key][0] in vrs[0] and bases_dict[key][1] in vrs[0]:
+                        v1 = vrs[0][bases_dict[key][0]]
+                        v2 = vrs[0][bases_dict[key][1]]
+                        p = list(product(v1, v2))
+                        for i in p:
+                            possibles.append([EnPredicate(key), EnVariable(i[0]), EnVariable(i[1])])
+                        for i in v1:
+                            possibles.append([EnPredicate(key), EnVariable(i), EnVariable(chr(ord(vrs[1])+1))])
+                        for i in v2:
+                            possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1)), EnVariable(i)])
+                    elif bases_dict[key][0] in vrs[0]:
+                        v1 = vrs[0][bases_dict[key][0]]
+                        for i in v1:
+                            possibles.append([EnPredicate(key), EnVariable(i), EnVariable(chr(ord(vrs[1])+1))])
+                    elif bases_dict[key][1] in vrs[0]:
+                        v2 = vrs[0][bases_dict[key][1]]
+                        for i in v2:
+                            possibles.append([EnPredicate(key), EnVariable(chr(ord(vrs[1])+1)), EnVariable(i)])
         return possibles
     
     def sample_candidate(self):
