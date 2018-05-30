@@ -31,12 +31,24 @@ class MCPLP:
         self.m = m
         self.amplitude = amplitude
         self.center = center
-        self.width = 50
+        self.width = width
+        
+        self.fixed_program = None
         
         logging.basicConfig(level=level)
         self.logger = logging.getLogger('mcplp')
         #self.logger.setLevel('INFO')        
-        
+
+    def print_parameters(self, run_time):
+        return '\n'.join(['Max literals: '+ str(self.max_literals),
+        'Target: ' + self.target,
+        'Delta p: ' + str(self.delta_p),
+        'M: ' + str(self.m),
+        'Curve Amplitude: ' + str(self.amplitude),
+        'Curve Center: '+str(self.center),
+        'Curve Width: ' + str(self.width),
+        'Run time: '+str(run_time)])
+
     def load_examples(self, file):
         data = []
         with open(file) as f:
@@ -106,6 +118,17 @@ class MCPLP:
             if random.random() < dt[2]:
                 program.add_tuple(dt[0], dt[1])
         return program
+        
+    def get_program(self):
+        if self.fixed_program == None:
+            program = EnStructure()
+            for base in self.bases:
+                program.add_base(base[0], base[1])
+            for dt in self.data:
+                #if random.random() < dt[2]:
+                program.add_tuple(dt[0], dt[1], dt[2])
+            self.fixed_program = program
+        return self.fixed_program
                 
     def monte_carlo(self, m=100, clause=[], variables={}):
         if len(clause) == 0:
@@ -113,7 +136,7 @@ class MCPLP:
         mn = 0
         for i in range(m):   
             program = self.sample_program()
-            mn += program.satisfy_clause_recursive(clause, variables=variables)
+            mn += program.satisfy_clause_recursive_prob(clause, variables=variables)
         return mn / m
 
     def monte_carlo_delta(self, delta_p = 0.01, m=100, clause=[], variables={}):
@@ -126,7 +149,7 @@ class MCPLP:
         delta = 1
         while delta > delta_p:
             program = self.sample_program()
-            result = program.satisfy_clause_recursive(clause, variables=variables)
+            result = program.satisfy_clause_recursive_prob(clause, variables=variables)
             c += result
             i += 1
             if i % m == 0:
@@ -314,4 +337,4 @@ class MCPLP:
         
         run_time = time.time() - start
         self.logger.info('Total Run Time: %s' % (str(run_time)))
-        return (run_time, temp_values, cost_values, state_values, self.clauses_visited())
+        return (self.print_parameters(run_time), temp_values, cost_values, state_values, self.clauses_visited())

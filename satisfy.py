@@ -7,6 +7,8 @@ Created on Mon Mar  5 14:35:52 2018
 
 """ Adicionado
 """
+import random
+
 class EnPredicate(object):
     def __init__(self, name):
         self.name = name
@@ -80,6 +82,7 @@ class EnTuples(object):
 class EnStructure(object):
     def __init__(self):
         self.tuples = EnTuples()
+        self.probabilities = {}
         self.predicates = {}
         self.atoms = {}
         self.bases = {}
@@ -91,7 +94,7 @@ class EnStructure(object):
                 if arg not in self.atoms:
                     self.atoms[arg] = {}
         
-    def add_tuple(self, relation, args):
+    def add_tuple(self, relation, args, probability=1.0):
         atoms = []
         bases = self.bases[relation]
         for i in range(len(args)):
@@ -101,6 +104,7 @@ class EnStructure(object):
         if relation not in self.predicates:
             self.predicates[relation] = EnPredicate(relation)
         self.tuples.add(self.predicates[relation], atoms)
+        self.probabilities[relation + ',' + ','.join(args)] = probability
         
     def count_tuples(self, target):
         def recursive_count(root):
@@ -113,6 +117,16 @@ class EnStructure(object):
                 return s
         tuples = self.tuples.data[target]
         return recursive_count(tuples)
+        
+    def literal_to_probability(self, literal, variables):
+        l = []
+        for ea in literal:
+            if type(ea) == EnPredicate or type(ea) == EnAtom:
+                l.append(str(ea))
+            elif type(ea) == EnVariable:
+                l.append(str(variables[ea]))
+        #return ','.join(l)
+        return self.probabilities[','.join(l)]
 
     def satisfy_clause(self, clause, variables={}):
         clause_pos = 0
@@ -240,6 +254,72 @@ class EnStructure(object):
                                 return 0.0
                             else:
                                 v.append(1.0)
+                            if clause_pos+1 == len(clause):
+                                s = 1.0
+                                for i in v:
+                                    s *= i
+                                return s
+                            else:
+                                return recursive(clause_pos+1, 0, dict(variables), root, v)
+                        else:
+                            return recursive(clause_pos, atom_pos+1, dict(variables), root[j], values)
+                elif type(j) == EnVariable: # new variable
+                    typ = self.bases[str(clause[clause_pos][0].child if type(clause[clause_pos][0]) == EnNot else clause[clause_pos][0])][atom_pos-1]
+                    found = 0.0
+                    for key, new_atom in self.atoms[typ].items():
+                        new_dict = dict(variables)
+                        new_dict[j] = new_atom
+                        found = recursive(clause_pos, atom_pos, new_dict, root, values)
+                        if found == 1.0:
+                            #with open('log.txt', 'a+') as file:
+                            #    file.write('teste\n')
+                            #    file.write(str(new_dict))
+                            break
+                    return found
+        return recursive(0, 0, variables, 0, [])
+        
+    def satisfy_clause_recursive_prob(self, clause, variables={}):
+        def recursive(clause_pos, atom_pos, variables, root, values):
+            if atom_pos == 0: #it is a predicate
+                predicate = clause[clause_pos][0]
+                if type(predicate) == EnNot:
+                    return recursive(clause_pos, atom_pos+1, dict(variables), self.tuples.data[predicate.child], values)
+                else:
+                    return recursive(clause_pos, atom_pos+1, dict(variables), self.tuples.data[predicate], values)
+            else:
+                j = clause[clause_pos][atom_pos]
+                if type(j) == EnVariable and j in variables:
+                    j = variables[j]
+                if type(j) == EnAtom:
+                    if j not in root:
+                        if type(clause[clause_pos][0]) == EnNot:
+                            v = list(values)
+                            v.append(1.0)
+                            if clause_pos+1 == len(clause):
+                                s = 1.0
+                                for i in v:
+                                    s *= i
+                                return s
+                            return recursive(clause_pos+1, 0, dict(variables), root, v)
+                        else:
+                            return 0.0
+                    else:
+                        if atom_pos+1 == len(clause[clause_pos]):
+                            v = list(values)
+                            if type(clause[clause_pos][0]) == EnNot:
+                                #return 0.0
+                                prob = self.literal_to_probability(clause[clause_pos], variables)
+                                if random.random() < prob:
+                                    v.append(0.0)
+                                else:
+                                    v.append(1.0)
+                            else:
+                                #v.append(1.0)
+                                prob = self.literal_to_probability(clause[clause_pos], variables)
+                                if random.random() < prob:
+                                    v.append(1.0)
+                                else:
+                                    v.append(0.0)
                             if clause_pos+1 == len(clause):
                                 s = 1.0
                                 for i in v:
