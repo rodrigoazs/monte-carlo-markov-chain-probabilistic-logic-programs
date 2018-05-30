@@ -1,2 +1,2 @@
-# mc_plp
-Tabalho de Mestrado - Monte Carlo em Probabilistic Logic Programs
+# MCMCPLP - Monte Carlo Markov Chain in Probabilistic Logic Programs
+Tabalho de Mestrado - UFRJ
