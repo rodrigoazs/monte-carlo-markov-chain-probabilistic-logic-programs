@@ -11,10 +11,10 @@ import logging
 import json
 
 print('Start MCPLP')
-mc = MCPLP(target='athleteplaysforteam', delta_p=0.1, m=10, max_literals=2, amplitude=1000, width=500, level='WARNING')
+mc = MCPLP(target='athleteplaysforteam', delta_p=0.05, m=50, max_literals=2, amplitude=2000, width=1250, level='INFO')
 mc.load_data('data/nell/athleteplaysforteam/nell_athleteplaysforteam_facts.txt')
 mc.load_examples('data/nell/athleteplaysforteam/nell_athleteplaysforteam_examples.txt')
-results = mc.annealing_process(5000)
+results = mc.annealing_process(8000)
 
 
 #a = mc.monte_carlo_delta(delta_p = 0.1, m=50, clause=[[EnPredicate('athleteledsportsteam'), EnVariable('A'), EnVariable('B')]], variables={EnVariable('A'): EnAtom('pat_burrell'), EnVariable('B'): EnAtom('phillies')})
@@ -37,8 +37,8 @@ results = mc.annealing_process(5000)
 
 #plt.loglog([i for i in range(len(results[2]))], results[2])
 
-with open('results/athleteplaysforteam_results.txt', 'w') as outfile:  
+with open('results/athleteplaysforteam_3_results.txt', 'w') as outfile:  
     json.dump(results, outfile)
     
-with open('results/athleteplaysforteam_clauses.txt', 'w') as outfile:  
+with open('results/athleteplaysforteam_3_clauses.txt', 'w') as outfile:  
     json.dump(mc.clauses_visited(), outfile)

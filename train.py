@@ -12,7 +12,9 @@ import re
 
 from satisfy import *
 
-from sklearn.metrics import mean_squared_error    
+from sklearn.metrics import mean_squared_error
+import numpy as np
+from numpy.linalg import pinv  
 
 from itertools import product
 import logging
@@ -135,7 +137,7 @@ class MCPLP:
             return 1.0
         mn = 0
         for i in range(m):   
-            program = self.sample_program()
+            program = self.get_program()
             mn += program.satisfy_clause_recursive_prob(clause, variables=variables)
         return mn / m
 
@@ -148,7 +150,7 @@ class MCPLP:
         p = 0
         delta = 1
         while delta > delta_p:
-            program = self.sample_program()
+            program = self.get_program()
             result = program.satisfy_clause_recursive_prob(clause, variables=variables)
             c += result
             i += 1
