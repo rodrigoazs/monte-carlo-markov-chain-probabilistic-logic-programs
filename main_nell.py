@@ -11,10 +11,10 @@ import logging
 import json
 
 print('Start MCPLP')
-mc = MCPLP(target='athleteplaysforteam', delta_p=0.05, m=50, max_literals=2, amplitude=2000, width=1250, level='INFO')
+mc = MCPLP(target='athleteplaysforteam', delta_p=0.05, m=50, max_literals=3, amplitude=2000, width=1500, level='INFO')
 mc.load_data('data/nell/athleteplaysforteam/nell_athleteplaysforteam_facts.txt')
 mc.load_examples('data/nell/athleteplaysforteam/nell_athleteplaysforteam_examples.txt')
-results = mc.annealing_process(8000)
+results = mc.annealing_process(10000)
 
 
 #a = mc.monte_carlo_delta(delta_p = 0.1, m=50, clause=[[EnPredicate('athleteledsportsteam'), EnVariable('A'), EnVariable('B')]], variables={EnVariable('A'): EnAtom('pat_burrell'), EnVariable('B'): EnAtom('phillies')})

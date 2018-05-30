@@ -131,7 +131,7 @@ def get_data(dataset, n_folds, target, target_parity, allow_negation=True, examp
 #    settings += '\n'
     sorted_x = sorted(graph.count.items(), key=lambda x: x[1], reverse=True)
     accepted_entities = set()
-    for i in range(25):
+    for i in range(100):
         accepted_entities.add(sorted_x[i][0])
     #facts = recursive(graph.nodes[first], target, 0)
 
