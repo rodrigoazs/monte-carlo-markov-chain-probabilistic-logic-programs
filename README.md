@@ -6,4 +6,6 @@ The following classwork addresses the problem of inference and structure learnin
 
 For learning structures from probabilistic facts it is proposed to use the MCMC method to perform a search in the space of defined clauses that best explain a target predicate.
 
-Please, read the <a href="https://github.com/rodrigoazs/-7-5-Reed-Solomon/raw/master/Report.pdf">whole project</a> to get more information about.
+<img src="https://github.com/rodrigoazs/MCMCPLP/blob/master/states_plp_mcmc.png?raw=true">
+
+Please, read the <a href="https://github.com/rodrigoazs/MCMCPLP/raw/master/Relatorio_MCMC_PLP.pdf">whole project</a> to get more information about.
